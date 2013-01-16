@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <header class="main-header row">
+    <div class="span8">
+      <h1 class="name">
+        <a href="mailto:{{ AUTHOR_EMAIL }}">
+          Top Django Entwickler
+        </a>
+      </h1>
+    </div>
+    <div class="span4">
+      <h2 class="profession hidden-phone">
+        <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR }}</a>
+      </h2>
+    </div>
+    <div class="span8">
+      <h2 class="claim hidden-phone">Expert For Hire. Perfekte Umsetzung.</h2>
+    </div>
+    <div class="span4">
+      <h3 class="address">
+        <a target="_blank" href="https://goo.gl/maps/BWyXHunP5au">
+        in Wien / Österreich
+        </a>
+      </h3>
+      <h3 class="contact">
+        <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>,
+        <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
+      </h3>
+    </div>
+  </header><!-- .main-header -->
+  <header class="main-header sticky row">
+    <div class="sticky-frame span12">
+      <div class="row">
+        <div class="offset8 span4">
+          <h3 class="contact">
+            <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>,
+            <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </header><!-- .main-header.sticky -->
+
+  {% block intro %}
+  <div class="row">
+    <div class="span8">
+      <section class="intro">
+        <h2>Über mich</h2>
+        <div class="intro-copy">
+          <p>
+            Mit Django und Python helfe ich seit 2008 Unternehmen grosse und kleine Ideen umzusetzen.
+          </p>
+          <ul>
+            <li>Als Mitglied eines bestehenden oder beim Aufbau eines neuen Teams.</li>
+            <li>Als kurzfristige Unterstützung oder beim Training des eigenen Teams.</li>
+            <li>Bei der Planung und Entwicklung neuer Web Applikationen oder bei der Erweiterung von bestehendenden Django-Applikationen.</li>
+            <li>Als Experte vor Ort in Wien oder über Telefon, Video-Konferenz und Chat in Deutschland, Schweiz und im restlichen Österreich.</li>
+          </ul>
+          {#
+          <br />
+          <p>
+            Je nach Art und Dauer der Zusammenarbeit liegt mein Stundensatz zwischen 90€ und 75€.
+          </p>
+          #}
+          <br />
+          <p>
+            Neben meiner Arbeit als Django-Entwickler betreue ich
+            das monatlich stattfindende <a target="_blank" href="http://www.meetup.com/Django-Vienna/">Django Meetup</a> in Wien, das
+            ich 2013 ins Leben gerufen habe und bereits über 300 Mitglieder zählt.
+          </p>
+        </div><!-- .intro-copy -->
+      </section><!-- .intro -->
+    </div><!-- .span8 -->
+    <div class="span4 portrait hidden-phone">
+      <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">
+        <img class="me" alt="{{ AUTHOR_EMAIL }}" title="{{ AUTHOR_EMAIL }}"
+          src="{{ url_for('static', filename='assets/images/me.png') }}">
+      </a>
+    </div><!-- .portrait -->
+  </div><!-- .row -->
+  <div class="row">
+    <div class="offset8 span4 contact-claim">
+      <a class="email icomoon-mail" href="mailto:{{ AUTHOR_EMAIL }}"> Verfügbarkeit anfragen!</a>
+    </div><!-- .contact-claim -->
+  </div><!-- .row -->
+
+  <hr />
+  <div class="row">
+    <div class="span12">
+      <section class="testimonials">
+        <h2>Was andere sagen</h2>
+        <div class="testimonial clearfix h-cite">
+          <div class="testimonial-icon">
+            <svg width="2em" height="3em" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.505,5.873c-3.937,2.52-5.904,5.556-5.904,9.108c0,1.104,0.192,1.656,0.576,1.656l0.396-0.107c0.312-0.12,0.563-0.18,0.756-0.18c1.128,0,2.07,0.411,2.826,1.229c0.756,0.82,1.134,1.832,1.134,3.037c0,1.157-0.408,2.14-1.224,2.947c-0.816,0.807-1.801,1.211-2.952,1.211c-1.608,0-2.935-0.661-3.979-1.984c-1.044-1.321-1.565-2.98-1.565-4.977c0-2.259,0.443-4.327,1.332-6.203c0.888-1.875,2.243-3.57,4.067-5.085c1.824-1.514,2.988-2.272,3.492-2.272c0.336,0,0.612,0.162,0.828,0.486c0.216,0.324,0.324,0.606,0.324,0.846L14.505,5.873zM27.465,5.873c-3.937,2.52-5.904,5.556-5.904,9.108c0,1.104,0.192,1.656,0.576,1.656l0.396-0.107c0.312-0.12,0.563-0.18,0.756-0.18c1.104,0,2.04,0.411,2.808,1.229c0.769,0.82,1.152,1.832,1.152,3.037c0,1.157-0.408,2.14-1.224,2.947c-0.816,0.807-1.801,1.211-2.952,1.211c-1.608,0-2.935-0.661-3.979-1.984c-1.044-1.321-1.565-2.98-1.565-4.977c0-2.284,0.449-4.369,1.35-6.256c0.9-1.887,2.256-3.577,4.068-5.067c1.812-1.49,2.97-2.236,3.474-2.236c0.336,0,0.612,0.162,0.828,0.486c0.216,0.324,0.324,0.606,0.324,0.846L27.465,5.873z"/>
+            </svg>
+          </div>
+          <cite class="testimonial-cite">
+            I was the CTO of Careesma when Stephan joined the development team. 
+            Careesma is an international jobboard with more than 20 million monthly pageviews.  
+            <br />
+            Stephan did a fantastic job at Careesma. 
+            On top of his strong engineering skills, Stephan exceeded my 
+            expectations about how fast he managed to fit as a team-member and the degree 
+            of autonomy and loyalty he showed.
+          </cite>
+          <div class="testimonial-author">
+            <span class="p-author h-card">Javier López, CTO von careesma.com</span>
+            (<time class="dt-published" datetime="2016-07-20">20.07.2016</time>)
+          </div>
+        </div><!-- .testimonial -->
+
+        <div class="testimonial clearfix h-cite">
+          <div class="testimonial-icon">
+            <svg width="2em" height="3em" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.505,5.873c-3.937,2.52-5.904,5.556-5.904,9.108c0,1.104,0.192,1.656,0.576,1.656l0.396-0.107c0.312-0.12,0.563-0.18,0.756-0.18c1.128,0,2.07,0.411,2.826,1.229c0.756,0.82,1.134,1.832,1.134,3.037c0,1.157-0.408,2.14-1.224,2.947c-0.816,0.807-1.801,1.211-2.952,1.211c-1.608,0-2.935-0.661-3.979-1.984c-1.044-1.321-1.565-2.98-1.565-4.977c0-2.259,0.443-4.327,1.332-6.203c0.888-1.875,2.243-3.57,4.067-5.085c1.824-1.514,2.988-2.272,3.492-2.272c0.336,0,0.612,0.162,0.828,0.486c0.216,0.324,0.324,0.606,0.324,0.846L14.505,5.873zM27.465,5.873c-3.937,2.52-5.904,5.556-5.904,9.108c0,1.104,0.192,1.656,0.576,1.656l0.396-0.107c0.312-0.12,0.563-0.18,0.756-0.18c1.104,0,2.04,0.411,2.808,1.229c0.769,0.82,1.152,1.832,1.152,3.037c0,1.157-0.408,2.14-1.224,2.947c-0.816,0.807-1.801,1.211-2.952,1.211c-1.608,0-2.935-0.661-3.979-1.984c-1.044-1.321-1.565-2.98-1.565-4.977c0-2.284,0.449-4.369,1.35-6.256c0.9-1.887,2.256-3.577,4.068-5.067c1.812-1.49,2.97-2.236,3.474-2.236c0.336,0,0.612,0.162,0.828,0.486c0.216,0.324,0.324,0.606,0.324,0.846L27.465,5.873z"/>
+            </svg>
+          </div>
+          <cite class="testimonial-cite">
+            Da das Projekt zeitlich sehr eng terminiert war, hatte ich die Erwartung, dass du das Projekt sehr schnell voranbringst 
+            und dabei gemäß den Rahmenbedingungen gute Arbeit ablieferst. Diese Erwartungen wurden definitiv erfüllt.<br />
+            <br />
+            Du hast eine sehr hohen Entwicklungsgeschwindigkeit und bist in der Lage sehr schnell Lösungen zu finden, 
+            die zu den gegebenen Rahmenbedingungen passen. 
+            Darüber hinaus bist in meinen Augen fachlich sehr kompetent und schaust auch über den Tellerrand, 
+            sprich hast wirklich die gesamte Architektur inkl. der Hosting-Plattform bei deinen Überlegungen im Blick. 
+            Ich fand bsp. deine Herangehensweise an die Skalierbarkeit der Applikation gut und schätze auch sehr die Tatsache, 
+            dass du sehr selbstständig gearbeitet und auch entschieden hast und nur kritische Entscheidung zu mir eskaliert hast.<br />
+
+          </cite>
+          <div class="testimonial-author">
+            <span class="p-author h-card">Michael Kühne, CTO slice+dice </span>
+            (<time class="dt-published" datetime="2014-07-10">10.07.2014</time>)
+          </div>
+        </div><!-- .testimonial -->
+
+      </section><!-- .testimonials -->
+    </div><!-- .span12 -->
+  </div><!-- .row -->
+  <hr />
+  {% endblock %}
+  <div class="row">
+    <div class="main-column span8">
+      {% block projects %}
+      <section class="projects">
+        <h1 class="section-title">» hand-picked projects</h1>
+        {% for project in projects %}
+        <article class="project">
+          <header class="headlines">
+            <h2>
+              {% if project.externalurl %}
+                <a target="_blank" href="{{ project.externalurl }}">
+              {% endif %}
+                {{ project.title }}
+              {% if project.externalurl %}
+                </a>
+              {% endif %}
+            </h2>
+
+            {% if project.subline %}
+            <h3>
+              {% if project.sublineurl %}
+              <a href="{{ project.sublineurl }}">
+              {% endif %}
+
+              {{ project.subline|safe }}
+
+              {% if project.sublineurl %}
+              </a>
+              {% endif %}
+            </h3>
+            {% endif %}
+          </header><!-- .headlines -->
+
+          <div class="preview row">
+            <div class="{% if project.displayimage != False %}span3{% else %}span8{% endif %} col1">
+              <div class="techcloud">
+                <span class="icomoon-tag" aria-hidden="true"></span>
+                {% for tag in project.tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor%}
+              </div><!-- .techcloud -->
+              <div class="date">
+                {{ project.duration }}
+              </div><!-- .date -->
+            </div>
+
+            {% if project.displayimage != False %}
+            <div class="project-image span5 col2">
+              {% if project.externalurl %}<a href="{{ project.externalurl }}">{% endif %}
+                <img style="width: 100%" src="{{ url_for('static', filename='assets/images/%s.png' % project.slug) }}" alt="{{ project.externalurl }}" />
+              {% if project.externalurl %}</a>{% endif %}
+            </div><!-- .project-image -->
+            {% endif %}
+          </div><!-- .preview -->
+
+
+          <section class="project-content main-copy">
+            {{ project.content|safe }}
+          </section><!-- .project.main-copy -->
+
+        </article><!-- .project -->
+        {% endfor %}
+      </section><!-- .projects -->
+      {% endblock %}
+
+    </div><!-- main-column -->
+    <div class="sidebar span4">
+      <div class="row">
+
+        <div class="span4">
+          {% block skills %}
+          <section class="skills">
+            <h1 class="section-title">» skills</h1>
+
+            {% for skill in skills %}
+            <article class="skill">
+              <header>
+                {% if skill.externalurl %}<a href="{{ skill.externalurl }}">{% endif %}
+                <h1>{{ skill.title }}</h1>
+                {% if skill.externalurl %}</a>{% endif %}
+              </header>
+              <section class="skill-content main-copy">
+                {{ skill.content|safe }}
+              </section><!-- .skill-content -->
+            </article>
+            {% endfor %}
+          </section> <!-- .skills -->
+          {% endblock %}
+
+        </div>
+      </div>
+    </div><!-- .sidebar -->
+  </div>
+
+{% endblock %}
+
+
+{% block footer %}
+  <footer class="main-footer" style="background-color: #000; opacity:.75;">
+    <div class="container">
+      <div class="row">
+        <address class="contact span12">
+          <div class="row">
+            <div class="contact-email span4">
+              <h2>
+                <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">
+                  » {{ AUTHOR_EMAIL }}
+                </a>
+              </h2>
+            </div><!-- .contact-email -->
+            <div class="contact-tel offset4 span4">
+              <h2>
+                <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
+              </h2>
+            </div><!-- .contact-tel -->
+          <div>
+        </address><!-- .contact -->
+        <address class="address span12">
+          <h3>
+            {{ AUTHOR_STREET }} ⬩ {{ AUTHOR_CITY }} ⬩ UID: {{ AUTHOR_UID }}
+          </h3>
+        </address><!-- .address -->
+
+        <!--
+        <div class="logo span12">
+          <a href="http://www.ignaz.at/">
+            Mitglied von Ignaz Softwaremanufaktur
+            <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Ignaz Softwaremanufaktur">
+          </a>
+        </div>
+        --><!-- .logo -->
+      </div>
+    </div><!-- .container -->
+  </footer><!-- .main-footer -->
+{% endblock %}
