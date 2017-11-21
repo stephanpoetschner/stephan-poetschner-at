@@ -1,0 +1,41 @@
+title: Wiener Staatsoper Live-Streaming
+slug: staatsoper-live
+externalurl: http://www.staatsoperlive.com/
+subline: für PocketScience GmbH
+duration: Juni 2013 – Oktober 2013
+tags: [ Video, Streaming, Django, ]
+author: Stephan Pötschner
+date: 2013-10-01 12:00
+---
+# Meine Aufgaben
+
+* Planung und Setup der Infrastruktur
+* Spezifikation für Hosting-Anbieter
+* Unterstützung bei der Planung
+
+# Projektbeschreibung
+
+Seit Oktober 2013 bietet die Wiener Staatsoper ausgewählte Vorstellungen
+als kostenpflichtigen Live-Stream im Internet an und stellt somit das Angebot des renommierten
+österreichischen Kulturhaus einem internationalen Publikum in Full HD zur Verfügung.
+
+Durch die Kooperation mit Samsung kann das Streaming-Angebot auch direkt über
+die Smart-TV App auf Samsung TV-Geräten in Anspruch genommen werden.
+
+Eine besondere Herausforderung dieses Projekts ist der Fokus auf den
+koreanischen Markt und die damit verbundenen technischen Anforderungen.
+
+# Team
+
+* Christopher Widauer (Staatsoper Wien)
+* Mark Burrett (PocketScience)
+* <a target="_blank" href="https://www.floriandemmer.com/">Florian Demmer</a> (Django-Freelancer)
+* Martin Leonhartsberger-Schrott (PocketScience)
+* Silvia Fürst (PocketScience)
+
+
+# Presse
+
+* <a target="_blank" href="http://futurezone.at/produkte/wiener-staatsoper-streamt-schon-bald-in-hd-ins-wohnzimmer/31.126.645">FutureZone</a>
+* <a target="_blank" href="http://diepresse.com/home/kultur/klassik/1423890/Ab-Herbst_LiveStream-aus-der-Staatsoper">Die Presse</a>
+* <a target="_blank" href="http://derstandard.at/1381368843189/Herr-Tristan-im-Wohnzimmer">Standard</a>

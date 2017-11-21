@@ -1,0 +1,31 @@
+Title: Pop-Up Pantry
+Slug: popup-pantry
+Subline: Startup aus Kalifornien, USA (2013 ✝)
+Duration: September 2012 – Jänner 2013
+Tags: Startup, Shop, Django, jQuery
+Author: Stephan Pötschner
+Date: 2013-01-16 12:00
+
+# Meine Aufgaben
+
+* als „Teleworker” das amerikanische Team entlasten
+* Performance- und Code-Qualitätsverbesserungen
+    * SASS Integration in den Build-Prozess
+    * Javascript-Dateien automatisch zusammenfügen (Django-Pipeline)
+* Empfehlungen und Verbesserungen für die System-Architektur machen
+* Modul zur Produktbewertung (inkl. A/B Tests) umsetzen
+
+# Projektbeschreibung
+
+Dreigängige Menü's von Top-Chefs direkt nachhause geliefert.
+
+> „A restaurant experience, enjoyed at home”
+
+# Team
+
+* <a target="_blank" href="http://kjamistan.tumblr.com/">Katharine Jarmul</a>
+* Jeremy Collyer
+
+# Links
+
+* <a target="_blank" href="http://www.crunchbase.com/company/pop-up-pantry">Crunchbase</a>

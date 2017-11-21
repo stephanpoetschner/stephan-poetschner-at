@@ -1,10 +1,13 @@
 *.pyc
-*.wpr
 *.pid
 
+
+/build/
+/sources/
+/venv/
+
+/.vagrant/
+/.idea/
+/*.wpr
 nohup.out
 
-/build/*
-/.idea/
-/.vagrant/
-/venv/

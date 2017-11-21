@@ -1,0 +1,40 @@
+title: Immovate
+slug: immovate
+externalurl: http://www.immovate.org/
+subline: für <a target="_blank" href="http://www.wundermanpxp.at/">WundermanPXP</a> und <a target="_blank" href="http://www.yr.com/">Young&Rubicam</a>
+duration: Oktober 2011 – Dezember 2011
+tags: [ Django, MySQL, jQuery, Scrum, ]
+author: Stephan Pötschner
+Peers: Mark Burrett, Gerd Haselsteiner, Daniela Faschang, Philipp Brunsteiner, Philipp Mayer
+date: 2011-12-30 12:00
+---
+# Meine Aufgaben
+
+* technische Planung/Beratung
+* Systemadministrator
+    * Hosting bei Webfaction
+* Django Entwicklung (Frontend und Administrationsinterface)
+    * CMS für externes Redaktionsteam zum Einfügen der Inhalte
+    * Bilder, Audio- und Videodateien verarbeiten
+    * Mehrsprachigkeit (stufenweise Einführung: deutsch und englisch)
+    * iPad/iPhone Kompatibilität (Layout und Multimedia-Inhalte)
+
+
+# Projektbeschreibung
+
+Immovate Projektentwicklungs GmbH. kauft und revitalisiert hochwertige
+Immobilien vorzugsweise mit historischem Kern.
+
+Um diese exklusiven Gebäude auch online ins rechte Licht zu rücken und das Bild vor
+allem für Investoren abzurunden, werden auf
+<a target="_blank" href="http://www.immovate.org">immovate.org</a> neben Fakten
+zu den Immobilien auch „Around-Guides” (Grätzeltipps), Fotostrecken und
+Interviews mit dem Architekten zur Verfügung gestellt.
+
+> Historische Bauwerke haben eine Geschichte und verdienen eine geeignete Nutzung.
+
+
+# Team
+
+* Gerd Haselsteiner (Wunderman Vienna)
+* Mark Burrett (Wunderman Vienna)
