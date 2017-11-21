@@ -1,0 +1,38 @@
+title: Voting Platform für Werbe-Awards
+slug: submit.to
+externalurl: http://submit.to/
+subline: für XIPAX Böck KG
+duration: Jänner 2013 – April 2013
+tags: [ Startup, Django, jQuery, PostgreSQL, Scrum, Facebook-App, ]
+author: Stephan Pötschner
+date: 2012-01-01 12:00
+displayimage: False
+---
+# Meine Aufgaben
+
+* Anforderungsanalyse
+* Planung
+* Wireframes
+* Umsetzung (Django Backend und Frontend)
+* Bugfixing
+* Frontend Relaunch
+
+# Projektbeschreibung
+
+Award-Tool – eingereichte Arbeiten können von Jurymitgliedern betrachtet und bewertet werden.
+
+Je nach Wettbewerb können die Ergebniss nach unterschiedlichen Ergebnissen errechnet werden:
+* Richter vergeben Punkte.
+* Richter legen persönlichen Favoriten fest.
+
+# Team
+
+* Stefan Böck
+* Ashley Camba
+
+
+# Betreute Bewerbe
+
+* <a target="_blank" href="http://enterprise.orf.at/topspot0/">ORF Topspot</a>, <a target="_blank" href="http://enterprise.orf.at/werbehahn/">ORF Werbehahn</a>, <a target="_blank" href="http://enterprise.orf.at/3217/">ORF Onward</a>
+* <a target="_blank" href="http://www.goldenawardmontreux.com/">Golden Award of Montreux</a>
+* <a target="_blank" href="http://www.pmca.at/category/veranstaltungen/best-of/">Best of Pharmaceutical Advertising</a>
