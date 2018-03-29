@@ -2,7 +2,7 @@ title: WLAN-Produkt „tigaeleven”
 slug: tigaeleven
 externalurl: http://tigaeleven.com/
 subline: für wifitiger GmbH
-duration: September 2016 – heute
+duration: November 2015 – Dezember 2016
 tags: [ Startup, Django, Heroku, Coova-Chilli, OpenWRT, PostgreSQL, jQuery, Scrum, ]
 author: Stephan Pötschner
 date: 2016-07-13 12:00
