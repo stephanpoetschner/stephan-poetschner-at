@@ -194,6 +194,7 @@ h3 a, h3 a:hover { color: inherit; }
    -moz-border-radius: 3px;
 }
 .contact-claim a.email:hover { text-decoration: inherit; background: #b82617; }
+.socialmedia { text-align: center; }
 
 .projects .section-title { margin-bottom: .75em; }
 .project { margin-bottom: 8em; }

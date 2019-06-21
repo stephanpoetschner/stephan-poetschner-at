@@ -14,6 +14,8 @@ SITE = {
 
 
     'AUTHOR_EMAIL': u'stephan.poetschner@gmail.com',
+    'AUTHOR_LINKEDIN': u'https://www.linkedin.com/in/stephan-poetschner/',
+    'AUTHOR_MEETUP': u'https://meetup.com/de-DE/Django-Vienna/',
     'AUTHOR_FIRSTNAME': u'Stephan',
     'AUTHOR_FAMILYNAME': u'Pötschner',
     'AUTHOR': u'%(AUTHOR_FIRSTNAME)s %(AUTHOR_FAMILYNAME)s',
