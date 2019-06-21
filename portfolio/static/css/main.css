@@ -4,10 +4,74 @@
    Author's custom styles
    Palette see: http://0to255.com/436db4
    ========================================================================== */
-.container { border-left: 1px solid #ddd; border-right: 1px solid #ddd; padding: 0; }
+.container {
+   padding: 0;
+}
 
 body {
-font-weight: normal;
+  font-weight: normal;
+  font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1rem 0;
+  font-family: inherit;
+  line-height: 1.5em;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1em;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 1em;
 }
 
 @font-face {
@@ -75,13 +139,6 @@ h3 a, h3 a:hover { color: inherit; }
 .main-header h2,
 .main-header h3 { padding:.25rem 1rem; }
 
-.main-header.sticky { display: none; position: fixed; top: 0; z-index: 1; padding-top:0; }
-.sticky-frame { background: #fff;
-                -webkit-box-shadow: 0 0 10px -3px #152238;
-                   -moz-box-shadow: 0 0 10px -3px #152238;
-                        box-shadow: 0 0 10px -3px #152238; }
-.main-header.sticky .contact { margin-bottom: .25em; }
-
 .main-header .name { color:#000; margin-top: 0; text-transform: uppercase; }
 .main-header .profession { color:#000; padding: 1rem 1rem .5rem; margin-top: 0; text-align: right; }
 .main-header .claim { margin-top: 0; padding: .375rem 1rem; }
@@ -92,6 +149,10 @@ h3 a, h3 a:hover { color: inherit; }
 .main-footer .container { border: none; }
 
 .main-footer .contact .contact-tel { text-align: right; }
+.main-footer .contact h2 { font-size: 1.75rem }
+@media (min-width: 768px) {
+  .main-footer .contact h2 { font-size: 2.5rem }
+}
 .main-footer .address h3 { font-weight: 300; margin-top: 0; }
 .main-footer .logo { font-size:.75em; margin-top: 1.5em; position: relative; text-align: right; }
 .main-footer .logo img { margin-left: .5em; position: absolute; top: -18px; }
@@ -99,8 +160,11 @@ h3 a, h3 a:hover { color: inherit; }
 
 .portrait { height: 270px; text-align: center; }
 
-.main-column { border-right: 1px solid #ddd; }
-.sidebar { margin-left: 19px; }
+.main-column { padding-bottom: 8rem; }
+@media (min-width: 768px) {
+  .main-column { border-right: 1px solid #ddd; }
+}
+.sidebar { padding-bottom: 8rem; }
 
 .main-column h1,
 .main-column h2,
@@ -116,13 +180,14 @@ h3 a, h3 a:hover { color: inherit; }
 .intro .intro-copy li { line-height: inherit; margin-top: .5em; }
 
 .testimonials { padding: 3rem 1rem 3rem; line-height: 1.6em; font-size: 1em; }
-.testimonials .testimonial { margin-bottom: 4rem; font-size: 1.25em; line-height: 1.5em;}
+.testimonials .testimonial { margin-bottom: 8rem; font-size: 1.25em; line-height: 1.5em;}
+.testimonials .testimonial:last-child { margin-bottom: 0; }
 .testimonials .testimonial li { line-height: inherit; margin-top: .5em; }
 .testimonial-icon { float: left; }
 .testimonial-cite { display: block; margin-left: 3em; }
 .testimonial-author { color: #bbb; margin-top: .5em; }
 
-.contact-claim { text-align: center; margin-bottom:5em; }
+.contact-claim { text-align: center; }
 .contact-claim a.email { color: #fff; background: #e74c3c; display: block; text-transform: uppercase; font-weight: 500; margin-right:1em; padding: 0.5em;
    border-radius: 3px;
    -webkit-border-radius: 3px;
@@ -131,7 +196,8 @@ h3 a, h3 a:hover { color: inherit; }
 .contact-claim a.email:hover { text-decoration: inherit; background: #b82617; }
 
 .projects .section-title { margin-bottom: .75em; }
-.project { margin-bottom: 4em; }
+.project { margin-bottom: 8em; }
+.project:last-child { margin-bottom: 0; }
 .project .headlines h2:first-child { margin-top: 0; }
 .project .preview { background: #363639; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #fff; margin-left:0; }
 .project .preview .col1 { padding: 1em 0; margin-left:0  ; }

@@ -2,49 +2,38 @@
 
 {% block main %}
   <header class="main-header row">
-    <div class="span8">
+    <div class="col-md-8">
       <h1 class="name">
         <a href="mailto:{{ AUTHOR_EMAIL }}">
           Top Django Entwickler
         </a>
       </h1>
     </div>
-    <div class="span4">
-      <h2 class="profession hidden-phone">
+    <div class="col-md-4">
+      <h2 class="profession
+                 hidden-xs hidden-sm">
         <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR }}</a>
       </h2>
     </div>
-    <div class="span8">
-      <h2 class="claim hidden-phone">Expert For Hire. Perfekte Umsetzung.</h2>
+    <div class="col-md-8">
+      <h2 class="claim">Expert For Hire. Perfekte Umsetzung.</h2>
     </div>
-    <div class="span4">
+    <div class="col-md-4">
       <h3 class="address">
         <a target="_blank" href="https://goo.gl/maps/BWyXHunP5au">
         in Wien / Österreich
         </a>
       </h3>
       <h3 class="contact">
-        <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>,
+        <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>,<br>
         <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
       </h3>
     </div>
   </header><!-- .main-header -->
-  <header class="main-header sticky row">
-    <div class="sticky-frame span12">
-      <div class="row">
-        <div class="offset8 span4">
-          <h3 class="contact">
-            <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>,
-            <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
-          </h3>
-        </div>
-      </div>
-    </div>
-  </header><!-- .main-header.sticky -->
 
   {% block intro %}
   <div class="row">
-    <div class="span8">
+    <div class="col-md-8">
       <section class="intro">
         <h2>Über mich</h2>
         <div class="intro-copy">
@@ -71,8 +60,9 @@
           </p>
         </div><!-- .intro-copy -->
       </section><!-- .intro -->
-    </div><!-- .span8 -->
-    <div class="span4 portrait hidden-phone">
+    </div><!-- .col-* -->
+    <div class="col-md-4 portrait
+                hidden-xs hidden-sm">
       <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">
         <img class="me" alt="{{ AUTHOR_EMAIL }}" title="{{ AUTHOR_EMAIL }}"
           src="{{ url_for('static', filename='assets/images/me.png') }}">
@@ -80,14 +70,14 @@
     </div><!-- .portrait -->
   </div><!-- .row -->
   <div class="row">
-    <div class="offset8 span4 contact-claim">
+    <div class="col-md-offset-8 col-md-4 contact-claim">
       <a class="email icomoon-mail" href="mailto:{{ AUTHOR_EMAIL }}"> Verfügbarkeit anfragen!</a>
     </div><!-- .contact-claim -->
   </div><!-- .row -->
 
   <hr />
   <div class="row">
-    <div class="span12">
+    <div class="col-xs-12">
       <section class="testimonials">
         <h2>Was andere sagen</h2>
         <div class="testimonial clearfix h-cite">
@@ -136,12 +126,12 @@
         </div><!-- .testimonial -->
 
       </section><!-- .testimonials -->
-    </div><!-- .span12 -->
+    </div><!-- .col-* -->
   </div><!-- .row -->
   <hr />
   {% endblock %}
   <div class="row">
-    <div class="main-column span8">
+    <div class="main-column col-md-8">
       {% block projects %}
       <section class="projects">
         <h1 class="section-title">» hand-picked projects</h1>
@@ -174,7 +164,7 @@
           </header><!-- .headlines -->
 
           <div class="preview row">
-            <div class="{% if project.displayimage != False %}span3{% else %}span8{% endif %} col1">
+            <div class="{% if project.displayimage != False %}col-md-4{% else %}col-md-12{% endif %} col1">
               <div class="techcloud">
                 <span class="icomoon-tag" aria-hidden="true"></span>
                 {% for tag in project.tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor%}
@@ -185,9 +175,10 @@
             </div>
 
             {% if project.displayimage != False %}
-            <div class="project-image span5 col2">
+            <div class="project-image
+                        col-md-8">
               {% if project.externalurl %}<a href="{{ project.externalurl }}">{% endif %}
-                <img style="width: 100%" src="{{ url_for('static', filename='assets/images/%s.png' % project.slug) }}" alt="{{ project.externalurl }}" />
+                <img class="img-responsive" width="100%" src="{{ url_for('static', filename='assets/images/%s.png' % project.slug) }}" alt="{{ project.externalurl }}" />
               {% if project.externalurl %}</a>{% endif %}
             </div><!-- .project-image -->
             {% endif %}
@@ -204,31 +195,26 @@
       {% endblock %}
 
     </div><!-- main-column -->
-    <div class="sidebar span4">
-      <div class="row">
+    <div class="sidebar col-md-4">
+      {% block skills %}
+      <section class="skills">
+        <h1 class="section-title">» skills</h1>
 
-        <div class="span4">
-          {% block skills %}
-          <section class="skills">
-            <h1 class="section-title">» skills</h1>
+        {% for skill in skills %}
+        <article class="skill">
+          <header>
+            {% if skill.externalurl %}<a href="{{ skill.externalurl }}">{% endif %}
+            <h1>{{ skill.title }}</h1>
+            {% if skill.externalurl %}</a>{% endif %}
+          </header>
+          <section class="skill-content main-copy">
+            {{ skill.content|safe }}
+          </section><!-- .skill-content -->
+        </article>
+        {% endfor %}
+      </section> <!-- .skills -->
+      {% endblock %}
 
-            {% for skill in skills %}
-            <article class="skill">
-              <header>
-                {% if skill.externalurl %}<a href="{{ skill.externalurl }}">{% endif %}
-                <h1>{{ skill.title }}</h1>
-                {% if skill.externalurl %}</a>{% endif %}
-              </header>
-              <section class="skill-content main-copy">
-                {{ skill.content|safe }}
-              </section><!-- .skill-content -->
-            </article>
-            {% endfor %}
-          </section> <!-- .skills -->
-          {% endblock %}
-
-        </div>
-      </div>
     </div><!-- .sidebar -->
   </div>
 
@@ -239,36 +225,31 @@
   <footer class="main-footer" style="background-color: #000; opacity:.75;">
     <div class="container">
       <div class="row">
-        <address class="contact span12">
+        <address class="contact
+                        col-md-12">
           <div class="row">
-            <div class="contact-email span4">
+            <div class="contact-email
+                        col-md-8">
               <h2>
                 <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">
                   » {{ AUTHOR_EMAIL }}
                 </a>
               </h2>
             </div><!-- .contact-email -->
-            <div class="contact-tel offset4 span4">
+            <div class="contact-tel
+                        col-md-4">
               <h2>
                 <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
               </h2>
             </div><!-- .contact-tel -->
-          <div>
+          </div>
         </address><!-- .contact -->
-        <address class="address span12">
+        <address class="address col-md-12">
           <h3>
             {{ AUTHOR_STREET }} ⬩ {{ AUTHOR_CITY }} ⬩ UID: {{ AUTHOR_UID }}
           </h3>
         </address><!-- .address -->
 
-        <!--
-        <div class="logo span12">
-          <a href="http://www.ignaz.at/">
-            Mitglied von Ignaz Softwaremanufaktur
-            <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Ignaz Softwaremanufaktur">
-          </a>
-        </div>
-        --><!-- .logo -->
       </div>
     </div><!-- .container -->
   </footer><!-- .main-footer -->
