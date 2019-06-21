@@ -184,7 +184,7 @@
 
             {% if project.displayimage != False %}
             <div class="project-image
-                        col-md-8">
+                        col-md-8 hidden-print">
               {% if project.externalurl %}<a target="_blank" href="{{ project.externalurl }}">{% endif %}
                 <img class="img-responsive" width="100%" src="{{ url_for('static', filename='assets/images/%s.png' % project.slug) }}" alt="{{ project.externalurl }}" />
               {% if project.externalurl %}</a>{% endif %}
