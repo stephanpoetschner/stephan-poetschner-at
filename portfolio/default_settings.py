@@ -2,10 +2,10 @@
 
 SITE = {
     'NAME': \
-    u'Senior Django-Developer aus Wien' \
-    u' | %(AUTHOR_FIRSTNAME)s %(AUTHOR_FAMILYNAME)s',
+    u'Top Django-Developer aus Wien' \
+    u' | Perfekte Umsetzung | %(AUTHOR_FIRSTNAME)s %(AUTHOR_FAMILYNAME)s',
 
-    'META': u'Freelancer for hire: %(AUTHOR_TEL)s',
+    'META': u'Freelancer aus Wien. Erfahrener Django-Entwickler. Referenzprojekte durchsehen!',
     'DOMAIN': 'www.stephan-poetschner.at',
     'ROOT_URL': 'http://%(DOMAIN)s',
 
