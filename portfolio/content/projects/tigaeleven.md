@@ -6,34 +6,24 @@ duration: November 2015 – Dezember 2016
 tags: [ Startup, Django, Heroku, Coova-Chilli, OpenWRT, PostgreSQL, jQuery, Scrum, ]
 author: Stephan Pötschner
 date: 2016-07-13 12:00
+displayimage: False
 ---
-# Meine Aufgaben
+# Meine Highlights
 
-* Führen vom rudimentären Prototypen zur Produktreife
-    * Einführen eines Entwicklungsprozesses
-    * Planen, Umsetzen und Dokumentieren der verteilte Architektur
-      (WLAN-Router und Web-Applikation)
-    * Koordination Testprozess
-* technische Projektleitung und Beratung
-* Führung und Mentoring des Entwicklungs-Teams (3 Entwickler)
-    * 1 Entwickler aus Polen
-    * 2 Entwickler in Wien
-* Unterstützung in der Konzeption/Sprint-Planning
-* Aktive Entwicklung
-    * Django Entwicklung
-    * Frontend Entwicklung (mobile-first)
+* Vom Prototypen **zum Produkt:** Planen und Umsetzen der Architektur (WLAN-Router und Web-Applikation)
+* Technische Projektleitung und Führung des Entwicklungs-Teams (3 Entwickler)
+* Software-Entwicklung (**Django-** und Frontendentwicklung)
 
 # Projektbeschreibung
 
-tigaeleven bringt Restaurants und Café's über aktives Einfordern von positiven
-Internet-Bewertungen (e.g. Tripadvisor) mehr Endkunden.
+tigaeleven bringt Restaurants und Café's positive Internet-Bewertungen (e.g. Tripadvisor) und damit mehr Neukunden.
 
-Dies wird durch eine WLAN-Lösung erreicht, bei der sich Restaurant-Besucher
-anmelden müssen und nach 2 Tagen automatisiert um eine Bewertung gebeten werden.
-So konvertieren bestehende Kunden in zukünftig mehr Kunden.
+Gäste im Restaurant nutzen die tigaeleven WLAN-Lösung und werden – nach 2 Tagen automatisiert – um eine Bewertung gebeten.
+Bestehende Gesäte konvertieren damit zukünftige Neukunden.
 
 # Team
 
 * Georg Parth (Gründer)
+* Martin Stemeseder (Gründer)
 * Pawel Bernat
 * Philipp DeCol

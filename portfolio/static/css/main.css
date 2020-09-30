@@ -161,9 +161,6 @@ h3 a, h3 a:hover { color: inherit; }
 .portrait { height: 270px; text-align: center; }
 
 .main-column { padding-bottom: 8rem; }
-@media (min-width: 768px) {
-  .main-column { border-right: 1px solid #ddd; }
-}
 .sidebar { padding-bottom: 8rem; }
 
 .main-column h1,

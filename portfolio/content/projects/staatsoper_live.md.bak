@@ -6,8 +6,9 @@ duration: Juni 2013 – Oktober 2013
 tags: [ Video, Streaming, Django, ]
 author: Stephan Pötschner
 date: 2013-10-01 12:00
+displayimage: False
 ---
-# Meine Aufgaben
+# Meine Highlights
 
 * Planung und Setup der Infrastruktur
 * Spezifikation für Hosting-Anbieter
@@ -16,8 +17,8 @@ date: 2013-10-01 12:00
 # Projektbeschreibung
 
 Seit Oktober 2013 bietet die Wiener Staatsoper ausgewählte Vorstellungen
-als kostenpflichtigen Live-Stream im Internet an und stellt somit das Angebot des renommierten
-österreichischen Kulturhaus einem internationalen Publikum in Full HD zur Verfügung.
+als kostenpflichtigen Live-Stream im Internet an und stellt das Angebot des renommierten
+österreichischen Kulturhaus einem internationalen Publikum zur Verfügung.
 
 Durch die Kooperation mit Samsung kann das Streaming-Angebot auch direkt über
 die Smart-TV App auf Samsung TV-Geräten in Anspruch genommen werden.
