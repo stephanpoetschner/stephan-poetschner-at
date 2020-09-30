@@ -8,12 +8,6 @@ author: Stephan Pötschner
 date: 2016-07-13 12:00
 displayimage: False
 ---
-# Meine Highlights
-
-* Vom Prototypen **zum Produkt:** 
-  Planen und Umsetzen der Architektur (WLAN-Router und Web-Applikation)
-* Technische Projektleitung und Führung des Entwicklungsteams (3 Entwickler)
-* **Django-** und Frontendentwicklung
 
 # Projektbeschreibung
 
@@ -21,6 +15,13 @@ tigaeleven bringt Restaurants und Café's positive Internet-Bewertungen (e.g. Tr
 
 Gäste im Restaurant nutzen die tigaeleven WLAN-Lösung und werden – nach 2 Tagen automatisiert – um eine Bewertung gebeten.
 Bestehende Gesäte konvertieren damit zukünftige Neukunden.
+
+# Meine Highlights
+
+* Vom Prototypen **zum Produkt:** 
+  Planen und Umsetzen der Architektur (WLAN-Router und Web-Applikation)
+* Technische Projektleitung und Führung des Entwicklungsteams (3 Entwickler)
+* **Django-** und Frontendentwicklung
 
 # Team
 

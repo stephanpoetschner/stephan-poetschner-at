@@ -8,24 +8,29 @@ author: Stephan Pötschner
 date: 2016-02-01 12:00
 displayimage: False
 ---
-# Meine Highlights
-
-* Anpassung der internationalen Jobplatform an österreichische Bedürfnisse
-    * Einarbeiten in bestehende Codebasis (jahrelange Entwicklung)
-    * Konzept für zukünftige österreichische Weiterentwicklung
-* Aufbau eines Entwicklungsteams in Österreich (Frontend, System-Administration)
-* Koordination mit dem Entwicklungsteam in Barcelona
-  (zuständig für infopraca.pl und careesma.in)
-* Django Entwicklung
 
 # Projektbeschreibung
 
-Mehr als 200.000 Besucher suchen monatlich auf careesma.at nach neuen Jobs.
+Mehr als 200.000 Besucher suchen monatlich auf careesma.at nach neuen Jobs. 
+Das Entwicklungsteam sitzt in Barcelona und entwickelt die Jobplattform für Österreich, Polen und Indien.
+Da Österreich der kleinste Markt ist, fällt es dem österreichischen Team schwierig den lokalen Änderungswünschen 
+Gewicht zu verleihen.
 
-Die Platform wurde von einem Entwicklungsteam in Barcelona betrieben – gemeinsam mit einer polnischen und indischen Jobplatform.
 Um auf die besonderen Anforderungen des österreichischen Marktes besser
-reagieren zu können, baut careesma.at ein eigenes technisches Team auf.
-Dabei habe ich die technische Leitung sowie die Umsetzung für das Backend übernommen.
+reagieren zu können, will careesma.at ein eigenes Entwicklerteam aufbauen.
+
+Gemeinsam mit dem technischen Leiter in Barcelona und dem österreichischen Geschäftsführer entwerfen wir einen Plan 
+und übernehmen die Weiterentwicklung.
+
+# Meine Highlights
+
+* Strategie zur Anpassung der internationalen Jobplatform an österreichische Anforderungen
+* Konzept für zukünftige Weiterentwicklungen
+* Einarbeiten in große, bestehende Codebasis
+* Aufbau eines Entwicklungsteams in Österreich (Frontend, System-Administration)
+* Koordination mit dem Entwicklungsteam in Barcelona
+ (zuständig für infopraca.pl und careesma.in)
+* Django Entwicklung
 
 # Team
 

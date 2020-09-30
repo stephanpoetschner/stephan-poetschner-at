@@ -8,23 +8,25 @@ author: Stephan Pötschner
 date: 2020-09-01 12:00
 displayimage: False
 ---
-# Meine Highlights
-
-* Mitentwicklung vom Prototypen **zum Produkt**
-    * Entwicklung eines Minimal Viable Products
-    * Erreichung Product/Market-Fit und erste Kunden
-    * Unterstützung beim weiteren Wachstum
-* Unterstützung des Teams als erfahrener Pythonentwickler
-* Planung und Umsetzung zahlreicher Kernkomponenten
 
 # Projektbeschreibung
 
-Mehr als 15.000 Subdomains werden laufend von Offensity gescannt. Der Kundenstamm in Österreich und Deutschland wächst stetig und beinhaltet viele bekannte und renommierte Unternehmen.
+Ein Gründerteam aus Securityexperten und Hackern – ohne Softwareentwicklungserfahrung. Budget für mehrere Entwickler. 1 Jahr Zeit.
+Die Idee Schwachstellenscanner radikal zu vereinfachen und für jeden nutzbar zu machen.
 
 Was ursprünglich in einem Innovationsprogramm der A1 Telekom gestartet wurde, ist mittlerweile zu einem beliebten Security Produkt geworden.
-Der Fokus ist weiterhin ein sehr einfach zu bedienendes Produkt zu schaffen, das verlässlich Sicherheitslücken erkennt.
+Der Fokus ist weiterhin ein sehr einfach zu bedienendes Produkt zu schaffen,
+ das verlässlich Sicherheitslücken erkennt und mit wenig Aufwand IT Infrastruktur 
+ absichern lässt.
  
-Unternehmen sollen mit wenig Aufwand ihre Infrastruktur absichern können.
+Mittlerweile werden mehr als 15.000 Subdomains von Offensity gescannt.
+
+
+# Meine Highlights
+
+* Mitentwicklung vom Prototypen **zum Produkt**
+* Unterstützung des Teams als erfahrener Pythonentwickler
+* Planung und Umsetzung zahlreicher Kernkomponenten
 
 
 # Gründungsteam
