@@ -3,7 +3,7 @@ slug: tigaeleven
 externalurl: http://tigaeleven.com/
 subline: für wifitiger GmbH
 duration: November 2015 – Dezember 2016
-tags: [ Startup, Django, Heroku, Coova-Chilli, OpenWRT, PostgreSQL, jQuery, Scrum, ]
+tags: [ Startup, Django, Coova-Chilli, OpenWRT, PostgreSQL ]
 author: Stephan Pötschner
 date: 2016-07-13 12:00
 displayimage: False
