@@ -13,23 +13,20 @@ displayimage: False
 
 Mehr als 200.000 Besucher suchen monatlich auf careesma.at nach neuen Jobs. 
 Das Entwicklungsteam sitzt in Barcelona und entwickelt die Jobplattform für Österreich, Polen und Indien.
-Da Österreich der kleinste Markt ist, fällt es dem österreichischen Team schwierig den lokalen Änderungswünschen 
-Gewicht zu verleihen.
+Da Österreich der kleinste Markt ist, wird den österreichischen Änderungswünschen keine Priorität eingeräumt.
 
 Um auf die besonderen Anforderungen des österreichischen Marktes besser
 reagieren zu können, will careesma.at ein eigenes Entwicklerteam aufbauen.
 
-Gemeinsam mit dem technischen Leiter in Barcelona und dem österreichischen Geschäftsführer entwerfen wir einen Plan 
-und übernehmen die Weiterentwicklung.
+Gemeinsam mit dem österreichischen Geschäftsführer und dem technischen Leiter in Barcelona entwerfen wir einen Plan, 
+beginnen ein Team aufzubauen und die Weiterentwicklung zu übernehmen.
 
 # Meine Highlights
 
-* Strategie zur Anpassung der internationalen Jobplatform an österreichische Anforderungen
-* Konzept für zukünftige Weiterentwicklungen
+* Konzept für zukünftige Weiterentwicklungen einer österreichischen Jobplattform
 * Einarbeiten in große, bestehende Codebasis
 * Aufbau eines Entwicklungsteams in Österreich (Frontend, System-Administration)
-* Koordination mit dem Entwicklungsteam in Barcelona
- (zuständig für infopraca.pl und careesma.in)
+* Koordination mit dem Entwicklungsteam in Barcelona (zuständig für infopraca.pl und careesma.in)
 * Django Entwicklung
 
 # Team
