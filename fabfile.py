@@ -8,8 +8,8 @@ from fabric.contrib.project import rsync_project
 from fabric.contrib.console import confirm
 
 
-env.hosts = [ "poetschner@poetschner.webfactional.com", ]
-env.root = "/home/poetschner/webapps/stephan_poetschner/"
+env.hosts = [ "poetschner", ]
+env.root = "/home/stephan/apps/stephan_poetschner_at/"
 env.PROJECT_ROOT = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     ""
