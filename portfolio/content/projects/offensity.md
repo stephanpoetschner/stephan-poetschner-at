@@ -19,7 +19,7 @@ Der Fokus ist weiterhin ein sehr einfach zu bedienendes Produkt zu schaffen,
  das verlässlich Sicherheitslücken erkennt und mit wenig Aufwand IT Infrastruktur 
  absichern lässt.
  
-Mittlerweile werden mehr als 15.000 Subdomains von Offensity gescannt.
+Mittlerweile werden mehr als 25.000 Subdomains von Offensity gescannt.
 
 
 # Meine Highlights
