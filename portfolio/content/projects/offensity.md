@@ -1,5 +1,5 @@
-title: Vulnerability Scanner „Offensity”
-slug: careesma
+title: Schwachstellenscanner „Offensity”
+slug: offensity
 externalurl: https://www.offensity.com/
 subline: für A1 Digital
 duration: Dezember 2017 –  heute
@@ -11,14 +11,11 @@ displayimage: False
 
 # Projektbeschreibung
 
-Ein Gründerteam aus Securityexperten und Hackern – ohne Softwareentwicklungserfahrung. Budget für mehrere Entwickler. 1 Jahr Zeit.
-Die Idee Schwachstellenscanner radikal zu vereinfachen und für jeden nutzbar zu machen.
+Ein Gründerteam ohne Softwareentwicklungserfahrung: Securityexperten und Hacker. Budget für mehrere Entwickler. Ein Jahr Zeit.
+Die Idee: Schwachstellenscanner radikal zu vereinfachen und für jeden nutzbar zu machen.
 
-Was ursprünglich in einem Innovationsprogramm der A1 Telekom gestartet wurde, ist mittlerweile zu einem beliebten Security Produkt geworden.
-Der Fokus ist weiterhin ein sehr einfach zu bedienendes Produkt zu schaffen,
- das verlässlich Sicherheitslücken erkennt und mit wenig Aufwand IT Infrastruktur 
- absichern lässt.
- 
+Was über ein Innovationsprogramm der A1 Telekom startete, ist zu einem beliebten Security Produkt geworden. Der Fokus bleibt ein einfach zu bedienendes Produkt, das verlässlich Sicherheitslücken erkennt und mit wenig Aufwand IT Infrastruktur absichern lässt.
+
 Mittlerweile werden mehr als 25.000 Subdomains von Offensity gescannt.
 
 
