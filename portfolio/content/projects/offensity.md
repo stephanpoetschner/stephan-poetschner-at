@@ -2,7 +2,7 @@ title: Schwachstellenscanner „Offensity”
 slug: offensity
 externalurl: https://www.offensity.com/
 subline: für A1 Digital
-duration: Dezember 2017 –  heute
+duration: Dezember 2017 – Juli 2022 
 tags: [ Django, Docker, Wagtail, VueJs ]
 author: Stephan Pötschner
 date: 2020-09-01 12:00
