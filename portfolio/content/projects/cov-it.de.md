@@ -11,9 +11,9 @@ displayimage: False
 
 # Projektbeschreibung
 
-Der Covid Virus hat unsere Gesellschaft ab 2020 vor enormer Herausforderungen gestellt. Auch Verwaltungen weltweit waren plötzlich unter dem Druck Tausende von Krankheitsfällen kurzfristig zu bearbeiten und nachzuverfolgen.
+Der Covid Virus hat unsere Gesellschaft ab 2020 vor enorme Herausforderungen gestellt. Auch Verwaltungen weltweit waren plötzlich unter dem Druck, Tausende von Krankheitsfällen kurzfristig zu bearbeiten und nachzuverfolgen.
 
-Covid IT Solutions GmbH hilft Prozesse im deutschen Gesundheitssystem zu digitalisieren und zu beschleunigen. Von der Fallunterstuchung, zur Kontakt-, dem Bescheinigungsversand, über viele weitere Anwendungsfälle.
+Covid IT Solutions GmbH hilft Prozesse im deutschen Gesundheitssystem zu digitalisieren und zu beschleunigen: von der Falluntersuchung, zur Kontakt-, dem Versand von Bescheinigungen, über viele weitere Anwendungsfälle.
 
 
 * 30 Gesundheitsämter nutzen Produkt
@@ -25,11 +25,11 @@ Covid IT Solutions GmbH hilft Prozesse im deutschen Gesundheitssystem zu digital
 # Meine Highlights
 
 * **Weiterentwicklung** am bestehenden Produkt 
-* Erweiterung des Portfolios mit neuen Prototypen
-* Unterstützung beim Teamaufbau (Automatische Deployments, Continuous Integration, Scrum Retros und Reviews)
+* Erweiterung des Portfolios mit neuen **Prototypen**
+* Unterstützung bei **Weiterentwicklung des Entwicklungsteams** (Automatische Deployments, Scrum Retros und Reviews, automatisierte Tests)
 
 
 # Technisches Team
 
-* Mäx Blauth (Gründer und CTO)
-* Yassine Dhane (Remote)
+* Mäx Blauth (Gründer und CTO, remote)
+* Yassine Dhane (remote)

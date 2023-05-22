@@ -18,19 +18,18 @@ Da Österreich der kleinste Markt ist, wird den österreichischen Änderungswün
 Um auf die besonderen Anforderungen des österreichischen Marktes besser
 reagieren zu können, will careesma.at ein eigenes Entwicklerteam aufbauen.
 
-Gemeinsam mit dem österreichischen Geschäftsführer und dem technischen Leiter in Barcelona entwerfen wir einen Plan, 
-beginnen ein Team aufzubauen und die Weiterentwicklung zu übernehmen.
+Gemeinsam mit dem österreichischen Geschäftsführer und dem technischen Leiter in Barcelona beginnen wir ein Team aufzubauen und die Weiterentwicklung lokal zu übernehmen.
 
 # Meine Highlights
 
-* Konzept für zukünftige Weiterentwicklungen einer österreichischen Jobplattform
-* Einarbeiten in große, bestehende Codebasis
+* Konzept für Weiterentwicklungen einer österreichischen Jobplattform
+* Einarbeiten in bestehende, mehrjährige Codebasis
 * Aufbau eines Entwicklungsteams in Österreich (Frontend, System-Administration)
 * Koordination mit dem Entwicklungsteam in Barcelona (zuständig für infopraca.pl und careesma.in)
-* Django Entwicklung
+* Aktive Django-Entwicklung
 
 # Team
 
 * Wolfgang Kowatsch (Geschäftsführer)
-* Javier Lopez (CTO Careesma Labs, Barcelona)
+* Javier Lopez (CTO Careesma Labs, remote)
 * Mark Burrett

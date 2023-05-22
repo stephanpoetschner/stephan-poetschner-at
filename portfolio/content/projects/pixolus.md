@@ -23,9 +23,9 @@ der neuen Diagnosemethode beweisen.
 # Meine Highlights
 
 * Mitentwicklung an einem Prototypen eines medizinischen Geräts 
-* Reine Remote-Zusammenarbeit mit dem Team aus Köln 
+* Remote-Zusammenarbeit mit dem Team aus Köln 
 * Django Entwicklung
 
 # Team
 
-* Mark Asbach
+* Mark Asbach (remote)
