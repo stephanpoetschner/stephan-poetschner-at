@@ -13,11 +13,11 @@ displayimage: False
 
 Der Covid Virus hat unsere Gesellschaft ab 2020 vor enorme Herausforderungen gestellt. Auch Verwaltungen weltweit waren plötzlich unter dem Druck, Tausende von Krankheitsfällen kurzfristig zu bearbeiten und nachzuverfolgen.
 
-Covid IT Solutions GmbH hilft Prozesse im deutschen Gesundheitssystem zu digitalisieren und zu beschleunigen: von der Falluntersuchung, zur Kontakt-, dem Versand von Bescheinigungen, über viele weitere Anwendungsfälle.
+Covid IT Solutions GmbH hilft Prozesse im deutschen Gesundheitssystem zu digitalisieren und zu beschleunigen: von der Falluntersuchung über die Kontaktnachverfolgung und den Versand von Bescheinigungen bis zu vielen weiteren Anwendungsfälle.
 
 
 * 30 Gesundheitsämter nutzen Produkt
-* 30.000 Deutschlandweit bearbeitete Fälle/Tag
+* 30.000 deutschlandweit bearbeitete Fälle/Tag
 * 4.500.000 insgesamt bearbeitete Aufgaben
 * 95% der Bearbeitungszeit pro Fall eingespart
 

@@ -13,7 +13,7 @@ displayimage: False
 
 Die Gründer suchen nach einem Entwicklerteam, das die eigene Idee technisch umsetzen kann:
 WLAN-Nutzer sollen im Café oder Restaurant erst nach Registrierung am Webportal kostenlosen Internetzugang bekommen. 
-Nach zwei Tagen werden Gäste automatisiert um eine positive Internetbewertung (e.g. Tripadvisor) gebeten.
+Nach zwei Tagen werden Gäste automatisiert um eine positive Internetbewertung (z. B. Tripadvisor) gebeten.
 Bestehende Gäste konvertieren damit zukünftige Neukunden.
 
 Handelsübliche WLAN-Router arbeiten mit dem tigaeleven-Webportal zusammen.
