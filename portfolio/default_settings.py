@@ -33,6 +33,7 @@ SITE = {
     'AUTHOR_AUTHORITY': u'BH Tulln',
     'AUTHOR_CHAMBER': u'WKO NÖ, FG UBIT',
     'SERVER_LOG_DAYS': u'52',
+    'HOSTER': u'Opalstack, Server in Frankfurt (Deutschland)',
 
     'GOOGLE_WEBMASTERS': '2Ek3OkuniHOEDKf3eXvXmJiyDkBGcncL05RNt3eca34',
 
