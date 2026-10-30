@@ -1,4 +1,5 @@
 # coding: utf-8
+import hashlib
 import os
 from flask import Flask, render_template, make_response, url_for, redirect
 
@@ -19,6 +20,14 @@ app.config.update(
 
 app.config.from_object('portfolio.default_settings')
 app.reader = ContentFolder(app.config['CONTENT_FOLDER'])
+
+@app.template_global()
+def static_url(filename):
+    """Static URL with a content hash, so browsers refetch changed files."""
+    with open(os.path.join(app.static_folder, filename), 'rb') as f:
+        digest = hashlib.md5(f.read()).hexdigest()[:8]
+    return url_for('static', filename=filename, v=digest)
+
 
 def annotate_items(d):
     return dict( (k, v % d) for (k, v) in d.items() )
