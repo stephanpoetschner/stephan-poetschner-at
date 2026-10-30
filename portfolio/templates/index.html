@@ -289,40 +289,46 @@
 {% block footer %}
   <footer class="main-footer">
     <div class="container">
-      <section class="footer-contact">
-        <h2>Projekt besprechen?</h2>
-        <p>Schreib mir oder ruf an – ich melde mich meist am selben Tag.</p>
-        <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>
-        <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
-      </section><!-- .footer-contact -->
+      <div class="footer-grid">
+        <section class="footer-contact">
+          <h2>Projekt besprechen?</h2>
+          <p>Schreib mir oder ruf an – ich melde mich meist am selben Tag.</p>
+          <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>
+          <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
+        </section><!-- .footer-contact -->
 
-      <section class="footer-legal">
-        <address id="impressum">
-          <strong>{{ AUTHOR_LEGALNAME }}</strong> · {{ AUTHOR_TRADE }}<br>
+        <address class="footer-imprint" id="impressum">
+          <strong>{{ AUTHOR_LEGALNAME }}</strong><br>
+          {{ AUTHOR_TRADE }}<br>
           {{ AUTHOR_STREET }}, {{ AUTHOR_CITY }}<br>
           UID {{ AUTHOR_UID }} · Gewerbebehörde {{ AUTHOR_AUTHORITY }}<br>
           Mitglied der {{ AUTHOR_CHAMBER }}<br>
           Berufsrecht: Gewerbeordnung: <a target="_blank" href="https://www.ris.bka.gv.at">www.ris.bka.gv.at</a>
-        </address>
-        <details id="datenschutz">
-          <summary>Datenschutz</summary>
-          <p>
-            Verantwortlich für diese Website ist {{ AUTHOR }}, {{ AUTHOR_STREET }}, {{ AUTHOR_CITY }},
-            <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>.
-          </p>
-          <p>
-            Beim Aufruf dieser Website speichert der Webserver technisch notwendige Daten
-            (IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browserkennung), um den sicheren Betrieb zu gewährleisten
-            (Art. 6 Abs. 1 lit. f DSGVO). Diese Daten werden nach {{ SERVER_LOG_DAYS }} Tagen gelöscht.
-            Gehostet wird die Website bei {{ HOSTER }}.
-            Es werden keine Cookies, keine Analyse-Werkzeuge und keine Dienste Dritter verwendet.
-          </p>
-          <p>
-            Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch.
-            Beschwerden können Sie bei der <a target="_blank" href="https://www.dsb.gv.at">österreichischen Datenschutzbehörde</a> einbringen.
-          </p>
-        </details>
-      </section><!-- .footer-legal -->
+        </address><!-- .footer-imprint -->
+      </div><!-- .footer-grid -->
+
+      <details class="footer-privacy" id="datenschutz">
+        <summary>Datenschutz</summary>
+        <p>
+          Diese Website verwendet keine Cookies, keine Analyse-Werkzeuge und keine Dienste Dritter.
+        </p>
+        <p>
+          Verantwortlich ist {{ AUTHOR }}, {{ AUTHOR_STREET }}, {{ AUTHOR_CITY }},
+          <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>.
+        </p>
+        <p>
+          Beim Aufruf speichert der Webserver technisch notwendige Daten (IP-Adresse, Datum und Uhrzeit,
+          aufgerufene Seite, Browserkennung), um den sicheren Betrieb zu gewährleisten
+          (Art. 6 Abs. 1 lit. f DSGVO). Diese Daten werden nach {{ SERVER_LOG_DAYS }} Tagen gelöscht.
+        </p>
+        <p>
+          Gehostet wird die Website bei {{ HOSTER }}.
+        </p>
+        <p>
+          Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch.
+          Beschwerden können Sie bei der <a target="_blank" href="https://www.dsb.gv.at">österreichischen Datenschutzbehörde</a> einbringen.
+        </p>
+      </details><!-- .footer-privacy -->
     </div><!-- .container -->
   </footer><!-- .main-footer -->
 {% endblock %}

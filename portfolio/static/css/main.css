@@ -221,15 +221,23 @@ img[src^="http://placehold.it/"] {
 }
 
 
-.main-footer { background: #222; color: #ccc; padding: 4rem 1rem 3rem; }
-.main-footer a { color: #fff; }
+.main-footer { background: #222; color: #ccc; padding: 4rem 1.5rem 3rem; }
+.main-footer a { color: #fff; text-decoration: underline; text-decoration-color: #777; text-underline-offset: .2em; }
+.main-footer a:hover, .main-footer a:focus { color: #fff; text-decoration-color: #fff; }
+
+.footer-grid { display: grid; gap: 3rem; }
+@media (min-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; align-items: end; }
+}
 
 .footer-contact h2 { color: #fff; margin: 0 0 .5rem; }
 .footer-contact p { margin: 0 0 1.5rem; }
-.footer-contact a { display: block; font-size: clamp(1.125em, 5vw, 1.5em); line-height: 1.6; overflow-wrap: anywhere; }
+.footer-contact a { display: block; width: fit-content; font-size: clamp(1.125em, 5vw, 1.5em); line-height: 1.6; overflow-wrap: anywhere; }
 
-.footer-legal { border-top: 1px solid #444; margin-top: 3rem; padding-top: 1.5rem; font-size: .875em; line-height: 1.7; }
-.footer-legal address { margin: 0 0 1rem; }
-.footer-legal a { text-decoration: underline; }
-.footer-legal summary { display: list-item; cursor: pointer; color: #fff; }
-.footer-legal details p { max-width: 65ch; margin: .75em 0 0; }
+.footer-imprint, .footer-privacy { font-size: .875em; line-height: 1.7; }
+.footer-imprint { font-style: normal; margin: 0; }
+.footer-imprint strong { color: #fff; }
+
+.footer-privacy { border-top: 1px solid #444; margin-top: 3rem; padding-top: 1.5rem; }
+.footer-privacy summary { display: list-item; cursor: pointer; color: #fff; }
+.footer-privacy p { max-width: 65ch; margin: .75em 0 0; }
