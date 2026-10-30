@@ -4,10 +4,12 @@
 * see http://flask.readthedocs.org for Flask-related documentation.
 * see https://pythonhosted.org/Frozen-Flask/ for Frozen-Flask-related documentation.
 
+Requires [uv](https://docs.astral.sh/uv/); it installs Python and dependencies on first run.
+
 ## Regenerate site
 
-    ./freeze.py
-    fab deploy
+    ./freeze.py     # writes ./build/
+    ./deploy.sh     # freeze + rsync to server
 
 ## Run debug server
 

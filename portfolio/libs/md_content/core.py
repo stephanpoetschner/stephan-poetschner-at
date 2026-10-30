@@ -26,7 +26,7 @@ class ContentFile(object):
         self.name = filename
 
         self.meta = dict()
-        self.content = u""
+        self.content = ""
 
         self.read()
 
@@ -34,7 +34,7 @@ class ContentFile(object):
         name, _ = os.path.splitext(os.path.basename(self._path))
         return "<%s (%s)>" % ( self.__class__.__name__, name, )
 
-    def __unicode__(self):
+    def __str__(self):
         return self.content
 
     def __getitem__(self, key):
@@ -70,40 +70,40 @@ class ContentFile(object):
 
     def annotate_meta(self, meta):
         if 'date' in meta:
-            meta['date'] = date_parser.parse(meta['date'])
+            meta['date'] = date_parser.parse(str(meta['date']))
         return meta
 
     def parse(self, contents):
         raw_metadata, md = self.split(contents)
 
         try:
-            self.meta = dict(yaml.load(raw_metadata))
+            self.meta = dict(yaml.safe_load(raw_metadata))
         except yaml.scanner.ScannerError:
             raise MetadataError(self._path)
 
         self.meta = self.annotate_meta(self.meta)
 
-        self.content = self._md.convert(md.decode('utf-8'))
+        self.content = self._md.reset().convert(md)
 
         return self.meta, self.content
 
 
     def read(self):
-        with open(self._path, 'r') as f:
+        with open(self._path, encoding='utf-8') as f:
             metadata, content = self.parse(f.read().strip())
             return metadata, content
 
 
 
 class ContentIterator(object):
-    def __init__(self, items, cmp=None, key=None, reverse=False):
-        self.items = sorted(items, cmp, key, reverse)
+    def __init__(self, items, key=None, reverse=False):
+        self.items = sorted(items, key=key, reverse=reverse)
         self.i = 0
 
     def __iter__(self):
         return self
 
-    def next(self):
+    def __next__(self):
         if self.i >= len(self.items):
             raise StopIteration
 
@@ -113,7 +113,7 @@ class ContentIterator(object):
         return item
 
     def sorted(self, sort_key):
-        return ContentIterator(self, items, sort_key)
+        return ContentIterator(self.items, key=sort_key)
 
 
 
@@ -180,5 +180,5 @@ class ContentFolder(object):
     def __iter__(self):
         return ContentIterator(self._files)
 
-    def sort(self, cmp=None, key=None, reverse=False):
-        return ContentIterator(self._files, cmp, key, reverse)
+    def sort(self, key=None, reverse=False):
+        return ContentIterator(self._files, key=key, reverse=reverse)

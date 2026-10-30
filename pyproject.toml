@@ -1,0 +1,15 @@
+[project]
+name = "stephan-poetschner-at"
+version = "1.0.0"
+description = "Static portfolio site stephan-poetschner.at"
+requires-python = ">=3.13"
+dependencies = [
+    "flask>=3.1",
+    "frozen-flask>=1.0",
+    "markdown>=3.7",
+    "python-dateutil>=2.9",
+    "pyyaml>=6.0",
+]
+
+[tool.uv]
+package = false

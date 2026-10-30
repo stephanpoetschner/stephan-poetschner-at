@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env -S uv run
 # coding: utf-8
 
 import os
@@ -14,4 +14,4 @@ if __name__ == '__main__':
     from portfolio.application import app
 
     app.debug = True
-    app.run()
+    app.run(port=8000)
