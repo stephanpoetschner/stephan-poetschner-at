@@ -39,7 +39,5 @@ def index():
     context = annotate_items(site_vars)
 
     context['projects'] = app.reader.projects.sort(key=lambda x: x['date'], reverse=True)
-    context['events'] = app.reader.events.sort(key=lambda x: x['date'], reverse=True)
-    context['skills'] = app.reader.skills.sort(key=lambda x: x['order'])
 
     return render_template('index.html', **context)

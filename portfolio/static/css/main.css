@@ -4,8 +4,29 @@
    Author's custom styles
    Palette see: http://0to255.com/436db4
    ========================================================================== */
-.container {
-   padding: 0;
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+p { margin: 0 0 1rem; }
+ul { margin: 0 0 1rem; }
+img { vertical-align: middle; }
+a { color: #337ab7; text-decoration: none; }
+a:hover, a:focus { color: #23527c; text-decoration: underline; }
+hr { margin: 0; border: 0; border-top: 1px solid #eee; }
+
+/* Spacing scale: .5 / 1 / 1.5 / 2.5 / 3 rem. The container padding is the
+   page's single left edge. */
+.container { max-width: 1170px; margin-inline: auto; padding-inline: 1.25rem; }
+
+/* Two-column layout from 992px: main content left, contact/portrait right. */
+@media (min-width: 992px) {
+  .row { display: grid; grid-template-columns: 2fr 1fr; column-gap: 2rem; }
+  .col-full { grid-column: 1 / -1; }
+  .col-side-only { grid-column: 2; }
+}
+@media (max-width: 991px) {
+  .desktop-only { display: none; }
 }
 
 body {
@@ -44,7 +65,7 @@ h6 small {
 h1,
 h2,
 h3 {
-  line-height: 1em;
+  line-height: 1.2;
 }
 
 h1 {
@@ -76,47 +97,17 @@ h6 {
 
 @font-face {
    font-family: 'icomoon';
-   src:url('../fonts/icomoon.eot');
-   src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.woff') format('woff'),
-      url('../fonts/icomoon.ttf') format('truetype'),
-      url('../fonts/icomoon.svg#icomoon') format('svg');
+   src: url('../fonts/icomoon.woff') format('woff');
    font-weight: normal;
    font-style: normal;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
+.icomoon-tag:before, .icomoon-mail:before {
    font-family: 'icomoon';
-   content: attr(data-icon);
-   speak: none;
-   font-weight: normal;
-   line-height: 1;
-   -webkit-font-smoothing: antialiased;
-}
-
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"]:before {
-*/
-.icomoon-at:before, .icomoon-iphone:before, .icomoon-github:before, .icomoon-tag:before, .icomoon-mail:before {
-   font-family: 'icomoon';
-   speak: none;
    font-style: normal;
    font-weight: normal;
    line-height: 1;
    -webkit-font-smoothing: antialiased;
-}
-.icomoon-at:before {
-   content: "\e000";
-}
-.icomoon-iphone:before {
-   content: "\e001";
-}
-.icomoon-github:before {
-   content: "\e002";
 }
 .icomoon-tag:before {
    content: "\e003";
@@ -125,103 +116,81 @@ you can use the generic selector below, but it's slower:
    content: "\e004";
 }
 
-
 .main-header a, .main-header a:hover,
 .main-footer a, .main-footer a:hover,
 h1 a, h1 a:hover,
 h2 a, h2 a:hover,
 h3 a, h3 a:hover { color: inherit; }
 
-
 .main-header, .main-footer { color: #bbb; }
 .main-header { padding-top: 2em; }
 .main-header h1,
 .main-header h2,
-.main-header h3 { padding:.25rem 1rem; }
+.main-header h3 { padding: 0; margin: 0 0 .5rem; }
 
-.main-header .name { color:#000; margin-top: 0; text-transform: uppercase; }
-.main-header .profession { color:#000; padding: 1rem 1rem .5rem; margin-top: 0; text-align: right; }
-.main-header .claim { margin-top: 0; padding: .375rem 1rem; }
-.main-header .address { margin: 0; text-align: right; }
-.main-header .contact { padding: 0 1rem .25rem 0; margin-top: 0; text-align: right; }
+.main-header .name { color:#000; text-transform: uppercase; }
+.main-header .profession { color:#000; text-align: right; }
+.main-header .address,
+.main-header .contact { text-align: right; line-height: 1.5; }
 
-
-
-.portrait { height: 270px; text-align: center; }
-
-.main-column { padding-bottom: 8rem; }
-.sidebar { padding-bottom: 8rem; }
-
-.main-column h1,
-.main-column h2,
-.main-column h3 { padding: 0 1rem; }
+.portrait { text-align: center; }
+.portrait img { max-width: 100%; }
 
 .main-column h1 { text-align: right; }
 
 .main-copy h1 { text-align: left;}
 .headlines h3 { color: #bbb; font-weight: 500; font-size: 1.5em; font-style: italic; }
 
-.intro { padding: 3rem 1rem 3rem; line-height: 1.6em; font-size: 1em; }
-.intro .intro-copy { margin-bottom: 1rem; font-size: 1.25em; line-height: 1.5em;}
-.intro .intro-copy li { line-height: inherit; margin-top: .5em; }
+/* Sections pad 2.5rem each side, so neighbours sit 5rem apart with the <hr> in the middle. */
+.intro, .testimonials, .projects { padding-block: 2.5rem; }
+.intro h2, .testimonials h2, .projects .section-title { margin: 0 0 1rem; }
+.intro { line-height: 1.6em; font-size: 1em; }
+.intro .intro-copy { max-width: 70ch; font-size: 1.25em; line-height: 1.5em;}
+.intro .intro-copy p { margin: 0 0 1rem; }
+.intro .intro-copy li { line-height: inherit; margin-top: .75rem; }
 
-.testimonials { padding: 3rem 1rem 3rem; line-height: 1.6em; font-size: 1em; }
-.testimonials .testimonial { margin-bottom: 8rem; font-size: 1.25em; line-height: 1.5em;}
+.testimonials { line-height: 1.6em; font-size: 1em; }
+.testimonials .testimonial { display: flow-root; margin-bottom: 3rem; font-size: 1.25em; line-height: 1.5em;}
 .testimonials .testimonial:last-child { margin-bottom: 0; }
-.testimonials .testimonial li { line-height: inherit; margin-top: .5em; }
 .testimonial-icon { float: left; }
-.testimonial-cite { display: block; margin-left: 3em; }
-.testimonial-author { color: #bbb; margin-top: .5em; }
+.testimonial-cite { display: block; margin-left: 3rem; max-width: 70ch; }
+.testimonial-author { color: #bbb; margin: .5rem 0 0 3rem; }
+/* Hang the quote icon in the margin so the quote text keeps the page's left edge. */
+@media (min-width: 768px) {
+  .testimonial-icon { margin-left: -3rem; }
+  .testimonial-cite, .testimonial-author { margin-left: 0; }
+}
 
-.contact-claim { text-align: center; }
-.contact-claim a.email { color: #fff; background: #e74c3c; display: block; text-transform: uppercase; font-weight: 500; margin-right:1em; padding: 0.5em;
+.contact-claim { text-align: center; margin-top: 1rem; }
+.contact-claim a.email { color: #fff; background: #e74c3c; display: block; text-transform: uppercase; font-weight: 500; padding: .5rem;
    border-radius: 3px;
-   -webkit-border-radius: 3px;
-   -moz-border-radius: 3px;
 }
 .contact-claim a.email:hover { text-decoration: inherit; background: #b82617; }
-.socialmedia { text-align: center; }
+.socialmedia { text-align: center; margin: .5rem 0 2.5rem; }
 
-.projects .section-title { margin-bottom: .75em; }
-.project { margin-bottom: 8em; }
+.project { margin-bottom: 3rem; }
 .project:last-child { margin-bottom: 0; }
 .project .headlines h2:first-child { margin-top: 0; }
-.project .preview { background: #363639; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #fff; margin-left:0; }
-.project .preview .col1 { padding: 1em 0; margin-left:0  ; }
-.project .techcloud { border-bottom: 5px solid #2b2b2e; padding-bottom: .75em; padding-right:1rem; margin-bottom: .75em; margin-left:20px; }
-.project .date { color: #bbb; font-size: .75em; font-style: italic; margin-left:20px; text-align: right; padding-right:1rem; }
-.project .project-content { margin: 1rem 2rem; }
-
-.skills, .events { margin: 0.25rem 1rem 3rem; }
-.event small { font-style: italic; }
-.event li { margin-bottom: .75em; }
+/* The bar bleeds 1rem past the text column so its text stays on the page's left edge. */
+.project .preview { background: #363639; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #fff; margin-inline: -1rem; padding: 1rem; }
+.project .techcloud { border-bottom: 5px solid #2b2b2e; padding-bottom: .75rem; margin-bottom: .75rem; }
+.project .date { color: #bbb; font-size: .75em; font-style: italic; text-align: right; }
+.project .project-content { margin: 1rem 0 1.5rem; max-width: 70ch; }
 
 .main-copy h1,
 .main-copy h2,
-.main-copy h3 { margin: 1.5rem 0 1rem; padding: 0; }
+.main-copy h3 { margin: 1.5rem 0 .5rem; padding: 0; }
 
 .main-copy h1, .skill h1 { font-size: 1.25em; text-transform: uppercase; }
 .main-copy h2, .skill h2 { font-size: 1em; }
 .main-copy h3, .skill h3 { font-size: 1em; }
 
-.main-copy ul { margin: 0 0 10px 20px; }
+.main-copy ul { margin: 0 0 1rem 1.25rem; }
 .main-copy > ul { margin-left:0; }
 
-.main-copy blockquote { border-left: 10px solid #cef; font-size: 1.125em; font-style: italic; font-weight: 300; line-height: 1.5em; margin: 20px 0 20px -32px; padding: 10px 0 10px 20px; text-transform: uppercase; }
+.main-copy blockquote { border-left: 10px solid #cef; font-size: 1.125em; font-style: italic; font-weight: 300; line-height: 1.5em; margin: 1.5rem 0; padding: .5rem 0 .5rem 1rem; text-transform: uppercase; }
 
-body.location-bg { background: url('../img/location.jpg') no-repeat center top; }
-.location-bg .portrait { visibility: hidden; }
-.location-bg .main-footer { -webkit-box-shadow: 0 0 10px #152238;
-                               -moz-box-shadow: 0 0 10px #152238;
-                                    box-shadow: 0 0 10px #152238; }
-
-img[src^="http://placehold.it/"] {
-   vertical-align: top;
-   margin-bottom: 16px;
-}
-
-
-.main-footer { background: #222; color: #ccc; padding: 4rem 1.5rem 3rem; }
+.main-footer { background: #222; color: #ccc; padding-block: 4rem 3rem; }
 .main-footer a { color: #fff; text-decoration: underline; text-decoration-color: #777; text-underline-offset: .2em; }
 .main-footer a:hover, .main-footer a:focus { color: #fff; text-decoration-color: #fff; }
 

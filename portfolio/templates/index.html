@@ -2,23 +2,23 @@
 
 {% block main %}
   <header class="main-header row">
-    <div class="col-md-8">
+    <div class="col-main">
       <h1 class="name">
         <a href="mailto:{{ AUTHOR_EMAIL }}">
           Top Django Entwickler
         </a>
       </h1>
     </div>
-    <div class="col-md-4">
+    <div class="col-side">
       <h2 class="profession
-                 hidden-xs hidden-sm">
+                 desktop-only">
         <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR }}</a>
       </h2>
     </div>
-    <div class="col-md-8">
+    <div class="col-main">
       <h2 class="claim">Expert For Hire. Perfekte Umsetzung.</h2>
     </div>
-    <div class="col-md-4">
+    <div class="col-side">
       <h3 class="address">
         <a target="_blank" href="https://goo.gl/maps/BWyXHunP5au">
         in Wien / Österreich
@@ -33,7 +33,7 @@
 
   {% block intro %}
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-main">
       <section class="intro">
         <h2>Über mich</h2>
         <div class="intro-copy">
@@ -46,7 +46,6 @@
             <li>Beim <strong>Aufbau eines neuen Entwicklerteams</strong> und der Einführung <strong>agiler</strong> Entwicklungsmethoden.</li>
             <li>Als kurzfristige Unterstützung oder beim Training des eigenen Teams.</li>
           </ul>
-          <br />
           <p>
             — Ich organisiere auch das <a target="_blank" href="http://www.meetup.com/Django-Vienna/">Django Vienna Meetup</a> (seit 2013) und halte dort auch regelmäßig Vorträge.
             Unser Meetup zählt mittlerweile mehr als 650 Django Entwickler (– hauptsächlich aus Wien).
@@ -54,8 +53,8 @@
         </div><!-- .intro-copy -->
       </section><!-- .intro -->
     </div><!-- .col-* -->
-    <div class="col-md-4 portrait
-                hidden-xs hidden-sm">
+    <div class="col-side portrait
+                desktop-only">
       <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">
         <img class="me" alt="{{ AUTHOR_EMAIL }}" title="{{ AUTHOR_EMAIL }}"
           src="{{ url_for('static', filename='assets/images/me.jpg') }}">
@@ -63,12 +62,12 @@
     </div><!-- .portrait -->
   </div><!-- .row -->
   <div class="row">
-    <div class="col-md-offset-8 col-md-4 contact-claim">
+    <div class="col-side col-side-only contact-claim">
       <a class="email icomoon-mail" href="mailto:{{ AUTHOR_EMAIL }}"> Dein Projekt besprechen!</a>
     </div><!-- .contact-claim -->
   </div><!-- .row -->
   <div class="row">
-    <div class="col-md-offset-8 col-md-4 socialmedia">
+    <div class="col-side col-side-only socialmedia">
       <a class="linkedin" href="{{ AUTHOR_LINKEDIN }}">
         oder LinkedIn-Profil ansehen
       </a>
@@ -78,7 +77,7 @@
 
   <hr />
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-full">
       <section class="intro">
         <h2>Warum mit mir arbeiten?</h2>
         <div class="intro-copy">
@@ -106,10 +105,10 @@
         </div><!-- .intro-copy -->
       </section><!-- .intro -->
     </div>
-    <div class="col-xs-12">
+    <div class="col-full">
       <section class="testimonials">
         <h2>Was andere sagen</h2>
-        <div class="testimonial clearfix h-cite">
+        <div class="testimonial h-cite">
           <div class="testimonial-icon">
             {% include 'svg/testimonial-icon.svg' %}
           </div>
@@ -130,7 +129,7 @@
           </div>
         </div><!-- .testimonial -->
 
-        <div class="testimonial clearfix h-cite">
+        <div class="testimonial h-cite">
           <div class="testimonial-icon">
             {% include 'svg/testimonial-icon.svg' %}
           </div>
@@ -150,7 +149,7 @@
           </div>
         </div><!-- .testimonial -->
 
-        <div class="testimonial clearfix h-cite">
+        <div class="testimonial h-cite">
           <div class="testimonial-icon">
             {% include 'svg/testimonial-icon.svg' %}
           </div>
@@ -175,7 +174,7 @@
   <hr />
   {% endblock %}
   <div class="row">
-    <div class="main-column col-xs-12">
+    <div class="main-column col-full">
       {% block projects %}
       <section class="projects">
         <h1 class="section-title">» hand-picked projects</h1>
@@ -211,8 +210,7 @@
             {{ project.content|safe }}
           </section><!-- .project.main-copy -->
 
-          <div class="preview row">
-            <div class="col-xs-12 col1">
+          <div class="preview">
               <div class="techcloud">
                 <span class="icomoon-tag" aria-hidden="true"></span>
                 {% for tag in project.tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor%}
@@ -220,7 +218,6 @@
               <div class="date">
                 {{ project.duration }}
               </div><!-- .date -->
-            </div>
           </div><!-- .preview -->
 
         </article><!-- .project -->
@@ -232,7 +229,7 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-full">
       <section class="intro">
         <h2>Was erfolgreiche Teams ausmacht?</h2>
         <div class="intro-copy">
