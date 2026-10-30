@@ -156,6 +156,8 @@ h3 a, h3 a:hover { color: inherit; }
 .intro .intro-copy { max-width: 70ch; font-size: 1.25em; line-height: 1.5em;}
 .intro .intro-copy p { margin: 0 0 1rem; }
 .intro .intro-copy li { line-height: inherit; margin-top: .75rem; }
+/* A divider inside a section separates sub-parts: smaller than the 5rem between sections. */
+.intro-copy hr { margin: 2rem 0; }
 
 .testimonials { line-height: 1.6em; font-size: 1em; }
 .testimonials .testimonial { display: flow-root; margin-bottom: 3rem; font-size: 1.25em; line-height: 1.5em;}
