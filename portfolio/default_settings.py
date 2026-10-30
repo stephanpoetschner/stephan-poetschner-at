@@ -29,10 +29,10 @@ SITE = {
 
     'AUTHOR_UID': u'ATU64371502',
     # Impressum (§5 ECG, §25 MedienG): wording as on the GISA extract
-    'AUTHOR_TRADE': u'[TODO: Gewerbewortlaut laut GISA]',
-    'AUTHOR_AUTHORITY': u'[TODO: Gewerbebehörde laut GISA]',
+    'AUTHOR_TRADE': u'Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik',
+    'AUTHOR_AUTHORITY': u'BH Tulln',
     'AUTHOR_CHAMBER': u'WKO NÖ, FG UBIT',
-    'SERVER_LOG_DAYS': u'[TODO: Anzahl]',
+    'SERVER_LOG_DAYS': u'52',
 
     'GOOGLE_WEBMASTERS': '2Ek3OkuniHOEDKf3eXvXmJiyDkBGcncL05RNt3eca34',
 
