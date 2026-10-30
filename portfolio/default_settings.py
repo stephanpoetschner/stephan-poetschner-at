@@ -27,8 +27,6 @@ SITE = {
 
     'AUTHOR_UID': u'ATU64371502',
 
-    'GOOGLE_ANALYTICS': 'UA-38123030-1',
-    'GOOGLE_ANALYTICS_DOMAIN': 'stephan-poetschner.at',
     'GOOGLE_WEBMASTERS': '2Ek3OkuniHOEDKf3eXvXmJiyDkBGcncL05RNt3eca34',
 
 }
