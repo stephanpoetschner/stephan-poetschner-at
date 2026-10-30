@@ -53,26 +53,22 @@
         </div><!-- .intro-copy -->
       </section><!-- .intro -->
     </div><!-- .col-* -->
-    <div class="col-side portrait
-                desktop-only">
-      <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">
-        <img class="me" alt="{{ AUTHOR_EMAIL }}" title="{{ AUTHOR_EMAIL }}"
-          src="{{ url_for('static', filename='assets/images/me.jpg') }}">
-      </a>
-    </div><!-- .portrait -->
-  </div><!-- .row -->
-  <div class="row">
-    <div class="col-side col-side-only contact-claim">
-      <a class="email icomoon-mail" href="mailto:{{ AUTHOR_EMAIL }}"> Dein Projekt besprechen!</a>
-    </div><!-- .contact-claim -->
-  </div><!-- .row -->
-  <div class="row">
-    <div class="col-side col-side-only socialmedia">
-      <a class="linkedin" href="{{ AUTHOR_LINKEDIN }}">
-        oder LinkedIn-Profil ansehen
-      </a>
-    </div><!-- .contact-claim -->
-
+    <div class="col-side side-stack">
+      <div class="portrait desktop-only">
+        <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">
+          <img class="me" alt="{{ AUTHOR_EMAIL }}" title="{{ AUTHOR_EMAIL }}"
+            src="{{ url_for('static', filename='assets/images/me.jpg') }}">
+        </a>
+      </div><!-- .portrait -->
+      <div class="contact-claim">
+        <a class="email icomoon-mail" href="mailto:{{ AUTHOR_EMAIL }}"> Dein Projekt besprechen!</a>
+      </div><!-- .contact-claim -->
+      <div class="socialmedia">
+        <a class="linkedin" href="{{ AUTHOR_LINKEDIN }}">
+          oder LinkedIn-Profil ansehen
+        </a>
+      </div><!-- .socialmedia -->
+    </div><!-- .side-stack -->
   </div><!-- .row -->
 
   <hr />

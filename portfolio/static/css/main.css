@@ -23,7 +23,6 @@ hr { margin: 0; border: 0; border-top: 1px solid #eee; }
 @media (min-width: 992px) {
   .row { display: grid; grid-template-columns: 2fr 1fr; column-gap: 2rem; }
   .col-full { grid-column: 1 / -1; }
-  .col-side-only { grid-column: 2; }
 }
 @media (max-width: 991px) {
   .desktop-only { display: none; }
@@ -129,12 +128,21 @@ h3 a, h3 a:hover { color: inherit; }
 .main-header h3 { padding: 0; margin: 0 0 .5rem; }
 
 .main-header .name { color:#000; text-transform: uppercase; }
-.main-header .profession { color:#000; text-align: right; }
+.main-header .profession { color:#000; }
 .main-header .address,
-.main-header .contact { text-align: right; line-height: 1.5; }
+.main-header .contact { line-height: 1.5; }
+/* Header lines on the same row share a baseline; the side column is flush right. */
+@media (min-width: 992px) {
+  .main-header { align-items: baseline; }
+  .main-header .col-side { text-align: right; }
+}
 
-.portrait { text-align: center; }
-.portrait img { max-width: 100%; }
+/* Portrait, button and LinkedIn link form one stack as wide as the photo,
+   flush with the right edge and level with the section heading beside it. */
+.portrait img { display: block; max-width: 100%; }
+@media (min-width: 992px) {
+  .side-stack { justify-self: end; width: 310px; padding-top: 2.5rem; }
+}
 
 .main-column h1 { text-align: right; }
 
@@ -197,6 +205,10 @@ h3 a, h3 a:hover { color: inherit; }
 .footer-grid { display: grid; gap: 3rem; }
 @media (min-width: 768px) {
   .footer-grid { grid-template-columns: 1fr 1fr; align-items: end; }
+}
+/* From 992px the imprint starts on the page's right column. */
+@media (min-width: 992px) {
+  .footer-grid { grid-template-columns: 2fr 1fr; gap: 2rem; }
 }
 
 .footer-contact h2 { color: #fff; margin: 0 0 .5rem; }
