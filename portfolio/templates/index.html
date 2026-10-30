@@ -287,35 +287,41 @@
 
 
 {% block footer %}
-  <footer class="main-footer" style="background-color: #000; opacity:.75;">
+  <footer class="main-footer">
     <div class="container">
-      <div class="row">
-        <address class="contact
-                        col-md-12">
-          <div class="row">
-            <div class="contact-email
-                        col-md-8">
-              <h2>
-                <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">
-                  » {{ AUTHOR_EMAIL }}
-                </a>
-              </h2>
-            </div><!-- .contact-email -->
-            <div class="contact-tel
-                        col-md-4">
-              <h2>
-                <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
-              </h2>
-            </div><!-- .contact-tel -->
-          </div>
-        </address><!-- .contact -->
-        <address class="address col-md-12">
-          <h3>
-            {{ AUTHOR_STREET }} ⬩ {{ AUTHOR_CITY }} ⬩ UID: {{ AUTHOR_UID }}
-          </h3>
-        </address><!-- .address -->
+      <section class="footer-contact">
+        <h2>Projekt besprechen?</h2>
+        <p>Schreib mir oder ruf an – ich melde mich meist am selben Tag.</p>
+        <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>
+        <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
+      </section><!-- .footer-contact -->
 
-      </div>
+      <section class="footer-legal">
+        <address id="impressum">
+          <strong>{{ AUTHOR_LEGALNAME }}</strong> · {{ AUTHOR_TRADE }}<br>
+          {{ AUTHOR_STREET }}, {{ AUTHOR_CITY }}<br>
+          UID {{ AUTHOR_UID }} · Gewerbebehörde {{ AUTHOR_AUTHORITY }}<br>
+          Mitglied der {{ AUTHOR_CHAMBER }} ·
+          <a target="_blank" href="https://www.ris.bka.gv.at">GewO</a>
+        </address>
+        <details id="datenschutz">
+          <summary>Datenschutz</summary>
+          <p>
+            Verantwortlich für diese Website ist {{ AUTHOR }}, {{ AUTHOR_STREET }}, {{ AUTHOR_CITY }},
+            <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>.
+          </p>
+          <p>
+            Beim Aufruf dieser Website speichert der Webserver technisch notwendige Daten
+            (IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browserkennung), um den sicheren Betrieb zu gewährleisten
+            (Art. 6 Abs. 1 lit. f DSGVO). Diese Daten werden nach {{ SERVER_LOG_DAYS }} Tagen gelöscht.
+            Es werden keine Cookies, keine Analyse-Werkzeuge und keine Dienste Dritter verwendet.
+          </p>
+          <p>
+            Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch.
+            Beschwerden können Sie bei der <a target="_blank" href="https://www.dsb.gv.at">österreichischen Datenschutzbehörde</a> einbringen.
+          </p>
+        </details>
+      </section><!-- .footer-legal -->
     </div><!-- .container -->
   </footer><!-- .main-footer -->
 {% endblock %}

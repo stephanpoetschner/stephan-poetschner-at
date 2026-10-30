@@ -145,17 +145,6 @@ h3 a, h3 a:hover { color: inherit; }
 .main-header .address { margin: 0; text-align: right; }
 .main-header .contact { padding: 0 1rem .25rem 0; margin-top: 0; text-align: right; }
 
-.main-footer { background-color: #fff; padding-bottom: 2em; width:100%; }
-.main-footer .container { border: none; }
-
-.main-footer .contact .contact-tel { text-align: right; }
-.main-footer .contact h2 { font-size: 1.75rem }
-@media (min-width: 768px) {
-  .main-footer .contact h2 { font-size: 2.5rem }
-}
-.main-footer .address h3 { font-weight: 300; margin-top: 0; }
-.main-footer .logo { font-size:.75em; margin-top: 1.5em; position: relative; text-align: right; }
-.main-footer .logo img { margin-left: .5em; position: absolute; top: -18px; }
 
 
 .portrait { height: 270px; text-align: center; }
@@ -231,3 +220,16 @@ img[src^="http://placehold.it/"] {
    margin-bottom: 16px;
 }
 
+
+.main-footer { background: #222; color: #ccc; padding: 4rem 1rem 3rem; }
+.main-footer a { color: #fff; }
+
+.footer-contact h2 { color: #fff; margin: 0 0 .5rem; }
+.footer-contact p { margin: 0 0 1.5rem; }
+.footer-contact a { display: block; font-size: clamp(1.125em, 5vw, 1.5em); line-height: 1.6; overflow-wrap: anywhere; }
+
+.footer-legal { border-top: 1px solid #444; margin-top: 3rem; padding-top: 1.5rem; font-size: .875em; line-height: 1.7; }
+.footer-legal address { margin: 0 0 1rem; }
+.footer-legal a { text-decoration: underline; }
+.footer-legal summary { display: list-item; cursor: pointer; color: #fff; }
+.footer-legal details p { max-width: 65ch; margin: .75em 0 0; }

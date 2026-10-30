@@ -19,13 +19,20 @@ SITE = {
     'AUTHOR_FIRSTNAME': u'Stephan',
     'AUTHOR_FAMILYNAME': u'Pötschner',
     'AUTHOR': u'%(AUTHOR_FIRSTNAME)s %(AUTHOR_FAMILYNAME)s',
+    'AUTHOR_TITLE': u'Dipl.-Ing. (FH)',
+    'AUTHOR_LEGALNAME': u'%(AUTHOR_TITLE)s %(AUTHOR_FIRSTNAME)s %(AUTHOR_FAMILYNAME)s',
 
     'AUTHOR_TEL': u'+43 676 7441671',
-    'AUTHOR_STREET': u'Hermannstraße 13/7',
+    'AUTHOR_STREET': u'Hermannstraße 13/1/7',
     'AUTHOR_CITY': u'3400 Klosterneuburg',
     'AUTHOR_COUNTRY': u'Österreich (Austria)',
 
     'AUTHOR_UID': u'ATU64371502',
+    # Impressum (§5 ECG, §25 MedienG): wording as on the GISA extract
+    'AUTHOR_TRADE': u'[TODO: Gewerbewortlaut laut GISA]',
+    'AUTHOR_AUTHORITY': u'[TODO: Gewerbebehörde laut GISA]',
+    'AUTHOR_CHAMBER': u'WKO NÖ, FG UBIT',
+    'SERVER_LOG_DAYS': u'[TODO: Anzahl]',
 
     'GOOGLE_WEBMASTERS': '2Ek3OkuniHOEDKf3eXvXmJiyDkBGcncL05RNt3eca34',
 
