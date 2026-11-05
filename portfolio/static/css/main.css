@@ -157,6 +157,7 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 /* Django-Vienna band: lead sentence, short text, three figures */
 .meetup-lead { font-size: var(--fs-lg); font-weight: 400; letter-spacing: -.03em; line-height: 1.1; max-width: 22ch; }
 .meetup-text { margin-top: var(--space-group); max-width: var(--measure); }
+.meetup-text + .meetup-text { margin-top: var(--space-in); }
 .meetup .fact-list { margin-top: var(--space-section-sm, 4rem); }
 .meetup-link { margin-top: var(--space-group); font-weight: 600; }
 .meetup-link a::after { content: " →"; }
