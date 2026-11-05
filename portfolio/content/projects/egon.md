@@ -19,6 +19,7 @@ Datenaustausch) empfangen und verarbeiten.
 
 # Meine Highlights
 
-* Plane mit zwei Kollegen die **Architektur** der Plattform, in einem Team von 7–8 Technikern
+* Im Backend-Team (EDA-Daten und Backend-Systeme) mitverantwortlich für **Architektur und Design**
+* Treibe Verbesserungen im **Entwicklungsprozess** voran
 * **Backend**-Entwicklung als Senior Individual Contributor
 * Anbindung an den **EDA-Datenaustausch** der Netzbetreiber
