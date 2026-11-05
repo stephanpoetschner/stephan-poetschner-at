@@ -82,7 +82,9 @@ Weights: 400 and 500 for large type, 600 for emphasis and small headings.
 2. **Für wen ich gearbeitet habe** – `.client-list`: name (large) · one line · years.
    Names only for clients that may be named (`profile.md`).
 3. **Django-Vienna** (green band) – the strongest differentiator after the clients: founded 2013,
-   organised for years, a network for referrals. Lead sentence in `--fs-lg`, short text, three
+   organised for years, a network for referrals. Lead sentence in `--fs-lg`; two short paragraphs
+   (founding story with co-founders Anton Pirker and Florian Demmer, linked; then what it means
+   for the client, hedged: "kenne ich wahrscheinlich jemanden"); three
    leaf figures (Treffen, Mitglieder, Bewertung), link to meetup.com. Wording is tense-proof
    ("gegründet", "organisiert") because the group ends in November 2026; never "Community
    aufgebaut".
