@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mockup A – Raster</title><style>*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-kerning:normal;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,ol,dl,dd,figure,blockquote{margin:0}
+ol{list-style:none;padding:0}
+a{color:inherit}
+.mock-note{position:fixed;right:.75rem;bottom:.75rem;font:500 12px/1 system-ui;background:#000;color:#fff;padding:.5em .75em;border-radius:3px;z-index:9;opacity:.75}
+
+/* A "Raster": Swiss asymmetric grid. Paper white, warm black, one vermilion signal. */
+@font-face{font-family:"Hanken Grotesk";src:url(fonts/hanken-grotesk-latin-wght-normal.woff2) format("woff2");font-weight:100 900;unicode-range:U+0000-00FF,U+2000-206F,U+20AC}
+@font-face{font-family:"Hanken Grotesk";src:url(fonts/hanken-grotesk-latin-ext-wght-normal.woff2) format("woff2");font-weight:100 900;unicode-range:U+0100-02FF}
+:root{--paper:#f7f5f0;--ink:#191816;--muted:#6a665e;--rule:#191816;--hair:#d8d3c8;--signal:#e0461f;
+ --s1:.5rem;--s2:1rem;--s3:2rem;--s4:4rem;--s5:8rem}
+body{background:var(--paper);color:var(--ink);font:400 1.125rem/1.5 "Hanken Grotesk",system-ui,sans-serif}
+.page{max-width:1360px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3.5rem)}
+.top,section,.contact{display:grid;grid-template-columns:repeat(12,1fr);column-gap:clamp(1rem,2vw,2rem)}
+.label{grid-column:1/-1;font-size:.875rem;font-weight:600;letter-spacing:.01em;margin-bottom:var(--s3)}
+@media(min-width:900px){.label{grid-column:1/4;margin:0;padding-top:.6rem}}
+section{padding:var(--s4) 0;border-top:2px solid var(--rule)}
+@media(min-width:900px){section{padding:var(--s3) 0 var(--s5)}}
+/* top */
+.top{padding:var(--s3) 0 var(--s5);row-gap:var(--s4)}
+.id{grid-column:1/-1;display:flex;gap:1rem;align-items:flex-end}
+.portrait{width:56px;height:56px;object-fit:cover;object-position:50% 20%;filter:grayscale(1) contrast(1.05)}
+.name{font-weight:700}
+.role{color:var(--muted);font-size:.875rem;margin-left:auto;text-align:right}
+.statement{grid-column:1/-1;font-size:clamp(2.4rem,1.2rem + 5vw,6rem);line-height:1;font-weight:500;letter-spacing:-.035em;max-width:14ch}
+.statement em{font-style:normal;color:var(--muted)}
+.cta{grid-column:1/-1}
+@media(min-width:900px){.statement{grid-column:1/12}.cta{grid-column:4/-1}}
+.cta-link{font-size:1.5rem;font-weight:600;text-decoration:none;border-bottom:4px solid var(--signal);padding-bottom:.1em}
+.cta-link:hover{background:var(--signal);color:var(--paper)}
+.cta-note{color:var(--muted);margin-top:var(--s2);font-size:1rem}
+/* clients: large rows */
+.client-list{grid-column:1/-1}
+@media(min-width:900px){.client-list{grid-column:4/-1}}
+.client-list li{display:grid;grid-template-columns:1fr;gap:.25rem;padding:1.1rem 0;border-bottom:1px solid var(--hair)}
+.client-list li:first-child{padding-top:0}
+@media(min-width:700px){.client-list li{grid-template-columns:4fr 6fr 2fr;gap:2rem;align-items:baseline}}
+.client{font-size:clamp(1.5rem,1rem + 1.5vw,2.25rem);font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.what{color:var(--ink)}
+.year{color:var(--muted);font-size:.875rem;font-variant-numeric:tabular-nums;text-align:right}
+/* facts: huge figures */
+.fact-list{grid-column:1/-1;display:grid;gap:var(--s3)}
+@media(min-width:700px){.fact-list{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.fact-list{grid-column:4/-1}}
+.fact-list dt{font-size:clamp(3.5rem,2rem + 5vw,7rem);font-weight:300;letter-spacing:-.05em;line-height:.9;margin-bottom:var(--s2)}
+.fact-list dd{max-width:18em}
+/* offers and how: two-column text blocks */
+.offer-list,.how-list{grid-column:1/-1;display:grid;gap:var(--s3) clamp(1rem,2vw,2rem)}
+@media(min-width:700px){.offer-list,.how-list{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.offer-list,.how-list{grid-column:4/-1}}
+h3{font-size:1.375rem;line-height:1.2;font-weight:600;letter-spacing:-.01em;margin-bottom:var(--s2)}
+.offer-list h3{font-size:clamp(1.5rem,1rem + 1.2vw,2rem);font-weight:500;letter-spacing:-.025em}
+/* voices */
+.quote{grid-column:1/-1;margin-bottom:var(--s3)}
+@media(min-width:900px){.quote{grid-column:span 4}.quote.quote-main{grid-column:4/-1;margin-bottom:var(--s4)}.quote-main+.quote{grid-column:4/8}.quote:last-child{grid-column:8/-1}}
+.quote-main blockquote{font-size:clamp(1.6rem,1rem + 2vw,2.75rem);line-height:1.15;font-weight:500;letter-spacing:-.025em;text-indent:-.4em}
+.quote-main blockquote p::before{content:"„"}.quote-main blockquote p::after{content:"“"}
+.quote figcaption{margin-top:var(--s2);font-size:.9375rem;color:var(--muted)}
+.quote b{color:var(--ink);font-weight:600}
+/* contact */
+.contact{background:var(--ink);color:var(--paper);margin:0 calc(-1*clamp(1.25rem,4vw,3.5rem));padding:var(--s5) clamp(1.25rem,4vw,3.5rem);row-gap:var(--s2)}
+.contact>*{grid-column:1/-1}
+@media(min-width:900px){.contact>*{grid-column:4/-1}}
+.contact-title{font-size:clamp(2.4rem,1.2rem + 4vw,5rem);font-weight:500;letter-spacing:-.035em;line-height:1}
+.contact-links{display:flex;flex-wrap:wrap;gap:.5rem 2.5rem;margin-top:var(--s3);font-size:clamp(1.25rem,1rem + 1vw,1.75rem);font-weight:600}
+.contact-links a{text-decoration:none;border-bottom:3px solid var(--signal)}
+</style></head><body><div class="page">
+<header class="top">
+  <div class="id">
+    <img class="portrait" src="portrait.jpg" alt="Stephan Pötschner" width="96" height="144">
+    <p class="name">Stephan Pötschner</p>
+    <p class="role">Django-Entwickler in Wien, <br>selbständig seit 2008</p>
+  </div>
+  <h1 class="statement">Ich entwickle Django-Systeme für kleine Teams in Österreich: <em>bestehende weiter, neue von Grund auf.</em></h1>
+  <div class="cta">
+    <a class="cta-link" href="mailto:stephan.poetschner@gmail.com">Kennenlerngespräch vereinbaren</a>
+    <p class="cta-note">Kostenlos. Ich melde mich meist am selben Tag.</p>
+  </div>
+</header>
+
+<section class="clients">
+  <h2 class="label">Für wen ich gearbeitet habe</h2>
+  <ol class="client-list">
+    <li><span class="client">E.GON</span><span class="what">Plattform für Energiegemeinschaften. Backend und Datenaustausch mit den Netzbetreibern.</span><span class="year">seit 2024</span></li>
+    <li><span class="client">Finmatics</span><span class="what">Belege und Rechnungen automatisch verbuchen, inklusive LLM-Projekt.</span><span class="year">2023–2024</span></li>
+    <li><span class="client">Covid IT Solutions</span><span class="what">Digitalisierung deutscher Gesundheitsämter.</span><span class="year">2022</span></li>
+    <li><span class="client">Offensity / A1 Digital</span><span class="what">Vom Prototyp zum Produkt, nach einem Jahr von A1 übernommen.</span><span class="year">2017–2022</span></li>
+    <li><span class="client">tiga.eleven</span><span class="what">Lead Developer, kleines internationales Team, marktreifes Produkt.</span><span class="year">2015–2016</span></li>
+    <li><span class="client">Careesma</span><span class="what">Codebasis eines spanischen Teams übernommen, Team in Wien aufgebaut.</span><span class="year">2014–2016</span></li>
+  </ol>
+</section>
+
+<section class="facts">
+  <h2 class="label">In Zahlen</h2>
+  <dl class="fact-list">
+    <div><dt>2008</dt><dd>arbeite ich selbständig mit Django und Python.</dd></div>
+    <div><dt>2013</dt><dd>organisiere ich Django-Vienna, heute rund 850 Mitglieder.</dd></div>
+    <div><dt>1 Jahr</dt><dd>vom Prototyp bis zur Übernahme von Offensity durch A1.</dd></div>
+  </dl>
+</section>
+
+<section class="offers">
+  <h2 class="label">Was ich für dich tun kann</h2>
+  <ol class="offer-list">
+    <li><h3>Bestehende Django-Systeme weiterentwickeln</h3><p>Skalieren, modernisieren, von einem anderen Team übernehmen. Zum Beispiel careesma.at mit über 200.000 Besuchern im Monat.</p></li>
+    <li><h3>Neue Webprojekte und MVPs</h3><p>Vom ersten Prototyp zum Produkt, das Kunden nutzen. Zum Beispiel Offensity.</p></li>
+    <li><h3>Architektur und technische Leitung</h3><p>Bei E.GON im Backend-Team mitverantwortlich für Architektur und Design, bei tiga.eleven als Lead Developer.</p></li>
+  </ol>
+</section>
+
+<section class="how">
+  <h2 class="label">Wie ich arbeite</h2>
+  <ol class="how-list">
+    <li><h3>Code, mit dem andere weiterarbeiten können</h3><p>Ich schreibe Software so, dass dein Team sie versteht und weiterführen kann.</p></li>
+    <li><h3>Ehrlich, auch wenn es gegen meinen Auftrag spricht</h3><p>Wenn Standardsoftware dein Problem besser löst als eine Eigenentwicklung, sage ich dir das – auch wenn ich dann weniger zu tun habe.</p></li>
+    <li><h3>Ich frage nach dem Nutzen, nicht nur nach dem Ticket</h3><p>Bevor ich etwas baue, will ich verstehen, wofür.</p></li>
+  </ol>
+</section>
+
+<section class="voices">
+  <h2 class="label">Was Kunden sagen</h2>
+  <figure class="quote quote-main"><blockquote><p>Es wäre schwierig, einen anderen Entwickler mit ähnlich tiefem Fach- und Spezialwissen, dem gleichen Ausmaß an Eigenverantwortung oder derart gutem Geschäftssinn zu finden.</p></blockquote><figcaption><b>Aron Molnar</b>, Gründer Offensity</figcaption></figure>
+  <figure class="quote"><blockquote><p>Stephan deckt diese Bereiche hervorragend ab und hat mit seinem Team ein Produkt geschaffen, auf das wir stolz sind.</p></blockquote><figcaption><b>Georg Parth</b>, CEO tiga.eleven</figcaption></figure>
+  <figure class="quote"><blockquote><p>Stephan exceeded my expectations about how fast he managed to fit as a team-member and the degree of autonomy and loyalty he showed.</p></blockquote><figcaption><b>Javier López</b>, CTO Careesma</figcaption></figure>
+</section>
+
+<footer class="contact">
+  <h2 class="contact-title">Projekt besprechen?</h2>
+  <p class="contact-text">Schreib mir oder ruf an – ich melde mich meist am selben Tag.</p>
+  <p class="contact-links"><a href="mailto:stephan.poetschner@gmail.com">stephan.poetschner@gmail.com</a><a href="tel:+436767441671">+43 676 7441671</a></p>
+</footer>
+</div>
+<div class="mock-note">Entwurf A – Raster</div></body></html>

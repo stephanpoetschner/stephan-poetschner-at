@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mockup C – Stille</title><style>*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-kerning:normal;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,ol,dl,dd,figure,blockquote{margin:0}
+ol{list-style:none;padding:0}
+a{color:inherit}
+.mock-note{position:fixed;right:.75rem;bottom:.75rem;font:500 12px/1 system-ui;background:#000;color:#fff;padding:.5em .75em;border-radius:3px;z-index:9;opacity:.75}
+
+/* C "Stille": one typeface, extreme contrast in size and weight, lots of air. White, ink, ultramarine. */
+@font-face{font-family:"Instrument Sans";src:url(fonts/instrument-sans-latin-wght-normal.woff2) format("woff2");font-weight:400 700;unicode-range:U+0000-00FF,U+2000-206F,U+20AC}
+@font-face{font-family:"Instrument Sans";src:url(fonts/instrument-sans-latin-ext-wght-normal.woff2) format("woff2");font-weight:400 700;unicode-range:U+0100-02FF}
+:root{--paper:#fff;--ink:#14161c;--muted:#666a73;--hair:#e4e4e7;--blue:#2337c6;--wash:#f1f2fb;
+ --gap:clamp(1.25rem,5vw,6rem)}
+body{background:var(--paper);color:var(--ink);font:400 1.125rem/1.55 "Instrument Sans",system-ui,sans-serif}
+.page{padding:0 var(--gap)}
+.label{font-size:1rem;font-weight:600;color:var(--blue);margin-bottom:2rem}
+section{padding:clamp(5rem,3rem + 8vw,12rem) 0 0;max-width:1280px}
+@media(min-width:1000px){section{display:grid;grid-template-columns:1fr 3fr;column-gap:4rem}.label{margin:0;padding-top:.35rem}}
+/* top: statement owns the screen */
+.top{min-height:min(92vh,54rem);display:grid;grid-template-rows:auto 1fr auto;padding:2rem 0 3rem;max-width:1280px}
+.id{display:flex;align-items:center;gap:.9rem}
+.portrait{width:44px;height:44px;object-fit:cover;object-position:50% 20%;border-radius:50%}
+.name{font-weight:600}.role{color:var(--muted)}.role br{display:none}.role::before{content:"·";margin:0 .6rem 0 0}
+@media(max-width:600px){.id{flex-wrap:wrap}.role{flex-basis:100%}.role::before{content:none}}
+.statement{align-self:center;font-size:clamp(2.3rem,.8rem + 5.6vw,6.5rem);line-height:1.02;font-weight:400;letter-spacing:-.035em;max-width:16ch;padding:4rem 0}
+.statement em{font-style:normal;font-weight:600}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem}
+.cta-link{display:inline-flex;align-items:center;min-height:52px;padding:0 1.6rem;border-radius:999px;background:var(--blue);color:#fff;text-decoration:none;font-weight:600}
+.cta-link::after{content:"→";margin-left:.6rem}
+.cta-link:hover{background:var(--ink)}
+.cta-note{color:var(--muted)}
+/* clients: a column of big names, detail beside */
+.client-list li{display:grid;gap:.2rem 2rem;padding:1.25rem 0;border-bottom:1px solid var(--hair)}
+@media(min-width:700px){.client-list li{grid-template-columns:minmax(0,5fr) minmax(0,6fr) auto;align-items:baseline}}
+.client{font-size:clamp(1.75rem,1rem + 2vw,3rem);font-weight:500;letter-spacing:-.03em;line-height:1.05}
+.year{color:var(--muted);font-size:.9375rem;font-variant-numeric:tabular-nums}
+/* facts on a soft wash, figures thin and large */
+.facts{background:var(--wash);margin:clamp(5rem,3rem + 8vw,12rem) calc(-1*var(--gap)) 0;padding:clamp(4rem,3rem + 4vw,8rem) var(--gap);max-width:none}
+.fact-list{display:grid;gap:3rem}
+@media(min-width:700px){.fact-list{grid-template-columns:repeat(3,1fr)}}
+.fact-list dt{font-size:clamp(3.5rem,2rem + 5vw,7.5rem);font-weight:400;letter-spacing:-.05em;line-height:.95;color:var(--blue)}
+.fact-list dd{margin-top:1rem;max-width:15em}
+/* offers: bigger, how: quieter */
+.offer-list li{padding:2rem 0;border-bottom:1px solid var(--hair)}.offer-list li:first-child{padding-top:0}
+.offer-list h3{font-size:clamp(1.6rem,1rem + 1.6vw,2.5rem);font-weight:500;letter-spacing:-.03em;line-height:1.1;margin-bottom:.6rem}
+.offer-list p{max-width:36em;color:var(--muted)}
+.how-list{display:grid;gap:2.5rem}
+@media(min-width:800px){.how-list{grid-template-columns:repeat(3,1fr)}}
+.how-list h3{font-size:1.25rem;font-weight:600;line-height:1.25;margin-bottom:.6rem}
+/* voices */
+.voices{row-gap:3rem}
+.voices .quote{grid-column:2}
+.quote-main blockquote{font-size:clamp(1.75rem,1rem + 2.4vw,3.25rem);line-height:1.12;font-weight:400;letter-spacing:-.03em}
+.quote-main blockquote p::before{content:"„";color:var(--blue)}.quote-main blockquote p::after{content:"“";color:var(--blue)}
+.quote:not(.quote-main) blockquote{font-size:1.25rem;line-height:1.45;max-width:36em}
+.quote figcaption{margin-top:1rem;color:var(--muted)}.quote b{color:var(--ink);font-weight:600}
+/* contact */
+.contact{padding:clamp(5rem,3rem + 8vw,12rem) 0 clamp(3rem,2rem + 4vw,6rem);max-width:1280px}
+.contact-title{font-size:clamp(2.6rem,1rem + 5vw,6rem);font-weight:400;letter-spacing:-.04em;line-height:1}
+.contact-text{color:var(--muted);margin-top:1.25rem;font-size:1.25rem}
+.contact-links{display:flex;flex-wrap:wrap;gap:1rem 3rem;margin-top:2.5rem;font-size:clamp(1.25rem,1rem + 1vw,2rem);font-weight:500;letter-spacing:-.02em}
+.contact-links a{color:var(--blue);text-decoration-thickness:2px;text-underline-offset:.2em}
+</style></head><body><div class="page">
+<header class="top">
+  <div class="id">
+    <img class="portrait" src="portrait.jpg" alt="Stephan Pötschner" width="96" height="144">
+    <p class="name">Stephan Pötschner</p>
+    <p class="role">Django-Entwickler in Wien, <br>selbständig seit 2008</p>
+  </div>
+  <h1 class="statement">Ich entwickle Django-Systeme für kleine Teams in Österreich: <em>bestehende weiter, neue von Grund auf.</em></h1>
+  <div class="cta">
+    <a class="cta-link" href="mailto:stephan.poetschner@gmail.com">Kennenlerngespräch vereinbaren</a>
+    <p class="cta-note">Kostenlos. Ich melde mich meist am selben Tag.</p>
+  </div>
+</header>
+
+<section class="clients">
+  <h2 class="label">Für wen ich gearbeitet habe</h2>
+  <ol class="client-list">
+    <li><span class="client">E.GON</span><span class="what">Plattform für Energiegemeinschaften. Backend und Datenaustausch mit den Netzbetreibern.</span><span class="year">seit 2024</span></li>
+    <li><span class="client">Finmatics</span><span class="what">Belege und Rechnungen automatisch verbuchen, inklusive LLM-Projekt.</span><span class="year">2023–2024</span></li>
+    <li><span class="client">Covid IT Solutions</span><span class="what">Digitalisierung deutscher Gesundheitsämter.</span><span class="year">2022</span></li>
+    <li><span class="client">Offensity / A1 Digital</span><span class="what">Vom Prototyp zum Produkt, nach einem Jahr von A1 übernommen.</span><span class="year">2017–2022</span></li>
+    <li><span class="client">tiga.eleven</span><span class="what">Lead Developer, kleines internationales Team, marktreifes Produkt.</span><span class="year">2015–2016</span></li>
+    <li><span class="client">Careesma</span><span class="what">Codebasis eines spanischen Teams übernommen, Team in Wien aufgebaut.</span><span class="year">2014–2016</span></li>
+  </ol>
+</section>
+
+<section class="facts">
+  <h2 class="label">In Zahlen</h2>
+  <dl class="fact-list">
+    <div><dt>2008</dt><dd>arbeite ich selbständig mit Django und Python.</dd></div>
+    <div><dt>2013</dt><dd>organisiere ich Django-Vienna, heute rund 850 Mitglieder.</dd></div>
+    <div><dt>1 Jahr</dt><dd>vom Prototyp bis zur Übernahme von Offensity durch A1.</dd></div>
+  </dl>
+</section>
+
+<section class="offers">
+  <h2 class="label">Was ich für dich tun kann</h2>
+  <ol class="offer-list">
+    <li><h3>Bestehende Django-Systeme weiterentwickeln</h3><p>Skalieren, modernisieren, von einem anderen Team übernehmen. Zum Beispiel careesma.at mit über 200.000 Besuchern im Monat.</p></li>
+    <li><h3>Neue Webprojekte und MVPs</h3><p>Vom ersten Prototyp zum Produkt, das Kunden nutzen. Zum Beispiel Offensity.</p></li>
+    <li><h3>Architektur und technische Leitung</h3><p>Bei E.GON im Backend-Team mitverantwortlich für Architektur und Design, bei tiga.eleven als Lead Developer.</p></li>
+  </ol>
+</section>
+
+<section class="how">
+  <h2 class="label">Wie ich arbeite</h2>
+  <ol class="how-list">
+    <li><h3>Code, mit dem andere weiterarbeiten können</h3><p>Ich schreibe Software so, dass dein Team sie versteht und weiterführen kann.</p></li>
+    <li><h3>Ehrlich, auch wenn es gegen meinen Auftrag spricht</h3><p>Wenn Standardsoftware dein Problem besser löst als eine Eigenentwicklung, sage ich dir das – auch wenn ich dann weniger zu tun habe.</p></li>
+    <li><h3>Ich frage nach dem Nutzen, nicht nur nach dem Ticket</h3><p>Bevor ich etwas baue, will ich verstehen, wofür.</p></li>
+  </ol>
+</section>
+
+<section class="voices">
+  <h2 class="label">Was Kunden sagen</h2>
+  <figure class="quote quote-main"><blockquote><p>Es wäre schwierig, einen anderen Entwickler mit ähnlich tiefem Fach- und Spezialwissen, dem gleichen Ausmaß an Eigenverantwortung oder derart gutem Geschäftssinn zu finden.</p></blockquote><figcaption><b>Aron Molnar</b>, Gründer Offensity</figcaption></figure>
+  <figure class="quote"><blockquote><p>Stephan deckt diese Bereiche hervorragend ab und hat mit seinem Team ein Produkt geschaffen, auf das wir stolz sind.</p></blockquote><figcaption><b>Georg Parth</b>, CEO tiga.eleven</figcaption></figure>
+  <figure class="quote"><blockquote><p>Stephan exceeded my expectations about how fast he managed to fit as a team-member and the degree of autonomy and loyalty he showed.</p></blockquote><figcaption><b>Javier López</b>, CTO Careesma</figcaption></figure>
+</section>
+
+<footer class="contact">
+  <h2 class="contact-title">Projekt besprechen?</h2>
+  <p class="contact-text">Schreib mir oder ruf an – ich melde mich meist am selben Tag.</p>
+  <p class="contact-links"><a href="mailto:stephan.poetschner@gmail.com">stephan.poetschner@gmail.com</a><a href="tel:+436767441671">+43 676 7441671</a></p>
+</footer>
+</div>
+<div class="mock-note">Entwurf C – Stille</div></body></html>
