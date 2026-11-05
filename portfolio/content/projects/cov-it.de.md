@@ -2,7 +2,7 @@ title: Digitalisierung für Covid-Fälle und Gesundheitsämter
 slug: cov-it
 externalurl: https://www.cov-it.de/
 subline: für Covid IT Solutions GmbH
-duration: Juli 2022 – heute
+duration: Juli 2022 – 2023
 tags: [ Django, Docker, Celery, SurvNet, Sormas, DEMIS ]
 author: Stephan Pötschner
 date: 2023-03-24 12:00
