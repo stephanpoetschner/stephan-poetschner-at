@@ -1,0 +1,56 @@
+title: SummitLynx Backend
+slug: summitlynx
+externalurl: http://summitlynx.com/
+subline: für SummitLynx New Media GmbH
+duration: Februar 2013 – April 2014
+tags: [ Startup, Django, jQuery, PostgreSQL, Scrum, ]
+author: Stephan Pötschner
+date: 2013-02-01 12:00
+---
+# Meine Aufgaben
+
+* technische Projektleitung und Beratung
+* Unterstützung in der Konzeption
+* Relaunch und Rewrite der bestehenden Codebasis
+    * API Entwicklung
+    * Koordination Testprozess
+* Django Entwicklung
+
+# Projektbeschreibung
+
+Mit der mobilen App SummitLynx lassen sich Gipfelsiege per Foto
+oder Text-Eintrag dokumentieren.
+
+Für ausgewählte Tourismus-Regionen können die virtuellen Errungenschaften
+in reale Wandernadeln beim lokalen Tourismusbüro eingetauscht werden.
+
+Aktuelle Partner-Regionen:
+
+* <a target="_blank" href="http://www.kitzbueheler-alpen.com/">Kitzbühler Alpen</a>
+* <a target="_blank" href="http://www.ramsau.com/">Ramsau am Dachstein</a>
+* <a target="_blank" href="http://www.saalbach.com/">Saalbach Hinterglemm</a>
+* <a target="_blank" href="http://www.schladming-dachstein.at/">Schladming-Rohrmoos</a>
+* <a target="_blank" href="http://www.wilderkaiser.info/">Wilder Kaiser</a>
+* <a target="_blank" href="http://www.zellamsee-kaprun.com/">Zell am See-Kaprun</a>
+
+
+# Team
+
+* Peter Höflehner (Gründer)
+* Michael Tritscher (Gründer)
+* <a target="_blank" href="https://www.floriandemmer.com/">Florian Demmer</a> (Django-Freelancer)
+* Lukas Kinigadner (Mobile Entwicklung: <a target="_blank" href="http://9yards.at/">9yards</a>)
+* Daniel Albertini (Iphone App: <a target="_blank" href="http://9yards.at/">9yards</a>)
+* Alex Fischl (Android App: <a target="_blank" href="http://9yards.at/">9yards</a>)
+* Martin Wohlfahrt (Android App: <a target="_blank" href="http://9yards.at/">9yards</a>)
+* Johannes Scharl (Facebook App: <a target="_blank" href="http://platogo.com/">Platogo</a>)
+
+
+# Presse
+
+* <a target="_blank" href="http://futurezone.at/produkte/gipfelstuermer-app-sammelt-wandernadeln/24.596.113">FutureZone</a>
+* <a target="_blank" href="http://www.heute.at/news/multimedia/art23657,880321">Heute</a>
+* <a target="_blank" href="http://www.kleinezeitung.at/nachrichten/chronik/3315108/obersteirer-entwickelten-app-fuer-gipfelstuermer.story">Kleine Zeitung</a>
+* <a target="_blank" href="http://ereader.autotouring.at/reader/autotouring/W/2013/6#16">ÖAMTC Autotouring Magazin 2013/06</a>
+
+

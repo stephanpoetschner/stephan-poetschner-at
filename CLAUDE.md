@@ -16,6 +16,7 @@ Copy is German, informal "du"; common English IT terms are fine. No hourly rate.
 - `portfolio/templates/index.html`: header, about, offers, "Warum mit mir arbeiten?", testimonials
 - `portfolio/content/projects/*.md`: one file per project, sorted by `date` (newest first)
 - `portfolio/static/`: CSS, images
+- `archive/projects/`: old and long versions of project texts from the git history, not built
 
 ## Design
 
