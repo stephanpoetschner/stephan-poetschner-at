@@ -4,6 +4,9 @@ Read this before touching `portfolio/templates/index.html` or `portfolio/static/
 Design name: **"Stille in Feld-Farben"** (chosen 2026-11-05 from mock-ups in `mockups/`:
 layout of C "Stille", colours of B "Feld").
 
+Cross-site principles, the "must not look like" list and the redesign process live in
+`../pitches/design.md`; this file is how this site applies them.
+
 ## Goal
 
 Referred visitors (KMU owners, founders) are about to trust one person with an important,
