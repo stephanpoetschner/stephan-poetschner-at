@@ -252,5 +252,12 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 .footer-imprint strong { color: var(--on-green); }
 .footer-privacy summary { cursor: pointer; color: var(--on-green); }
 .footer-privacy p { max-width: 65ch; margin-top: .75em; }
+/* Desktop: the summary stays in the third column, the opened text gets its own full-width row
+   below. Growing only downwards keeps the bottom-aligned columns (and the scroll position) still. */
+@media (min-width: 1000px) {
+  .footer-privacy { display: contents; }
+  .footer-privacy::details-content { grid-column: 1 / -1; }
+  .footer-privacy:not([open])::details-content { display: none; }
+}
 
 @media (prefers-reduced-motion: reduce) { .pill { transition: none; } }

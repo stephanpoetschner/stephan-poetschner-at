@@ -97,7 +97,8 @@ Weights: 400 and 500 for large type, 600 for emphasis and small headings.
 9. **Projekt besprechen?** – portrait in the label column (above on phones), large heading,
    email / phone / LinkedIn as large links, offer to meet in person.
 10. **Footer** (green) – Riesenrad mark + "Aus Wien.", imprint and privacy (legally required,
-   keep the content).
+   keep the content). Privacy is a `<details>`: on desktop its text opens as a full-width row
+   below the three bottom-aligned columns, so nothing above it moves when it opens.
 
 Adding a section: `<section class="section">` with `<h2 class="label">` first; add `band
 band-green` or `band band-sand` only if the rhythm needs it (never two bands in a row).
