@@ -116,3 +116,17 @@ done
 Check: the three space levels are visible; labels and content edges line up; nothing important
 is grey; leaf appears only on green; only one pill; phone layout reads top to bottom with
 project titles before their facts; it looks like none of: template, blog, terminal.
+
+## References
+
+Where the direction came from, for when the design needs to evolve:
+
+- Books: Matthew Butterick, *Practical Typography* (free online); Adam Wathan & Steve Schoger,
+  *Refactoring UI*; Josef Müller-Brockmann, *Grid Systems in Graphic Design* (asymmetric grids,
+  contrast); Jost Hochuli, *Detail in Typography*.
+- Sites built from type, not images: type foundries (klim.co.nz, commercialtype.com,
+  grillitype.com, abcdinamo.com), ia.net, press.stripe.com, oxide.computer.
+- Galleries: typewolf.com, fontsinuse.com, siteinspire.com (filter "Typographic"),
+  minimal.gallery.
+- Rejected directions and why: `mockups/README.md` (A Raster, B Feld, C Stille) and the
+  "must not look like" list above.

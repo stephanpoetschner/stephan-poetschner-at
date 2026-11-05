@@ -29,5 +29,8 @@ See `DESIGN.md` for principles, tokens, layout and components. Follow it when to
 ./deploy.sh      # freeze + rsync to the server; only with Stephan's explicit OK
 ```
 
+The dev server reloads templates but reads `content/projects/*.md` only at startup: restart it
+after changing project content.
+
 `build/` uses absolute `/static/` paths: serve it over HTTP (e.g. `python3 -m http.server`
 in `build/`) to check it, `file://` shows it unstyled.
