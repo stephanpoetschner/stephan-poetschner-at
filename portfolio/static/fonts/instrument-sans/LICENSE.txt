@@ -1,0 +1,3 @@
+Instrument Sans by Rodrigo Fuenzalida and Jordan Egstad, SIL Open Font License 1.1
+https://github.com/Instrument/instrument-sans
+WOFF2 subsets from @fontsource-variable/instrument-sans

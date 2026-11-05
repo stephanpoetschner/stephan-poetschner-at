@@ -1,305 +1,171 @@
 {% extends "base.html" %}
 
+{# Layout and reasoning: see DESIGN.md. Order follows the 30-second path in
+   ../pitches/positioning.md: who and where → statement → contact → clients →
+   figures → offers → how I work → testimonials → project details. #}
+
 {% block main %}
-  <header class="main-header row">
-    <div class="col-main">
-      <h1 class="name">
-        <a href="mailto:{{ AUTHOR_EMAIL }}">
-          Top Django Entwickler
-        </a>
-      </h1>
+  <header class="top">
+    <div class="id">
+      <img class="portrait" src="{{ static_url('assets/images/me.jpg') }}" alt="{{ AUTHOR }}" width="48" height="48">
+      <p class="name">{{ AUTHOR }}</p>
+      <p class="role">Django-Entwickler in Wien, selbständig seit 2008</p>
     </div>
-    <div class="col-side">
-      <h2 class="profession
-                 desktop-only">
-        <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR }}</a>
-      </h2>
+    <h1 class="statement">Ich entwickle Django-Systeme für kleine Teams in Österreich: <em>bestehende weiter, neue von Grund auf.</em></h1>
+    <div class="cta">
+      <a class="pill" href="mailto:{{ AUTHOR_EMAIL }}">Kennenlerngespräch vereinbaren</a>
+      <p class="cta-note">Kostenlos. Ich melde mich meist am selben Tag.</p>
     </div>
-    <div class="col-main">
-      <h2 class="claim">Django-Entwickler seit 2008. Aktuell bei E.GON: Software für Energiegemeinschaften.</h2>
+  </header>
+
+  <section class="section clients">
+    <h2 class="label">Für wen ich gearbeitet habe</h2>
+    <ol class="client-list">
+      <li><span class="client">E.GON</span><span class="what">Plattform für Energiegemeinschaften. Backend und Datenaustausch mit den Netzbetreibern.</span><span class="year">seit 2024</span></li>
+      <li><span class="client">Finmatics</span><span class="what">Belege und Rechnungen automatisch verbuchen, inklusive LLM-Projekt.</span><span class="year">2023–2024</span></li>
+      <li><span class="client">Covid IT Solutions</span><span class="what">Digitalisierung deutscher Gesundheitsämter.</span><span class="year">2022</span></li>
+      <li><span class="client">Offensity / A1 Digital</span><span class="what">Vom Prototyp zum Produkt, nach einem Jahr von A1 übernommen.</span><span class="year">2017–2022</span></li>
+      <li><span class="client">tiga.eleven</span><span class="what">Lead Developer, kleines internationales Team, marktreifes Produkt.</span><span class="year">2015–2016</span></li>
+      <li><span class="client">Careesma</span><span class="what">Codebasis eines spanischen Teams übernommen, Team in Wien aufgebaut.</span><span class="year">2014–2016</span></li>
+    </ol>
+  </section>
+
+  <section class="section band band-green facts">
+    <h2 class="label">In Zahlen</h2>
+    <dl class="fact-list">
+      <div><dt><small>seit</small> 2008</dt><dd>selbständig als Django- und Python-Entwickler.</dd></div>
+      <div><dt><small>seit 2013</small> 59</dt><dd>Treffen von <a href="{{ AUTHOR_MEETUP }}">Django-Vienna</a> mitorganisiert. 838 Mitglieder, Bewertung 4,9 von 5.</dd></div>
+      <div><dt><small>in</small> 1 Jahr</dt><dd>vom Prototyp bis zur Übernahme von Offensity durch A1.</dd></div>
+    </dl>
+  </section>
+
+  <section class="section offers">
+    <h2 class="label">Was ich für dich tun kann</h2>
+    <ol class="offer-list">
+      <li><h3>Bestehende Django-Systeme weiterentwickeln</h3><p>Skalieren, modernisieren, von einem anderen Team übernehmen. Zum Beispiel careesma.at mit über 200.000 Besuchern im Monat.</p></li>
+      <li><h3>Neue Webprojekte und MVPs</h3><p>Vom ersten Prototyp zum Produkt, das Kunden nutzen. Zum Beispiel Offensity.</p></li>
+      <li><h3>Architektur und technische Leitung</h3><p>Bei E.GON im Backend-Team mitverantwortlich für Architektur und Design, bei tiga.eleven als Lead Developer.</p></li>
+    </ol>
+  </section>
+
+  <section class="section how">
+    <h2 class="label">Wie ich arbeite</h2>
+    <ol class="how-list">
+      <li><h3>Code, mit dem andere weiterarbeiten können</h3><p>Ich schreibe Software so, dass dein Team sie versteht und weiterführen kann. Bei Careesma habe ich die Codebasis eines spanischen Teams übernommen und in Wien ein eigenes Team darauf aufgebaut.</p></li>
+      <li><h3>Ehrlich, auch wenn es gegen meinen Auftrag spricht</h3><p>Wenn Standardsoftware dein Problem besser löst als eine Eigenentwicklung, sage ich dir das – auch wenn ich dann weniger zu tun habe.</p></li>
+      <li><h3>Ich frage nach dem Nutzen, nicht nur nach dem Ticket</h3><p>Bevor ich etwas baue, will ich verstehen, wofür. Bei Offensity wurde so aus der Idee von Security-Experten ohne Entwicklungserfahrung in einem Jahr ein Produkt, das A1 übernommen hat.</p></li>
+    </ol>
+  </section>
+
+  <section class="section band band-sand voices">
+    <h2 class="label">Was Kunden sagen</h2>
+    <div class="quotes">
+      <figure class="quote quote-main h-cite">
+        <blockquote><p>Es wäre schwierig, einen anderen Entwickler mit ähnlich tiefem Fach- und Spezialwissen, dem gleichen Ausmaß an Eigenverantwortung oder derart gutem Geschäftssinn zu finden.</p></blockquote>
+        <figcaption><span class="p-author h-card">Aron Molnar</span>, Gründer <a href="https://www.offensity.com/">Offensity</a>, <time class="dt-published" datetime="2019-10-28">2019</time></figcaption>
+      </figure>
+      <figure class="quote h-cite">
+        <blockquote><p>Stephan deckt diese Bereiche hervorragend ab und hat mit seinem Team ein Produkt geschaffen, auf das wir stolz sind und ich wirklich gerne beim Kunden präsentiere.</p></blockquote>
+        <figcaption><span class="p-author h-card">Georg Parth</span>, CEO <a href="https://tiga.at/">tiga.eleven</a>, <time class="dt-published" datetime="2016-07-25">2016</time></figcaption>
+      </figure>
+      <figure class="quote h-cite">
+        <blockquote lang="en"><p>Stephan exceeded my expectations about how fast he managed to fit as a team-member and the degree of autonomy and loyalty he showed.</p></blockquote>
+        <figcaption><span class="p-author h-card">Javier López</span>, CTO Careesma, <time class="dt-published" datetime="2016-07-20">2016</time></figcaption>
+      </figure>
     </div>
-    <div class="col-side">
-      <h3 class="address">
-        <a target="_blank" href="https://goo.gl/maps/BWyXHunP5au">
-        in Wien / Österreich
-        </a>
-      </h3>
-      <h3 class="contact">
-        <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>,<br>
-        <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
-      </h3>
-    </div>
-  </header><!-- .main-header -->
+  </section>
 
-  {% block intro %}
-  <div class="row">
-    <div class="col-main">
-      <section class="intro">
-        <h2>Über mich</h2>
-        <div class="intro-copy">
-          <p>
-            Mit Django und Python helfe ich seit 2008 Unternehmen, große und kleine Ideen umzusetzen.
-            Aktuell baue ich bei <a target="_blank" href="https://www.e-gon.at/">E.GON</a> die Plattform
-            für Energiegemeinschaften mit: vom Backend bis zum Datenaustausch mit den Netzbetreibern.
-          </p>
-          <ul>
-            <li>Ich <strong>entwickle bestehende Django-Systeme weiter</strong>, skaliere und modernisiere sie –
-              z. B. die globale Jobplattform Careesma für den österreichischen Markt angepasst (careesma.at, über 200.000 Besucher im Monat).</li>
-            <li>Ich setze <strong>neue Webprojekte und MVPs</strong> um –
-              z. B. Offensity, vom Prototyp zum Produkt der A1 Digital.</li>
-            <li>Ich übernehme <strong>Architektur und technische Leitung</strong> –
-              z. B. als Systemarchitekt bei E.GON und Lead Developer bei tiga.eleven.</li>
-          </ul>
-          <p>
-            — Ich organisiere auch das <a target="_blank" href="http://www.meetup.com/Django-Vienna/">Django Vienna Meetup</a> (seit 2013) und halte dort auch regelmäßig Vorträge.
-            Unser Meetup zählt mittlerweile mehr als 650 Django Entwickler (– hauptsächlich aus Wien).
-          </p>
-        </div><!-- .intro-copy -->
-      </section><!-- .intro -->
-    </div><!-- .col-* -->
-    <div class="col-side side-stack">
-      <div class="portrait desktop-only">
-        <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">
-          <img class="me" alt="{{ AUTHOR_EMAIL }}" title="{{ AUTHOR_EMAIL }}"
-            src="{{ url_for('static', filename='assets/images/me.jpg') }}">
-        </a>
-      </div><!-- .portrait -->
-      <div class="contact-claim">
-        <a class="email icomoon-mail" href="mailto:{{ AUTHOR_EMAIL }}"> Kennenlernen</a>
-      </div><!-- .contact-claim -->
-      <div class="socialmedia">
-        <a class="linkedin" href="{{ AUTHOR_LINKEDIN }}">
-          oder LinkedIn-Profil ansehen
-        </a>
-      </div><!-- .socialmedia -->
-    </div><!-- .side-stack -->
-  </div><!-- .row -->
-
-  <hr />
-  <div class="row">
-    <div class="col-full">
-      <section class="intro">
-        <h2>Warum mit mir arbeiten?</h2>
-        <div class="intro-copy">
-          <ul>
-            <li>
-              <strong>Code, mit dem andere weiterarbeiten können</strong><br>
-              Ich schreibe Software so, dass dein Team sie versteht und weiterführen kann.
-              Bei Careesma habe ich die Codebasis eines spanischen Teams übernommen und in Wien ein eigenes Team darauf aufgebaut.
-            </li>
-            <li>
-              <strong>Ehrlich, auch wenn es gegen meinen Auftrag spricht</strong><br>
-              Wenn Standardsoftware dein Problem besser löst als eine Eigenentwicklung, sage ich dir das –
-              auch wenn ich dann weniger zu tun habe.
-            </li>
-            <li>
-              <strong>Ich frage nach dem Nutzen, nicht nur nach dem Ticket</strong><br>
-              Bevor ich etwas baue, will ich verstehen, wofür. Bei Offensity wurde so aus der Idee von
-              Security-Experten ohne Entwicklungserfahrung in einem Jahr ein Produkt, das A1 übernommen hat.
-            </li>
-          </ul>
-        </div><!-- .intro-copy -->
-      </section><!-- .intro -->
-    </div>
-    <div class="col-full">
-      <section class="testimonials">
-        <h2>Was andere sagen</h2>
-        <div class="testimonial h-cite">
-          <div class="testimonial-icon">
-            {% include 'svg/testimonial-icon.svg' %}
-          </div>
-          <cite class="testimonial-cite">
-            Stephan begleitet uns seit Beginn der Entwicklung bei Offensity. Mittlerweile scannen wir mit Offensity regelmäßig 25.000 Subdomains für unsere Kunden.
-            <br/>
-            Stephan hat tiefen Einblick in unser System und ist wahrscheinlich einer der erfahrensten Django-Programmierer in Wien.
-            Er bringt darüber hinaus wichtige Inputs zur geschäftlichen Entwicklung unseres Produkts ein.
-              Im Team ist er bestens vernetzt und übernimmt auch informelle Leader-Rollen, z. B. als Mentor für neue Teammitglieder.
-            <br />
-            Es wäre schwierig, einen anderen Entwickler mit ähnlich tiefem Fach- und Spezialwissen,
-              dem gleichen Ausmaß an Eigenverantwortung oder derart gutem Geschäftssinn zu finden.
-          </cite>
-          <div class="testimonial-author">
-              <span class="p-author h-card">Aron Molnar,
-                  <a target="_blank" href="https://www.offensity.com/">Offensity</a> Gründer</span>
-            (<time class="dt-published" datetime="2019-10-28">28.10.2019</time>)
-          </div>
-        </div><!-- .testimonial -->
-
-        <div class="testimonial h-cite">
-          <div class="testimonial-icon">
-            {% include 'svg/testimonial-icon.svg' %}
-          </div>
-          <cite class="testimonial-cite">
-            Ich hatte bereits vor tiga.eleven Gründer Erfahrung mit einer Taxi-App und einer eCommerce-Plattform für
-              Teppiche.
-              Für tiga.eleven war es wichtig jemanden zu finden, der neben viel technischem Know-How auch ein
-              kleines, internationales Team aufbauen und koordinieren kann.
-              So konnte ich mich als Gründer auf die Weiterentwicklung des Unternehmens konzentrieren.
-              <br />
-              Stephan deckt diese Bereiche hervorragend ab und hat mit seinem Team ein Produkt geschaffen,
-              auf das wir stolz sind und ich wirklich gerne beim Kunden präsentiere.
-          </cite>
-          <div class="testimonial-author">
-              <span class="p-author h-card">Georg Parth, CEO <a target="_blank" href="https://tiga.at/">tiga.eleven</a></span>
-            (<time class="dt-published" datetime="2016-07-25">25.7.2016</time>)
-          </div>
-        </div><!-- .testimonial -->
-
-        <div class="testimonial h-cite">
-          <div class="testimonial-icon">
-            {% include 'svg/testimonial-icon.svg' %}
-          </div>
-          <cite class="testimonial-cite">
-            I was the CTO of Careesma when Stephan joined the development team.
-            Careesma is an international job board with more than 20 million monthly pageviews.
-            <br />
-            Stephan did a fantastic job at Careesma.
-            On top of his strong engineering skills, Stephan exceeded my
-            expectations about how fast he managed to fit as a team-member and the degree
-            of autonomy and loyalty he showed.
-          </cite>
-          <div class="testimonial-author">
-            <span class="p-author h-card">Javier López, CTO careesma.com</span>
-            (<time class="dt-published" datetime="2016-07-20">20.07.2016</time>)
-          </div>
-        </div><!-- .testimonial -->
-
-      </section><!-- .testimonials -->
-    </div><!-- .col-* -->
-  </div><!-- .row -->
-  <hr />
+  {% block projects %}
+  <section class="section projects">
+    <h2 class="label">Projekte im Detail</h2>
+    {% for project in projects %}
+    <article class="project">
+      <h3 class="project-title">{% if project.externalurl %}<a href="{{ project.externalurl }}">{% endif %}{{ project.title }}{% if project.externalurl %}</a>{% endif %}</h3>
+      <dl class="project-meta">
+        {% if project.subline %}
+        <dt>Kunde</dt>
+        <dd>{% if project.sublineurl %}<a href="{{ project.sublineurl }}">{% endif %}{{ project.subline|safe }}{% if project.sublineurl %}</a>{% endif %}</dd>
+        {% endif %}
+        <dt>Zeitraum</dt>
+        <dd>{{ project.duration }}</dd>
+        <dt>Technik</dt>
+        <dd>{% for tag in project.tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}</dd>
+      </dl>
+      <div class="prose">
+        {{ project.content|safe }}
+      </div>
+    </article>
+    {% endfor %}
+  </section>
   {% endblock %}
-  <div class="row">
-    <div class="main-column col-full">
-      {% block projects %}
-      <section class="projects">
-        <h1 class="section-title">» Ausgewählte Projekte</h1>
-        {% for project in projects %}
-        <article class="project">
-          <header class="headlines">
-            <h2>
-              {% if project.externalurl %}
-                <a target="_blank" href="{{ project.externalurl }}">
-              {% endif %}
-                {{ project.title }}
-              {% if project.externalurl %}
-                </a>
-              {% endif %}
-            </h2>
 
-            {% if project.subline %}
-            <h3>
-              {% if project.sublineurl %}
-              <a href="{{ project.sublineurl }}">
-              {% endif %}
-
-              {{ project.subline|safe }}
-
-              {% if project.sublineurl %}
-              </a>
-              {% endif %}
-            </h3>
-            {% endif %}
-          </header><!-- .headlines -->
-
-          <section class="project-content main-copy">
-            {{ project.content|safe }}
-          </section><!-- .project.main-copy -->
-
-          <div class="preview">
-              <div class="techcloud">
-                <span class="icomoon-tag" aria-hidden="true"></span>
-                {% for tag in project.tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor%}
-              </div><!-- .techcloud -->
-              <div class="date">
-                {{ project.duration }}
-              </div><!-- .date -->
-          </div><!-- .preview -->
-
-        </article><!-- .project -->
-        {% endfor %}
-      </section><!-- .projects -->
-      {% endblock %}
-
-    </div><!-- main-column -->
-  </div>
-
-  <hr />
-  <div class="row">
-    <div class="col-full">
-      <section class="intro">
-        <h2>Was erfolgreiche Teams ausmacht?</h2>
-        <div class="intro-copy">
-          <p>
-              Für mich als Softwareentwickler gibt es zwei Konzepte, die mir besonders wichtig sind und die
-              ich in allen gut funktionierenden Teams und Projekten wiedergefunden habe:
-          </p>
-              <ul>
-                <li>
-                  <strong>Strong Ownership</strong><br>
-                  Das Team (und damit jeder Entwickler) muss Gesamtverantwortung für ein Produkt oder Service haben und
-                    sich gegenüber dem Endkunden verantwortlich fühlen.
-                </li>
-                <li>
-                    <strong>Fast Prototyping</strong><br>
-                    Ideen und Konzepte müssen schnell abgetestet werden.
-                    Je weniger technischer Aufwand, um eine Idee zu testen, desto besser.
-                </li>
-              </ul>
-            <hr>
-          <p>
-            Hier meine Lieblingsbücher und -ressourcen, in denen beide Konzepte wiederzufinden sind:
-          </p>
-            <ul>
-              <li>
-                  <a target="_blank" href="https://www.whatmatters.com/the-book/">
-                      Measure what matters</a><br>
-                  „Get Started With OKRs. Your step-by-step guide for setting and achieving audacious goals.”
-              </li>
-              <li>
-                  <a target="_blank" href="https://www.gv.com/sprint/">
-                      The Google design sprint</a><br>
-                  „The sprint is a five-day process for answering critical business questions through design,
-                  prototyping, and testing ideas with customers.”
-              </li>
-              <li>
-                  <a target="_blank" href="https://www.strategyzer.com/canvas/business-model-canvas">
-                      The Value Proposition Canvas</a><br>
-                  „How to better understand customers and create value propositions that sell.”
-              </li>
-              <li>
-                  <a target="_blank" href="https://www.morawa.at/detail/ISBN-9781984801463/Iger-Robert/The-Ride-of-a-Lifetime">
-                      The Ride of a Lifetime</a><br>
-                  „The former CEO of Disney shares the ideas and values he embraced during his fifteen years as CEO while reinventing one of the world's most beloved companies”
-              </li>
-            </ul>
-        </div>
-      </section>
+  <section class="section teams">
+    <h2 class="label">Was erfolgreiche Teams ausmacht</h2>
+    <div class="prose">
+      <p>
+        Für mich als Softwareentwickler gibt es zwei Konzepte, die mir besonders wichtig sind und die
+        ich in allen gut funktionierenden Teams und Projekten wiedergefunden habe:
+      </p>
+      <ul>
+        <li>
+          <strong>Strong Ownership</strong><br>
+          Das Team (und damit jeder Entwickler) muss Gesamtverantwortung für ein Produkt oder Service haben und
+          sich gegenüber dem Endkunden verantwortlich fühlen.
+        </li>
+        <li>
+          <strong>Fast Prototyping</strong><br>
+          Ideen und Konzepte müssen schnell abgetestet werden.
+          Je weniger technischer Aufwand, um eine Idee zu testen, desto besser.
+        </li>
+      </ul>
+      <p>
+        Hier meine Lieblingsbücher und -ressourcen, in denen beide Konzepte wiederzufinden sind:
+      </p>
+      <ul>
+        <li>
+          <a href="https://www.whatmatters.com/the-book/">Measure what matters</a><br>
+          „Get Started With OKRs. Your step-by-step guide for setting and achieving audacious goals.”
+        </li>
+        <li>
+          <a href="https://www.gv.com/sprint/">The Google design sprint</a><br>
+          „The sprint is a five-day process for answering critical business questions through design,
+          prototyping, and testing ideas with customers.”
+        </li>
+        <li>
+          <a href="https://www.strategyzer.com/canvas/business-model-canvas">The Value Proposition Canvas</a><br>
+          „How to better understand customers and create value propositions that sell.”
+        </li>
+        <li>
+          <a href="https://www.morawa.at/detail/ISBN-9781984801463/Iger-Robert/The-Ride-of-a-Lifetime">The Ride of a Lifetime</a><br>
+          „The former CEO of Disney shares the ideas and values he embraced during his fifteen years as CEO while reinventing one of the world's most beloved companies”
+        </li>
+      </ul>
     </div>
-  </div>
+  </section>
+
+  <section class="contact">
+    <h2 class="contact-title">Projekt besprechen?</h2>
+    <p class="contact-text">Schreib mir oder ruf an – ich melde mich meist am selben Tag.</p>
+    <p class="contact-links">
+      <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>
+      <a href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
+      <a href="{{ AUTHOR_LINKEDIN }}">LinkedIn</a>
+    </p>
+  </section>
 {% endblock %}
 
 
 {% block footer %}
-  <footer class="main-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <section class="footer-contact">
-          <h2>Projekt besprechen?</h2>
-          <p>Schreib mir oder ruf an – ich melde mich meist am selben Tag.</p>
-          <a class="email" href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>
-          <a class="tel" href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
-        </section><!-- .footer-contact -->
-
-        <address class="footer-imprint" id="impressum">
-          <strong>{{ AUTHOR_LEGALNAME }}</strong><br>
-          {{ AUTHOR_TRADE }}<br>
-          {{ AUTHOR_STREET }}, {{ AUTHOR_CITY }}<br>
-          UID {{ AUTHOR_UID }} · Gewerbebehörde {{ AUTHOR_AUTHORITY }}<br>
-          Mitglied der {{ AUTHOR_CHAMBER }}<br>
-          Berufsrecht: Gewerbeordnung: <a target="_blank" href="https://www.ris.bka.gv.at">www.ris.bka.gv.at</a>
-        </address><!-- .footer-imprint -->
-      </div><!-- .footer-grid -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <address class="footer-imprint" id="impressum">
+        <strong>{{ AUTHOR_LEGALNAME }}</strong><br>
+        {{ AUTHOR_TRADE }}<br>
+        {{ AUTHOR_STREET }}, {{ AUTHOR_CITY }}<br>
+        UID {{ AUTHOR_UID }} · Gewerbebehörde {{ AUTHOR_AUTHORITY }}<br>
+        Mitglied der {{ AUTHOR_CHAMBER }}<br>
+        Berufsrecht: Gewerbeordnung: <a href="https://www.ris.bka.gv.at">www.ris.bka.gv.at</a>
+      </address>
 
       <details class="footer-privacy" id="datenschutz">
         <summary>Datenschutz</summary>
@@ -320,9 +186,9 @@
         </p>
         <p>
           Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch.
-          Beschwerden können Sie bei der <a target="_blank" href="https://www.dsb.gv.at">österreichischen Datenschutzbehörde</a> einbringen.
+          Beschwerden können Sie bei der <a href="https://www.dsb.gv.at">österreichischen Datenschutzbehörde</a> einbringen.
         </p>
-      </details><!-- .footer-privacy -->
-    </div><!-- .container -->
-  </footer><!-- .main-footer -->
+      </details>
+    </div>
+  </footer>
 {% endblock %}

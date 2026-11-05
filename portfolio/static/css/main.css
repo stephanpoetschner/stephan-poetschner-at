@@ -1,226 +1,239 @@
-
-
-/* ==========================================================================
-   Author's custom styles
-   Palette see: http://0to255.com/436db4
-   ========================================================================== */
-*, *::before, *::after { box-sizing: border-box; }
-
-html { font-size: 16px; -webkit-text-size-adjust: 100%; }
-body { margin: 0; }
-p { margin: 0 0 1rem; }
-ul { margin: 0 0 1rem; }
-img { vertical-align: middle; }
-a { color: #337ab7; text-decoration: none; }
-a:hover, a:focus { color: #23527c; text-decoration: underline; }
-hr { margin: 0; border: 0; border-top: 1px solid #eee; }
-
-/* Spacing scale: .5 / 1 / 1.5 / 2.5 / 3 rem. The container padding is the
-   page's single left edge. */
-.container { max-width: 1170px; margin-inline: auto; padding-inline: 1.25rem; }
-
-/* Two-column layout from 992px: main content left, contact/portrait right. */
-@media (min-width: 992px) {
-  .row { display: grid; grid-template-columns: 2fr 1fr; column-gap: 2rem; }
-  .col-full { grid-column: 1 / -1; }
-}
-@media (max-width: 991px) {
-  .desktop-only { display: none; }
-}
-
-body {
-  font-weight: normal;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #333;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 1rem 0;
-  font-family: inherit;
-  line-height: 1.5em;
-  color: inherit;
-  text-rendering: optimizelegibility;
-}
-
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-  font-weight: normal;
-  line-height: 1;
-  color: #999999;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: 3em;
-  font-weight: 300;
-}
-
-h2 {
-  font-size: 2em;
-  font-weight: 300;
-}
-
-h3 {
-  font-size: 1em;
-  font-weight: 500;
-}
-
-h4 {
-  font-size: 1em;
-}
-
-h5 {
-  font-size: 1em;
-}
-
-h6 {
-  font-size: 1em;
-}
+/* stephan-poetschner.at – design "Stille in Feld-Farben". Principles and reasoning: DESIGN.md.
+   Mobile first, one layout breakpoint at 1000px (label column appears). */
 
 @font-face {
-   font-family: 'icomoon';
-   src: url('../fonts/icomoon.woff') format('woff');
-   font-weight: normal;
-   font-style: normal;
+  font-family: "Instrument Sans";
+  src: url("../fonts/instrument-sans/instrument-sans-latin-wght-normal.woff2") format("woff2");
+  font-weight: 400 700; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../fonts/instrument-sans/instrument-sans-latin-ext-wght-normal.woff2") format("woff2");
+  font-weight: 400 700; font-style: normal; font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-.icomoon-tag:before, .icomoon-mail:before {
-   font-family: 'icomoon';
-   font-style: normal;
-   font-weight: normal;
-   line-height: 1;
-   -webkit-font-smoothing: antialiased;
-}
-.icomoon-tag:before {
-   content: "\e003";
-}
-.icomoon-mail:before {
-   content: "\e004";
-}
+:root {
+  /* Colour: cream ground, ink text, deep green as the only accent.
+     Leaf is used only on green; sand only as a band. Contrast on --paper unless noted. */
+  --paper: #faf7f0;
+  --ink: #1b1d1a;            /* 16:1 */
+  --muted: #5f5e57;          /* 6.2:1; 5.2:1 on sand */
+  --hair: #ddd5c4;
+  --green: #1d3b31;          /* 11:1; accent: labels, links, pill, green bands */
+  --leaf: #c8e06a;           /* 8.6:1 on green; never on cream */
+  --on-green: #eef0e6;       /* text on green, 10:1 */
+  --on-green-muted: #a9bdb2; /* 6:1 on green */
+  --sand: #e9e2d3;
 
-.main-header a, .main-header a:hover,
-.main-footer a, .main-footer a:hover,
-h1 a, h1 a:hover,
-h2 a, h2 a:hover,
-h3 a, h3 a:hover { color: inherit; }
+  --font: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-.main-header, .main-footer { color: #bbb; }
-.main-header { padding-top: 2em; }
-.main-header h1,
-.main-header h2,
-.main-header h3 { padding: 0; margin: 0 0 .5rem; }
+  /* Type: few sizes, far apart. Body and the giant sizes do the work. */
+  --fs-sm: .9375rem;                                  /* meta: years, captions */
+  --fs-base: 1.125rem;                                /* running text */
+  --fs-md: 1.25rem;                                   /* small headings, secondary quotes */
+  --fs-lg: clamp(1.6rem, 1rem + 1.8vw, 2.75rem);      /* client names, offers, main quote */
+  --fs-xl: clamp(2.3rem, .8rem + 5.6vw, 6.5rem);      /* statement, contact */
 
-.main-header .name { color:#000; text-transform: uppercase; }
-.main-header .profession { color:#000; }
-.main-header .address,
-.main-header .contact { line-height: 1.5; }
-/* Header lines on the same row share a baseline; the side column is flush right. */
-@media (min-width: 992px) {
-  .main-header { align-items: baseline; }
-  .main-header .col-side { text-align: right; }
+  /* Space: three clearly different levels. */
+  --space-in: 1rem;                                   /* inside a group */
+  --space-group: clamp(1.5rem, 1rem + 1.5vw, 2.5rem); /* between items of a section */
+  --space-section: clamp(5rem, 3rem + 8vw, 12rem);    /* between sections */
+
+  --gap: clamp(1.25rem, 5vw, 6rem);                   /* page margin */
+  --wide: 80rem;
+  --measure: 38rem;
 }
 
-/* Portrait, button and LinkedIn link form one stack as wide as the photo,
-   flush with the right edge and level with the section heading beside it. */
-.portrait img { display: block; max-width: 100%; }
-@media (min-width: 992px) {
-  .side-stack { justify-self: end; width: 310px; padding-top: 2.5rem; }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 var(--fs-base)/1.55 var(--font);
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p, ol, ul, dl, dd, figure, blockquote { margin: 0; }
+ol { list-style: none; padding: 0; }
+strong, b { font-weight: 600; }
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--green);
+  text-underline-offset: .2em;
+}
+a:hover { color: var(--green); text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 3px; }
+
+/* Page frame: base.html wraps the main content in .container */
+.container { padding-inline: var(--gap); }
+.container > * { max-width: var(--wide); }
+
+/* Section = small green label + content. From 1000px the label gets its own left column. */
+.section { padding-top: var(--space-section); }
+.label {
+  font-size: 1rem; font-weight: 600; line-height: 1.4;
+  color: var(--green);
+  margin-bottom: var(--space-group);
+}
+@media (min-width: 1000px) {
+  .section { display: grid; grid-template-columns: 1fr 3fr; column-gap: 4rem; align-items: start; }
+  .section > :not(.label) { grid-column: 2; }
+  .label { grid-column: 1; margin: 0; padding-top: .35rem; }
 }
 
-.main-column h1 { text-align: right; }
-
-.main-copy h1 { text-align: left;}
-.headlines h3 { color: #bbb; font-weight: 500; font-size: 1.5em; font-style: italic; }
-
-/* Sections pad 2.5rem each side, so neighbours sit 5rem apart with the <hr> in the middle. */
-.intro, .testimonials, .projects { padding-block: 2.5rem; }
-.intro h2, .testimonials h2, .projects .section-title { margin: 0 0 1rem; }
-.intro { line-height: 1.6em; font-size: 1em; }
-.intro .intro-copy { max-width: 70ch; font-size: 1.25em; line-height: 1.5em;}
-.intro .intro-copy p { margin: 0 0 1rem; }
-.intro .intro-copy li { line-height: inherit; margin-top: .75rem; }
-/* A divider inside a section separates sub-parts: smaller than the 5rem between sections. */
-.intro-copy hr { margin: 2rem 0; }
-
-.testimonials { line-height: 1.6em; font-size: 1em; }
-.testimonials .testimonial { display: flow-root; margin-bottom: 3rem; font-size: 1.25em; line-height: 1.5em;}
-.testimonials .testimonial:last-child { margin-bottom: 0; }
-.testimonial-icon { float: left; }
-.testimonial-cite { display: block; margin-left: 3rem; max-width: 70ch; }
-.testimonial-author { color: #bbb; margin: .5rem 0 0 3rem; }
-/* Hang the quote icon in the margin so the quote text keeps the page's left edge. */
-@media (min-width: 768px) {
-  .testimonial-icon { margin-left: -3rem; }
-  .testimonial-cite, .testimonial-author { margin-left: 0; }
+/* Full-bleed colour bands; their columns line up with the sections around them */
+.band {
+  margin-top: var(--space-section);
+  margin-inline: calc(-1 * var(--gap));
+  padding: clamp(4rem, 3rem + 4vw, 8rem) var(--gap);
+  max-width: none !important;
 }
-
-.contact-claim { text-align: center; margin-top: 1rem; }
-.contact-claim a.email { color: #fff; background: #e74c3c; display: block; text-transform: uppercase; font-weight: 500; padding: .5rem;
-   border-radius: 3px;
+@media (min-width: 1000px) {
+  .band {
+    --inner: min(100vw - 2 * var(--gap), var(--wide));
+    grid-template-columns: calc((var(--inner) - 4rem) / 4) calc((var(--inner) - 4rem) * .75);
+  }
 }
-.contact-claim a.email:hover { text-decoration: inherit; background: #b82617; }
-.socialmedia { text-align: center; margin: .5rem 0 2.5rem; }
+.band-green { background: var(--green); color: var(--on-green); }
+.band-green .label { color: var(--leaf); }
+.band-green a { text-decoration-color: var(--leaf); }
+.band-green a:hover { color: var(--leaf); }
+.band-sand { background: var(--sand); }
 
-.project { margin-bottom: 3rem; }
-.project:last-child { margin-bottom: 0; }
-.project .headlines h2:first-child { margin-top: 0; }
-/* The bar bleeds 1rem past the text column so its text stays on the page's left edge. */
-.project .preview { background: #363639; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #fff; margin-inline: -1rem; padding: 1rem; }
-.project .techcloud { border-bottom: 5px solid #2b2b2e; padding-bottom: .75rem; margin-bottom: .75rem; }
-.project .date { color: #bbb; font-size: .75em; font-style: italic; text-align: right; }
-.project .project-content { margin: 1rem 0 1.5rem; max-width: 70ch; }
-
-.main-copy h1,
-.main-copy h2,
-.main-copy h3 { margin: 1.5rem 0 .5rem; padding: 0; }
-
-.main-copy h1, .skill h1 { font-size: 1.25em; text-transform: uppercase; }
-.main-copy h2, .skill h2 { font-size: 1em; }
-.main-copy h3, .skill h3 { font-size: 1em; }
-
-.main-copy ul { margin: 0 0 1rem 1.25rem; }
-.main-copy > ul { margin-left:0; }
-
-.main-copy blockquote { border-left: 10px solid #cef; font-size: 1.125em; font-style: italic; font-weight: 300; line-height: 1.5em; margin: 1.5rem 0; padding: .5rem 0 .5rem 1rem; text-transform: uppercase; }
-
-.main-footer { background: #222; color: #ccc; padding-block: 4rem 3rem; }
-.main-footer a { color: #fff; text-decoration: underline; text-decoration-color: #777; text-underline-offset: .2em; }
-.main-footer a:hover, .main-footer a:focus { color: #fff; text-decoration-color: #fff; }
-
-.footer-grid { display: grid; gap: 3rem; }
-@media (min-width: 768px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; align-items: end; }
+/* Top: name line, statement, pill */
+.top {
+  min-height: min(92vh, 54rem);
+  display: grid; grid-template-rows: auto 1fr auto;
+  padding: 2rem 0 3rem;
 }
-/* From 992px the imprint starts on the page's right column. */
-@media (min-width: 992px) {
-  .footer-grid { grid-template-columns: 2fr 1fr; gap: 2rem; }
+.id { display: flex; align-items: center; gap: .9rem; }
+.portrait { width: 48px; height: 48px; object-fit: cover; object-position: 50% 20%; border-radius: 50%; }
+.name { font-weight: 600; }
+.role { color: var(--muted); }
+.role::before { content: "·"; margin-right: .6rem; }
+@media (max-width: 600px) {
+  .id { flex-wrap: wrap; }
+  .role { flex-basis: 100%; }
+  .role::before { content: none; }
 }
+.statement {
+  align-self: center;
+  font-size: var(--fs-xl); line-height: 1.02; font-weight: 400; letter-spacing: -.035em;
+  max-width: 16ch;
+  padding: 4rem 0;
+}
+.statement em { font-style: normal; font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; }
+.cta-note { color: var(--muted); }
 
-.footer-contact h2 { color: #fff; margin: 0 0 .5rem; }
-.footer-contact p { margin: 0 0 1.5rem; }
-.footer-contact a { display: block; width: fit-content; font-size: clamp(1.125em, 5vw, 1.5em); line-height: 1.6; overflow-wrap: anywhere; }
+/* Pill: the one call to action. Green on cream, leaf on hover. */
+.pill {
+  display: inline-flex; align-items: center; min-height: 52px; padding: 0 1.6rem;
+  border-radius: 999px;
+  background: var(--green); color: var(--on-green);
+  font-weight: 600; text-decoration: none; white-space: nowrap;
+  transition: background-color .15s, color .15s;
+}
+.pill::after { content: "→"; margin-left: .6rem; }
+.pill:hover { background: var(--leaf); color: var(--green); }
+@media (max-width: 420px) { .pill { font-size: 1rem; padding: 0 1.25rem; } }
 
-.footer-imprint, .footer-privacy { font-size: .875em; line-height: 1.7; }
-.footer-imprint { font-style: normal; margin: 0; }
-.footer-imprint strong { color: #fff; }
+/* Clients: big names, one line of context, years */
+.client-list li { display: grid; gap: .2rem 2rem; padding: 1.25rem 0; border-bottom: 1px solid var(--hair); }
+.client-list li:first-child { padding-top: 0; }
+@media (min-width: 700px) {
+  .client-list li { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr) auto; align-items: baseline; }
+}
+.client { font-size: var(--fs-lg); font-weight: 500; letter-spacing: -.03em; line-height: 1.05; }
+.year { color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
 
-.footer-privacy { border-top: 1px solid #444; margin-top: 3rem; padding-top: 1.5rem; }
-.footer-privacy summary { display: list-item; cursor: pointer; color: #fff; }
-.footer-privacy p { max-width: 65ch; margin: .75em 0 0; }
+/* Figures */
+.fact-list { display: grid; gap: var(--space-group) 3rem; }
+@media (min-width: 700px) { .fact-list { grid-template-columns: repeat(3, 1fr); } }
+.fact-list dt {
+  font-size: clamp(3rem, 1.6rem + 4vw, 6rem); font-weight: 400; letter-spacing: -.05em; line-height: .95;
+  color: var(--leaf);
+}
+.fact-list dt small { display: block; font-size: var(--fs-md); letter-spacing: 0; line-height: 1.4; color: var(--on-green-muted); }
+.fact-list dd { margin-top: var(--space-in); max-width: 16em; }
+
+/* Offers large; how I work quieter, in three columns */
+.offer-list li { padding: 2rem 0; border-bottom: 1px solid var(--hair); }
+.offer-list li:first-child { padding-top: 0; }
+.offer-list h3 { font-size: var(--fs-lg); font-weight: 500; letter-spacing: -.03em; line-height: 1.1; margin-bottom: .6rem; }
+.offer-list p { max-width: var(--measure); color: var(--muted); }
+.how-list { display: grid; gap: var(--space-group) 2.5rem; }
+@media (min-width: 800px) { .how-list { grid-template-columns: repeat(3, 1fr); } }
+.how-list h3 { font-size: var(--fs-md); font-weight: 600; line-height: 1.25; margin-bottom: .6rem; }
+
+/* Testimonials on sand: one large, the others smaller */
+.quotes { display: grid; gap: 3rem; }
+.quote-main blockquote { font-size: var(--fs-lg); line-height: 1.12; font-weight: 400; letter-spacing: -.03em; }
+.quote-main blockquote p::before { content: "„"; }
+.quote-main blockquote p::after { content: "“"; }
+.quote:not(.quote-main) blockquote { font-size: var(--fs-md); line-height: 1.45; max-width: var(--measure); }
+.quote figcaption { margin-top: var(--space-in); color: var(--muted); font-size: var(--fs-sm); }
+.quote .p-author { color: var(--ink); font-weight: 600; }
+
+/* Project details: facts in the label column, text in the content column */
+.project { padding: var(--space-group) 0 calc(var(--space-group) * 1.5); border-top: 1px solid var(--hair); }
+.label + .project { border-top: 0; padding-top: 0; }
+.project-meta { font-size: var(--fs-sm); color: var(--muted); display: grid; align-content: start; grid-template-columns: auto 1fr; gap: .1rem 1rem; margin-bottom: var(--space-in); }
+.project-meta dd { color: var(--ink); }
+@media (min-width: 1000px) {
+  .projects { row-gap: 0; }
+  .projects > .project { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 3fr; column-gap: 4rem; align-items: start;
+    grid-template-areas: "meta title" "meta prose"; grid-template-rows: auto 1fr; }
+  .project-title { grid-area: title; }
+  .project > .prose { grid-area: prose; }
+  .project-meta { grid-area: meta; }
+  .projects > .label { grid-row: 1; }
+  .projects > .label + .project { grid-row: 1; }
+  .project-meta { grid-template-columns: 1fr; gap: 0; padding-top: .4rem; margin: 0; }
+  .projects > .label + .project .project-meta { margin-top: 3.5rem; }
+  .project-meta dt:not(:first-child) { margin-top: .6rem; }
+}
+.project-title { font-size: var(--fs-lg); font-weight: 500; letter-spacing: -.03em; line-height: 1.1; margin-bottom: var(--space-in); }
+@media (min-width: 1000px) { .project-title { margin-bottom: var(--space-group); } }
+.project-title a { text-decoration-color: var(--hair); }
+
+/* Running text from Markdown: its "#" headings are labels, not page headings */
+.prose { max-width: var(--measure); }
+.prose > * + * { margin-top: var(--space-in); }
+.prose h1, .prose h2, .prose h3 { font-size: var(--fs-base); font-weight: 600; line-height: 1.4; margin-top: var(--space-group); }
+.prose > :first-child { margin-top: 0; }
+.prose h1 + *, .prose h2 + *, .prose h3 + * { margin-top: .35rem; }
+.prose ul { padding-left: 1.2em; }
+.prose li + li { margin-top: .4em; }
+.prose li::marker { color: var(--muted); }
+.prose blockquote { padding-left: 1em; border-left: 2px solid var(--green); }
+
+/* Contact */
+.contact { padding: var(--space-section) 0 clamp(4rem, 3rem + 4vw, 8rem); }
+.contact-title { font-size: var(--fs-xl); font-weight: 400; letter-spacing: -.04em; line-height: 1; }
+.contact-text { color: var(--muted); margin-top: 1.25rem; font-size: var(--fs-md); }
+.contact-links {
+  display: flex; flex-wrap: wrap; gap: 1rem 3rem; margin-top: var(--space-group);
+  font-size: clamp(1.25rem, 1rem + 1vw, 2rem); font-weight: 500; letter-spacing: -.02em;
+}
+.contact-links a { text-decoration-thickness: 2px; overflow-wrap: anywhere; }
+
+/* Footer: legal text on green, small */
+.site-footer { background: var(--green); color: var(--on-green-muted); font-size: var(--fs-sm); line-height: 1.7; }
+.footer-inner { padding: clamp(3rem, 2rem + 3vw, 5rem) var(--gap); max-width: calc(var(--wide) + 2 * var(--gap)); display: grid; gap: 2rem; }
+@media (min-width: 1000px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
+.site-footer a { color: var(--on-green); text-decoration-color: var(--on-green-muted); }
+.site-footer a:hover { color: var(--leaf); text-decoration-color: var(--leaf); }
+.footer-imprint { font-style: normal; }
+.footer-imprint strong { color: var(--on-green); }
+.footer-privacy summary { cursor: pointer; color: var(--on-green); }
+.footer-privacy p { max-width: 65ch; margin-top: .75em; }
+
+@media (prefers-reduced-motion: reduce) { .pill { transition: none; } }

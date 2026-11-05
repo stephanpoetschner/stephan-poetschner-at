@@ -17,6 +17,10 @@ Copy is German, informal "du"; common English IT terms are fine. No hourly rate.
 - `portfolio/content/projects/*.md`: one file per project, sorted by `date` (newest first)
 - `portfolio/static/`: CSS, images
 
+## Design
+
+See `DESIGN.md` for principles, tokens, layout and components. Follow it when touching templates or CSS.
+
 ## Commands
 
 ```bash
