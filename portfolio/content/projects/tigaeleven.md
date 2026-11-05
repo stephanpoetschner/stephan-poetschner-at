@@ -11,23 +11,13 @@ displayimage: False
 
 # Projektbeschreibung
 
-Die Gründer suchen nach einem Entwicklerteam, das die eigene Idee technisch umsetzen kann:
-WLAN-Nutzer sollen im Café oder Restaurant erst nach Registrierung am Webportal kostenlosen Internetzugang bekommen. 
-Nach zwei Tagen werden Gäste automatisiert um eine positive Internetbewertung (z. B. Tripadvisor) gebeten.
-Bestehende Gäste konvertieren damit zukünftige Neukunden.
-
-Handelsübliche WLAN-Router arbeiten mit dem tigaeleven-Webportal zusammen.
+Gäste in Cafés und Restaurants bekommen kostenloses WLAN, nachdem sie sich am Webportal
+registriert haben, und werden später um eine Bewertung (z. B. auf Tripadvisor) gebeten.
+Mit den Gründern habe ich die Idee vom Prototyp zum marktreifen Produkt gebracht: WLAN-Router
+und Web-Applikation.
 
 # Meine Highlights
 
-* Vom Prototypen **zum Produkt:** 
-  Planung und Umsetzung der Lösung (WLAN-Router und Web-Applikation)
-* Technische Projektleitung und Führung des Entwicklungsteams (3 Entwickler)
-* **Django-** und Frontendentwicklung
-
-# Team
-
-* Georg Parth (Gründer)
-* Martin Stemeseder (Gründer)
-* Pawel Bernat (remote)
-* Philipp DeCol
+* Vom Prototyp **zum Produkt**
+* **Technische Projektleitung**, Team von 3 Entwicklern
+* Django- und Frontend-Entwicklung

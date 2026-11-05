@@ -1,11 +1,9 @@
 # coding: utf-8
 
 SITE = {
-    'NAME': \
-    u'Top Django-Developer aus Wien' \
-    u' | Perfekte Umsetzung | %(AUTHOR_FIRSTNAME)s %(AUTHOR_FAMILYNAME)s',
+    'NAME': u'Django-Entwickler in Wien – %(AUTHOR_FIRSTNAME)s %(AUTHOR_FAMILYNAME)s',
 
-    'META': u'Freelancer aus Wien. Erfahrener Django-Entwickler. Referenzprojekte durchsehen!',
+    'META': u'Django-Entwickler in Wien seit 2008. Ich entwickle bestehende Django-Systeme weiter und baue neue, für E.GON, Finmatics und A1 Digital. Erstgespräch kostenlos.',
     'DOMAIN': 'www.stephan-poetschner.at',
     'ROOT_URL': 'http://%(DOMAIN)s',
 
