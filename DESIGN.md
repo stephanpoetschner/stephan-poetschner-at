@@ -17,7 +17,8 @@ It must **not** look like:
 - **Something technical / a terminal:** no monospace, no "01/02" indices, no code aesthetics,
   no dark-mode-hacker look.
 
-No mood photography. One small round portrait (48px) as proof of a real person.
+No mood photography. The portrait appears twice: small and round (48px) at the top, larger in
+the contact section, where it puts a real person next to the invitation.
 
 ## Principles (and why)
 
@@ -34,11 +35,14 @@ No mood photography. One small round portrait (48px) as proof of a real person.
    (¼) and content on the right (¾). This asymmetry is the page's structure; everything lines up
    on the content edge. Running text never exceeds `--measure` (38rem).
 6. **Colour as fields, one accent.** Cream ground; deep green is the only accent colour (labels,
-   links, pill, bands). Full-width bands give rhythm: green for figures, sand for testimonials,
-   green footer. Leaf is only ever used on green.
+   links, pill, bands). Full-width bands give rhythm: green for Django-Vienna, sand for
+   testimonials, green footer. Leaf is only ever used on green.
 7. **One call to action.** The green pill "Kennenlerngespräch vereinbaren" appears once, at the
    top. The contact section at the end uses large plain links, not a second button.
-8. **Important things are dark.** Names, authors, client names in `--ink`. `--muted` only for
+8. **Vienna, quietly.** Location shows in words (role line, "auf einen Kaffee in Wien") and in one
+   leaf line drawing of the Riesenrad in the footer. No other illustrations, no skyline photos,
+   no red-white-red.
+9. **Important things are dark.** Names, authors, client names in `--ink`. `--muted` only for
    context (years, captions, descriptions of offers). Nothing below 4.5:1.
 
 ## Tokens (`:root` in main.css)
@@ -74,24 +78,29 @@ Weights: 400 and 500 for large type, 600 for emphasis and small headings.
    pill + "Kostenlos. Ich melde mich meist am selben Tag."
 2. **Für wen ich gearbeitet habe** – `.client-list`: name (large) · one line · years.
    Names only for clients that may be named (`profile.md`).
-3. **In Zahlen** (green band) – three `<dt>` figures with a small prefix (`<small>seit</small>`).
+3. **Django-Vienna** (green band) – the strongest differentiator after the clients: founded 2013,
+   organised for years, a network for referrals. Lead sentence in `--fs-lg`, short text, three
+   leaf figures (Treffen, Mitglieder, Bewertung), link to meetup.com. Wording is tense-proof
+   ("gegründet", "organisiert") because the group ends in November 2026; never "Community
+   aufgebaut".
 4. **Was ich für dich tun kann** – the three offers in the order of `positioning.md`.
 5. **Wie ich arbeite** – three values, three columns.
 6. **Was Kunden sagen** (sand band) – one large quote, two smaller, author in ink.
 7. **Projekte im Detail** – from `content/projects/*.md`; facts (Kunde/Zeitraum/Technik) in the
    label column, title + text right. Markdown `#` headings render as small bold labels.
 8. **Was erfolgreiche Teams ausmacht** – prose.
-9. **Projekt besprechen?** – large heading, email / phone / LinkedIn as large links.
-10. **Footer** (green) – imprint and privacy; legally required, keep the content.
+9. **Projekt besprechen?** – portrait in the label column (above on phones), large heading,
+   email / phone / LinkedIn as large links, offer to meet in person.
+10. **Footer** (green) – Riesenrad mark + "Aus Wien.", imprint and privacy (legally required,
+   keep the content).
 
 Adding a section: `<section class="section">` with `<h2 class="label">` first; add `band
 band-green` or `band band-sand` only if the rhythm needs it (never two bands in a row).
 
 ## Copy
 
-Copy rules live in `../pitches/copy.md`, facts in `../pitches/profile.md`. Figures on this page
-(Django-Vienna: 59 Treffen, 838 Mitglieder, 4,9/5) are from 2026-11; the meetup ends in
-November 2026, so keep the wording tense-proof ("mitorganisiert").
+Copy rules live in `../pitches/copy.md`, facts in `../pitches/profile.md`. Django-Vienna figures
+(59 Treffen, 838 Mitglieder, 4,9/5 bei 166 Bewertungen) are from 2026-11.
 
 ## Checking changes
 

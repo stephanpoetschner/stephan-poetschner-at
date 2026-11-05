@@ -154,6 +154,13 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 .client { font-size: var(--fs-lg); font-weight: 500; letter-spacing: -.03em; line-height: 1.05; }
 .year { color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
 
+/* Django-Vienna band: lead sentence, short text, three figures */
+.meetup-lead { font-size: var(--fs-lg); font-weight: 400; letter-spacing: -.03em; line-height: 1.1; max-width: 22ch; }
+.meetup-text { margin-top: var(--space-group); max-width: var(--measure); }
+.meetup .fact-list { margin-top: var(--space-section-sm, 4rem); }
+.meetup-link { margin-top: var(--space-group); font-weight: 600; }
+.meetup-link a::after { content: " →"; }
+
 /* Figures */
 .fact-list { display: grid; gap: var(--space-group) 3rem; }
 @media (min-width: 700px) { .fact-list { grid-template-columns: repeat(3, 1fr); } }
@@ -162,7 +169,7 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
   color: var(--leaf);
 }
 .fact-list dt small { display: block; font-size: var(--fs-md); letter-spacing: 0; line-height: 1.4; color: var(--on-green-muted); }
-.fact-list dd { margin-top: var(--space-in); max-width: 16em; }
+.fact-list dd { margin-top: .5rem; max-width: 16em; }
 
 /* Offers large; how I work quieter, in three columns */
 .offer-list li { padding: 2rem 0; border-bottom: 1px solid var(--hair); }
@@ -215,20 +222,29 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 .prose li::marker { color: var(--muted); }
 .prose blockquote { padding-left: 1em; border-left: 2px solid var(--green); }
 
-/* Contact */
-.contact { padding: var(--space-section) 0 clamp(4rem, 3rem + 4vw, 8rem); }
+/* Contact: portrait in the label column, a real person next to the invitation */
+.contact { padding-bottom: clamp(4rem, 3rem + 4vw, 8rem); }
+.contact-portrait { width: 9rem; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 2px; margin-bottom: var(--space-group); }
+@media (min-width: 1000px) {
+  .section > .contact-portrait { grid-column: 1; width: 100%; max-width: 15rem; margin: .6rem 0 0; }
+}
 .contact-title { font-size: var(--fs-xl); font-weight: 400; letter-spacing: -.04em; line-height: 1; }
-.contact-text { color: var(--muted); margin-top: 1.25rem; font-size: var(--fs-md); }
+.contact-text { color: var(--muted); margin-top: 1.25rem; font-size: var(--fs-md); max-width: var(--measure); }
 .contact-links {
   display: flex; flex-wrap: wrap; gap: 1rem 3rem; margin-top: var(--space-group);
   font-size: clamp(1.25rem, 1rem + 1vw, 2rem); font-weight: 500; letter-spacing: -.02em;
 }
 .contact-links a { text-decoration-thickness: 2px; overflow-wrap: anywhere; }
 
+/* Vienna mark: one line drawing of the Riesenrad, leaf on green, in the footer only */
+.vienna { display: flex; align-items: flex-end; gap: 1rem; color: var(--leaf); }
+.vienna svg { width: 4.5rem; height: auto; flex: none; }
+.vienna span { color: var(--on-green); font-size: var(--fs-md); line-height: 1.2; }
+
 /* Footer: legal text on green, small */
 .site-footer { background: var(--green); color: var(--on-green-muted); font-size: var(--fs-sm); line-height: 1.7; }
 .footer-inner { padding: clamp(3rem, 2rem + 3vw, 5rem) var(--gap); max-width: calc(var(--wide) + 2 * var(--gap)); display: grid; gap: 2rem; }
-@media (min-width: 1000px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .footer-inner { grid-template-columns: 1fr 1.5fr 1.5fr; align-items: end; } }
 .site-footer a { color: var(--on-green); text-decoration-color: var(--on-green-muted); }
 .site-footer a:hover { color: var(--leaf); text-decoration-color: var(--leaf); }
 .footer-imprint { font-style: normal; }

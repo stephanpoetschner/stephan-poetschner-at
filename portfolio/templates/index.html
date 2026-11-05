@@ -30,13 +30,22 @@
     </ol>
   </section>
 
-  <section class="section band band-green facts">
-    <h2 class="label">In Zahlen</h2>
-    <dl class="fact-list">
-      <div><dt><small>seit</small> 2008</dt><dd>selbständig als Django- und Python-Entwickler.</dd></div>
-      <div><dt><small>seit 2013</small> 59</dt><dd>Treffen von <a href="{{ AUTHOR_MEETUP }}">Django-Vienna</a> mitorganisiert. 838 Mitglieder, Bewertung 4,9 von 5.</dd></div>
-      <div><dt><small>in</small> 1 Jahr</dt><dd>vom Prototyp bis zur Übernahme von Offensity durch A1.</dd></div>
-    </dl>
+  <section class="section band band-green meetup">
+    <h2 class="label">Django-Vienna</h2>
+    <div class="meetup-body">
+      <p class="meetup-lead">2013 habe ich Django-Vienna gegründet.</p>
+      <p class="meetup-text">
+        Seither habe ich die Treffen organisiert, mit wechselnden Mitorganisatoren: Vorträge und
+        Lightning Talks, jeweils 20 bis 40 Leute. Ich habe dort auch regelmäßig vorgetragen. Für dich
+        heißt das: Wenn ich selbst keine Zeit habe, kenne ich jemanden, der helfen kann.
+      </p>
+      <dl class="fact-list">
+        <div><dt>59</dt><dd>Treffen organisiert</dd></div>
+        <div><dt>838</dt><dd>Mitglieder</dd></div>
+        <div><dt>4,9</dt><dd>von 5 Sternen, bei 166 Bewertungen</dd></div>
+      </dl>
+      <p class="meetup-link"><a href="{{ AUTHOR_MEETUP }}">Django-Vienna auf meetup.com</a></p>
+    </div>
   </section>
 
   <section class="section offers">
@@ -52,7 +61,7 @@
     <h2 class="label">Wie ich arbeite</h2>
     <ol class="how-list">
       <li><h3>Code, mit dem andere weiterarbeiten können</h3><p>Ich schreibe Software so, dass dein Team sie versteht und weiterführen kann. Bei Careesma habe ich die Codebasis eines spanischen Teams übernommen und in Wien ein eigenes Team darauf aufgebaut.</p></li>
-      <li><h3>Ehrlich, auch wenn es gegen meinen Auftrag spricht</h3><p>Wenn Standardsoftware dein Problem besser löst als eine Eigenentwicklung, sage ich dir das – auch wenn ich dann weniger zu tun habe.</p></li>
+      <li><h3>Ehrlich, auch wenn es gegen meinen Auftrag spricht</h3><p>Wenn Standardsoftware dein Problem besser löst als eine Eigenentwicklung, sage ich dir das – auch wenn ich dann weniger zu tun habe. Manchmal rate ich schon im ersten Gespräch zu einer fertigen Lösung.</p></li>
       <li><h3>Ich frage nach dem Nutzen, nicht nur nach dem Ticket</h3><p>Bevor ich etwas baue, will ich verstehen, wofür. Bei Offensity wurde so aus der Idee von Security-Experten ohne Entwicklungserfahrung in einem Jahr ein Produkt, das A1 übernommen hat.</p></li>
     </ol>
   </section>
@@ -143,14 +152,17 @@
     </div>
   </section>
 
-  <section class="contact">
-    <h2 class="contact-title">Projekt besprechen?</h2>
-    <p class="contact-text">Schreib mir oder ruf an – ich melde mich meist am selben Tag.</p>
-    <p class="contact-links">
-      <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>
-      <a href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
-      <a href="{{ AUTHOR_LINKEDIN }}">LinkedIn</a>
-    </p>
+  <section class="section contact">
+    <img class="contact-portrait" src="{{ static_url('assets/images/me.jpg') }}" alt="{{ AUTHOR }}" width="310" height="465" loading="lazy">
+    <div class="contact-body">
+      <h2 class="contact-title">Projekt besprechen?</h2>
+      <p class="contact-text">Schreib mir oder ruf an – ich melde mich meist am selben Tag. Gern auch persönlich, auf einen Kaffee in Wien.</p>
+      <p class="contact-links">
+        <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>
+        <a href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
+        <a href="{{ AUTHOR_LINKEDIN }}">LinkedIn</a>
+      </p>
+    </div>
   </section>
 {% endblock %}
 
@@ -158,6 +170,7 @@
 {% block footer %}
   <footer class="site-footer">
     <div class="footer-inner">
+      <p class="vienna"><svg viewBox="0 0 100 116" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="50" cy="46" r="38"/><circle cx="50" cy="46" r="3"/><line x1="50" y1="46" x2="50.0" y2="8.0"/><rect x="46.8" y="8.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="65.5" y2="11.3"/><rect x="62.3" y="11.8" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="78.2" y2="20.6"/><rect x="75.0" y="21.1" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="86.1" y2="34.3"/><rect x="82.9" y="34.8" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="87.8" y2="50.0"/><rect x="84.6" y="50.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="82.9" y2="65.0"/><rect x="79.7" y="65.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="72.3" y2="76.7"/><rect x="69.1" y="77.2" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="57.9" y2="83.2"/><rect x="54.7" y="83.7" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="42.1" y2="83.2"/><rect x="38.9" y="83.7" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="27.7" y2="76.7"/><rect x="24.5" y="77.2" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="17.1" y2="65.0"/><rect x="13.9" y="65.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="12.2" y2="50.0"/><rect x="9.0" y="50.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="13.9" y2="34.3"/><rect x="10.7" y="34.8" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="21.8" y2="20.6"/><rect x="18.6" y="21.1" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="34.5" y2="11.3"/><rect x="31.3" y="11.8" width="6.4" height="5" rx="1"/><path d="M50 46 L22 112 M50 46 L78 112 M14 112 H86"/></svg><span>Aus Wien.</span></p>
       <address class="footer-imprint" id="impressum">
         <strong>{{ AUTHOR_LEGALNAME }}</strong><br>
         {{ AUTHOR_TRADE }}<br>
