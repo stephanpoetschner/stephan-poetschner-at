@@ -2,7 +2,8 @@
 
 Read this before touching `portfolio/templates/index.html` or `portfolio/static/css/main.css`.
 Design name: **"Stille in Feld-Farben"** (chosen 2026-11-05 from mock-ups in `mockups/`:
-layout of C "Stille", colours of B "Feld").
+layout of C "Stille", colours of B "Feld"). Made bolder on 2026-11-06 (mock-up `f.html`):
+strong green signal, 300/700 weight contrast, serif italic for key words.
 
 Cross-site principles, the "must not look like" list and the redesign process live in
 `../pitches/design.md`; this file is how this site applies them.
@@ -27,23 +28,28 @@ the contact section, where it puts a real person next to the invitation.
 
 1. **Contrast, not variety.** Few type sizes, far apart: a huge statement, large names, normal
    body text, small meta. Nothing in between. A page where everything is medium has no priority.
-2. **Weight contrast within one typeface.** The statement is light (400) with its key phrase in
-   600. One family (Instrument Sans) keeps it calm; contrast comes from size and weight.
+2. **Weight contrast, plus one italic voice.** The statement is light (300) with its key phrase
+   in 700 and a signal underline. Instrument Sans carries everything; single key words (`<i>`)
+   are set in Instrument Serif Italic, 1.12em (1.15em in the statement, Vienna lead, contact
+   title). Use it for one or two words per heading, never for sentences or running text.
 3. **Three levels of space, clearly different.** `--space-in` (inside a group) ≪ `--space-group`
    (between items) ≪ `--space-section` (between sections). Proximity shows what belongs together;
    don't add rules or boxes to do space's job.
-4. **Facts are design elements.** Client names are set large; figures are huge and in leaf green.
+4. **Facts are design elements.** Client names are set large (600); figures are huge and in signal green.
    Proof is what builds trust, so proof gets the visual weight, not adjectives.
 5. **Label column + content column.** From 1000px each section has a small green label on the left
    (¼) and content on the right (¾). This asymmetry is the page's structure; everything lines up
    on the content edge. Running text never exceeds `--measure` (38rem).
-6. **Colour as fields, one accent.** Cream ground; deep green is the only accent colour (labels,
-   links, pill, bands). Full-width bands give rhythm: green for Django-Vienna, sand for
-   testimonials, green footer. Leaf is only ever used on green.
-7. **One call to action.** The green pill "Kennenlerngespräch vereinbaren" appears once, at the
+6. **Colour as fields, one accent, one signal.** Cream ground; deep green is the accent (labels,
+   bands, footer). Strong green `--signal` marks: the statement's key phrase, link underlines, the
+   dot before each label, `<mark>` stripes in the main quote, client-row hover, pill hover. On
+   cream it is never text (too light); on green, `--signal-on-green` may be text (figures,
+   labels). Full-width bands give rhythm: green for Django-Vienna, sand for testimonials, green
+   footer.
+7. **One call to action.** The ink pill "Kennenlerngespräch vereinbaren" appears once, at the
    top. The contact section at the end uses large plain links, not a second button.
 8. **Vienna, quietly.** Location shows in words (role line, "auf einen Kaffee in Wien") and in one
-   leaf line drawing of the Riesenrad in the footer. No other illustrations, no skyline photos,
+   signal-green line drawing of the Riesenrad in the footer. No other illustrations, no skyline photos,
    no red-white-red.
 9. **Important things are dark.** Names, authors, client names in `--ink`. `--muted` only for
    context (years, captions, descriptions of offers). Nothing below 4.5:1.
@@ -56,24 +62,25 @@ the contact section, where it puts a real person next to the invitation.
 | `--ink` | `#1b1d1a` | text (16:1) |
 | `--muted` | `#5f5e57` | secondary text (6.2:1; 5.2:1 on sand) |
 | `--hair` | `#ddd5c4` | thin dividers inside lists |
-| `--green` | `#1d3b31` | the accent: labels, link underlines, pill, bands, footer |
-| `--leaf` | `#c8e06a` | figures, labels and links **on green only** (8.6:1) |
+| `--green` | `#1d3b31` | the accent: labels, bands, footer |
+| `--signal` | `#2fd36b` | lines and fills on cream (**not text**): key-phrase underline, link underlines, label dots, `<mark>` |
+| `--signal-on-green` | `#4be38a` | figures, labels, links, Riesenrad, focus ring **on green** (7:1) |
 | `--on-green` / `--on-green-muted` | `#eef0e6` / `#a9bdb2` | text on green (10:1 / 6:1) |
 | `--sand` | `#e9e2d3` | testimonial band |
 
-Type (Instrument Sans, self-hosted in `static/fonts/instrument-sans/`, OFL; no italic, so don't
-use italics):
+Type (Instrument Sans in `static/fonts/instrument-sans/`, Instrument Serif Italic for `<i>` in
+`static/fonts/instrument-serif/`; both self-hosted, OFL):
 
 | Token | Size | Use |
 |---|---|---|
-| `--fs-xl` | 2.3–6.5rem | statement, "Projekt besprechen?" (figures use their own 3–6rem) |
+| `--fs-xl` | 2.3–6rem, capped at 8.5vh so the pill stays above the fold | statement, "Projekt besprechen?" (figures use their own 3–6rem) |
 | `--fs-lg` | 1.6–2.75rem | client names, offers, project titles, main quote |
 | `--fs-md` | 1.25rem | how-I-work headings, secondary quotes |
 | `--fs-base` | 1.125rem / 1.55 | running text |
 | `--fs-sm` | .9375rem | years, captions, project facts |
 
 Large sizes use negative tracking (−.03 to −.05em) and tight leading (1–1.1).
-Weights: 400 and 500 for large type, 600 for emphasis and small headings.
+Weights: 300 for the statement, 600 for names and titles, 700 for the key phrase and labels.
 
 ## Page order and components
 
@@ -85,7 +92,7 @@ Weights: 400 and 500 for large type, 600 for emphasis and small headings.
    organised for years, a network for referrals. Lead sentence in `--fs-lg`; two short paragraphs
    (founding story with co-founders Anton Pirker and Florian Demmer, linked; then what it means
    for the client, hedged: "kenne ich wahrscheinlich jemanden"); three
-   leaf figures (Treffen, Mitglieder, Bewertung), link to meetup.com. Wording is tense-proof
+   signal-green figures (Treffen, Mitglieder, Bewertung), link to meetup.com. Wording is tense-proof
    ("gegründet", "organisiert") because the group ends in November 2026; never "Community
    aufgebaut".
 4. **Was ich für dich tun kann** – the three offers in the order of `positioning.md`.
@@ -99,6 +106,13 @@ Weights: 400 and 500 for large type, 600 for emphasis and small headings.
 10. **Footer** (green) – Riesenrad mark + "Aus Wien.", imprint and privacy (legally required,
    keep the content). Privacy is a `<details>`: on desktop its text opens as a full-width row
    below the three bottom-aligned columns, so nothing above it moves when it opens.
+
+Favicon: italic "p" (Pötschner, Python), `--ink` on `--signal` (a dark tile vanished among other
+tabs). A scaled serif glyph blurs at 16px, so small sizes get hand-drawn pixel art:
+`favicon.svg` holds both drawings and switches with `@media (max-width: 24px)` inside the SVG
+(pixel "p" with `crispEdges` for tabs, Instrument Serif glyph, thickened with a stroke, above).
+`favicon.ico` is the fallback (pixel 16px, glyph 32/48px); `apple-touch-icon.png` is 180px, square.
+To change the pixel "p", edit the 16×16 grid in both the SVG and the ICO.
 
 Adding a section: `<section class="section">` with `<h2 class="label">` first; add `band
 band-green` or `band band-sand` only if the rhythm needs it (never two bands in a row).
@@ -120,7 +134,8 @@ done
 ```
 
 Check: the three space levels are visible; labels and content edges line up; nothing important
-is grey; leaf appears only on green; only one pill; phone layout reads top to bottom with
+is grey; signal is never text on cream; serif italic only on single words; the pill is visible
+without scrolling at 1280×720 and 375×667; only one pill; phone layout reads top to bottom with
 project titles before their facts; it looks like none of: template, blog, terminal.
 
 ## References

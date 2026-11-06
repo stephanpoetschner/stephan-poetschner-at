@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  
+  <meta charset="utf-8">
+  <title>Django-Entwickler in Wien – Stephan Pötschner</title>
+
+  
+  <meta name="description" content="Django-Entwickler in Wien seit 2008. Ich entwickle bestehende Django-Systeme weiter und baue neue, für E.GON, Finmatics und A1 Digital. Erstgespräch kostenlos.">
+  
+
+  <meta name="google-site-verification" content="2Ek3OkuniHOEDKf3eXvXmJiyDkBGcncL05RNt3eca34" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../build/static/css/main.css?v=b87f8233">
+
+  
+<!-- mock-up f: Instrument Serif Italic + strong green signal -->
+<style>
+:root { --signal:#2fd36b; --signal-on-green:#4be38a; --fs-xl: clamp(2.3rem, min(.8rem + 5vw, 8.5vh), 6rem); }
+/* bolder weights */
+.statement { font-weight: 300; letter-spacing: -.035em; line-height: 1.1; max-width: 18ch; text-wrap: balance; padding: clamp(2rem, 6vh, 4rem) 0; }
+.top { min-height: min(100svh, 54rem); padding-bottom: 2rem; }
+.statement em { font-weight: 700; text-decoration: underline; text-decoration-color: var(--signal);
+  text-decoration-thickness: .09em; text-underline-offset: .1em; text-decoration-skip-ink: none; }
+.client { font-weight: 600; letter-spacing: -.04em; }
+.offer-list h3, .project-title { font-weight: 600; letter-spacing: -.035em; }
+.label { color: var(--green); font-weight: 700; display:flex; gap:.6rem; align-items:center; }
+.label::before { content:""; width:.7rem; height:.7rem; border-radius:50%; background:var(--signal); flex:none; }
+a { text-decoration-color: var(--signal); text-decoration-thickness: 2px; }
+a:hover { color: var(--ink); text-decoration-thickness: 4px; }
+.client-list li { border-bottom-width: 2px; border-color: var(--ink); }
+.client-list li:hover .client { box-shadow: inset 0 -.18em var(--signal); }
+.pill { background: var(--ink); color: var(--paper); }
+.pill:hover { background: var(--signal); color: var(--ink); }
+.band-green .label, .fact-list dt, .vienna { color: var(--signal-on-green); }
+.band-green .label::before { background: var(--signal-on-green); }
+.band-green a { text-decoration-color: var(--signal-on-green); }
+.band-green a:hover { color: var(--signal-on-green); }
+.fact-list dt { font-weight: 600; }
+.meetup-lead { font-weight: 500; }
+mark { background: linear-gradient(transparent 62%, var(--signal) 62%, var(--signal) 92%, transparent 92%); color: inherit; padding: 0 .05em; }
+.contact-title { font-weight: 600; letter-spacing: -.05em; }
+.site-footer a:hover { color: var(--signal-on-green); }
+
+@font-face { font-family:"Instrument Serif"; src:url("fonts/instrument-serif-latin-400-italic.woff2") format("woff2"); font-weight:400; font-style:italic; }
+i { font-family:"Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.12em; letter-spacing: -.01em; }
+.statement i, .contact-title i, .meetup-lead i { font-size: 1.15em; }
+</style>
+</head>
+<body>
+
+  
+  
+
+  <div class="container">
+    
+  <header class="top">
+    <div class="id">
+      <img class="portrait" src="../build/static/assets/images/me.jpg?v=4a36f767" alt="Stephan Pötschner" width="48" height="48">
+      <p class="name">Stephan Pötschner</p>
+      <p class="role">Django-Entwickler in Wien, selbständig seit 2008</p>
+    </div>
+    <h1 class="statement">Ich entwickle Django-Systeme für <i>kleine Teams</i> in Österreich: <em>bestehende weiter, neue von Grund auf.</em></h1>
+    <div class="cta">
+      <a class="pill" href="mailto:stephan.poetschner@gmail.com">Kennenlerngespräch vereinbaren</a>
+      <p class="cta-note">Kostenlos. Ich melde mich meist am selben Tag.</p>
+    </div>
+  </header>
+
+  <section class="section clients">
+    <h2 class="label">Für wen ich gearbeitet habe</h2>
+    <ol class="client-list">
+      <li><span class="client">E.GON</span><span class="what">Plattform für Energiegemeinschaften. Backend und Datenaustausch mit den Netzbetreibern.</span><span class="year">seit 2024</span></li>
+      <li><span class="client">Finmatics</span><span class="what">Belege und Rechnungen automatisch verbuchen, inklusive LLM-Projekt.</span><span class="year">2023–2024</span></li>
+      <li><span class="client">Covid IT Solutions</span><span class="what">Digitalisierung deutscher Gesundheitsämter.</span><span class="year">2022</span></li>
+      <li><span class="client">Offensity / A1 Digital</span><span class="what">Vom Prototyp zum Produkt, nach einem Jahr von A1 übernommen.</span><span class="year">2017–2022</span></li>
+      <li><span class="client">tiga.eleven</span><span class="what">Lead Developer, kleines internationales Team, marktreifes Produkt.</span><span class="year">2015–2016</span></li>
+      <li><span class="client">Careesma</span><span class="what">Codebasis eines spanischen Teams übernommen, Team in Wien aufgebaut.</span><span class="year">2014–2016</span></li>
+    </ol>
+  </section>
+
+  <section class="section band band-green meetup">
+    <h2 class="label">Django-Vienna</h2>
+    <div class="meetup-body">
+      <p class="meetup-lead">2013 habe ich Django-Vienna <i>gegründet.</i></p>
+      <p class="meetup-text">
+        Gemeinsam mit <a href="https://www.linkedin.com/in/antonpirker/">Anton Pirker</a> und
+        <a href="https://www.linkedin.com/in/fdemmer/">Florian Demmer</a>: Mit den beiden habe ich
+        schon im Studium Fußballroboter gebaut und bin mit anderen Studenten zur Roboterfußball-WM
+        nach Osaka gefahren.
+      </p>
+      <p class="meetup-text">
+        Seither habe ich die Treffen organisiert, später auch mit weiteren
+        Django-Kollegen: Vorträge und Lightning Talks, jeweils 20 bis 40 Leute. Ich habe dort auch
+        regelmäßig vorgetragen. Für dich heißt das: Wenn ich selbst keine Zeit habe, kenne ich
+        wahrscheinlich jemanden, der helfen kann.
+      </p>
+      <dl class="fact-list">
+        <div><dt>59</dt><dd>Treffen organisiert</dd></div>
+        <div><dt>838</dt><dd>Mitglieder</dd></div>
+        <div><dt>4,9</dt><dd>von 5 Sternen, bei 166 Bewertungen</dd></div>
+      </dl>
+      <p class="meetup-link"><a href="https://meetup.com/de-DE/Django-Vienna/">Django-Vienna auf meetup.com</a></p>
+    </div>
+  </section>
+
+  <section class="section offers">
+    <h2 class="label">Was ich für dich tun kann</h2>
+    <ol class="offer-list">
+      <li><h3>Bestehende Django-Systeme <i>weiterentwickeln</i></h3><p>Skalieren, modernisieren, von einem anderen Team übernehmen. Zum Beispiel careesma.at mit über 200.000 Besuchern im Monat.</p></li>
+      <li><h3>Neue Webprojekte und <i>MVPs</i></h3><p>Vom ersten Prototyp zum Produkt, das Kunden nutzen. Zum Beispiel Offensity.</p></li>
+      <li><h3>Architektur und <i>technische Leitung</i></h3><p>Bei E.GON im Backend-Team mitverantwortlich für Architektur und Design, bei tiga.eleven als Lead Developer.</p></li>
+    </ol>
+  </section>
+
+  <section class="section how">
+    <h2 class="label">Wie ich arbeite</h2>
+    <ol class="how-list">
+      <li><h3>Code, mit dem <i>andere</i> weiterarbeiten können</h3><p>Ich schreibe Software so, dass dein Team sie versteht und weiterführen kann. Bei Careesma habe ich die Codebasis eines spanischen Teams übernommen und in Wien ein eigenes Team darauf aufgebaut.</p></li>
+      <li><h3><i>Ehrlich,</i> auch wenn es gegen meinen Auftrag spricht</h3><p>Wenn Standardsoftware dein Problem besser löst als eine Eigenentwicklung, sage ich dir das – auch wenn ich dann weniger zu tun habe. Manchmal rate ich schon im ersten Gespräch zu einer fertigen Lösung.</p></li>
+      <li><h3>Ich frage nach dem <i>Nutzen,</i> nicht nur nach dem Ticket</h3><p>Bevor ich etwas baue, will ich verstehen, wofür. Bei Offensity wurde so aus der Idee von Security-Experten ohne Entwicklungserfahrung in einem Jahr ein Produkt, das A1 übernommen hat.</p></li>
+    </ol>
+  </section>
+
+  <section class="section band band-sand voices">
+    <h2 class="label">Was Kunden sagen</h2>
+    <div class="quotes">
+      <figure class="quote quote-main h-cite">
+        <blockquote><p>Es wäre schwierig, einen anderen Entwickler mit ähnlich tiefem Fach- und Spezialwissen, dem gleichen Ausmaß an <mark>Eigenverantwortung</mark> oder derart gutem <mark>Geschäftssinn</mark> zu finden.</p></blockquote>
+        <figcaption><span class="p-author h-card">Aron Molnar</span>, Gründer <a href="https://www.offensity.com/">Offensity</a>, <time class="dt-published" datetime="2019-10-28">2019</time></figcaption>
+      </figure>
+      <figure class="quote h-cite">
+        <blockquote><p>Stephan deckt diese Bereiche hervorragend ab und hat mit seinem Team ein Produkt geschaffen, auf das wir stolz sind und ich wirklich gerne beim Kunden präsentiere.</p></blockquote>
+        <figcaption><span class="p-author h-card">Georg Parth</span>, CEO <a href="https://tiga.at/">tiga.eleven</a>, <time class="dt-published" datetime="2016-07-25">2016</time></figcaption>
+      </figure>
+      <figure class="quote h-cite">
+        <blockquote lang="en"><p>Stephan exceeded my expectations about how fast he managed to fit as a team-member and the degree of autonomy and loyalty he showed.</p></blockquote>
+        <figcaption><span class="p-author h-card">Javier López</span>, CTO Careesma, <time class="dt-published" datetime="2016-07-20">2016</time></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  
+  <section class="section projects">
+    <h2 class="label">Projekte im Detail</h2>
+    
+    <article class="project">
+      <h3 class="project-title"><a href="https://www.e-gon.at/">Plattform für Energiegemeinschaften „E.GON“</a></h3>
+      <dl class="project-meta">
+        
+        <dt>Kunde</dt>
+        <dd>für EZN / E.GON</dd>
+        
+        <dt>Zeitraum</dt>
+        <dd>April 2024 – heute</dd>
+        <dt>Technik</dt>
+        <dd>Django, Python, EDA</dd>
+      </dl>
+      <div class="prose">
+        <h1>Projektbeschreibung</h1>
+<p>E.GON ist eine Online-Plattform für Energiegemeinschaften in Österreich.
+Damit gemeinsam erzeugter Strom, etwa aus Photovoltaik, fair verteilt und abgerechnet werden
+kann, muss die Plattform die Energiedaten der Netzbetreiber über EDA (Energiewirtschaftlicher
+Datenaustausch) empfangen und verarbeiten.</p>
+<h1>Meine Highlights</h1>
+<ul>
+<li>Im Backend-Team (EDA-Daten und Backend-Systeme) mitverantwortlich für <strong>Architektur und Design</strong></li>
+<li>Treibe Verbesserungen im <strong>Entwicklungsprozess</strong> voran</li>
+<li><strong>Backend</strong>-Entwicklung als Senior Individual Contributor</li>
+<li>Anbindung an den <strong>EDA-Datenaustausch</strong> der Netzbetreiber</li>
+</ul>
+      </div>
+    </article>
+    
+    <article class="project">
+      <h3 class="project-title"><a href="https://www.finmatics.com/">Automatische Buchhaltung</a></h3>
+      <dl class="project-meta">
+        
+        <dt>Kunde</dt>
+        <dd>für Finmatics</dd>
+        
+        <dt>Zeitraum</dt>
+        <dd>2023 – 2024</dd>
+        <dt>Technik</dt>
+        <dd>Django, Python, LLM</dd>
+      </dl>
+      <div class="prose">
+        <h1>Projektbeschreibung</h1>
+<p>Finmatics automatisiert die Buchhaltung: Belege und Rechnungen werden erkannt und
+automatisch verbucht.</p>
+<h1>Meine Highlights</h1>
+<ul>
+<li>Weiterentwicklung der automatischen <strong>Verbuchung von Belegen und Rechnungen</strong></li>
+<li>Mitarbeit an einem <strong>LLM-Projekt</strong></li>
+</ul>
+      </div>
+    </article>
+    
+    <article class="project">
+      <h3 class="project-title"><a href="https://www.cov-it.de/">Digitalisierung für Covid-Fälle und Gesundheitsämter</a></h3>
+      <dl class="project-meta">
+        
+        <dt>Kunde</dt>
+        <dd>für Covid IT Solutions GmbH</dd>
+        
+        <dt>Zeitraum</dt>
+        <dd>Juli 2022 – Dezember 2022</dd>
+        <dt>Technik</dt>
+        <dd>Django, Docker, Celery, SurvNet, Sormas, DEMIS</dd>
+      </dl>
+      <div class="prose">
+        <h1>Projektbeschreibung</h1>
+<p>Der Covid Virus hat unsere Gesellschaft ab 2020 vor enorme Herausforderungen gestellt. Auch Verwaltungen weltweit waren plötzlich unter dem Druck, Tausende von Krankheitsfällen kurzfristig zu bearbeiten und nachzuverfolgen.</p>
+<p>Covid IT Solutions GmbH hilft Prozesse im deutschen Gesundheitssystem zu digitalisieren und zu beschleunigen: von der Falluntersuchung über die Kontaktnachverfolgung und den Versand von Bescheinigungen bis zu vielen weiteren Anwendungsfälle.</p>
+<ul>
+<li>30 Gesundheitsämter nutzen Produkt</li>
+<li>30.000 deutschlandweit bearbeitete Fälle/Tag</li>
+<li>4.500.000 insgesamt bearbeitete Aufgaben</li>
+<li>95% der Bearbeitungszeit pro Fall eingespart</li>
+</ul>
+<h1>Meine Highlights</h1>
+<ul>
+<li><strong>Weiterentwicklung</strong> am bestehenden Produkt </li>
+<li>Erweiterung des Portfolios mit neuen <strong>Prototypen</strong></li>
+<li>Unterstützung bei <strong>Weiterentwicklung des Entwicklungsteams</strong> (Automatische Deployments, Scrum Retros und Reviews, automatisierte Tests)</li>
+</ul>
+<h1>Technisches Team</h1>
+<ul>
+<li>Mäx Blauth (Gründer und CTO, remote)</li>
+<li>Yassine Dhane (remote)</li>
+</ul>
+      </div>
+    </article>
+    
+    <article class="project">
+      <h3 class="project-title"><a href="https://www.offensity.com/">Schwachstellenscanner „Offensity”</a></h3>
+      <dl class="project-meta">
+        
+        <dt>Kunde</dt>
+        <dd>für A1 Digital</dd>
+        
+        <dt>Zeitraum</dt>
+        <dd>Dezember 2017 – Juli 2022</dd>
+        <dt>Technik</dt>
+        <dd>Django, Docker, Wagtail, VueJs</dd>
+      </dl>
+      <div class="prose">
+        <h1>Projektbeschreibung</h1>
+<p>Ein Gründerteam ohne Erfahrung als Softwareentwickler: Security Experten und Hacker. Budget für mehrere Entwickler. Ein Jahr Zeit.
+Die Idee: Schwachstellenscanner radikal zu vereinfachen und für jeden nutzbar zu machen.</p>
+<p>Was über ein Innovationsprogramm der A1 Telekom startete, ist zu einem beliebten Security Produkt geworden. Der Fokus bleibt ein einfach zu bedienendes Produkt, das Sicherheitslücken verlässlich erkennt und mit wenig Aufwand IT Infrastruktur absichern lässt.</p>
+<ul>
+<li>Mehr als 25.000 Subdomains von Offensity gescannt</li>
+</ul>
+<h1>Meine Highlights</h1>
+<ul>
+<li>Neuentwicklung vom Prototypen <strong>zum erfolgreichen Produkt</strong></li>
+<li>Aktive Mitwirkung beim Aufbau der <strong>Softwarearchitektur</strong></li>
+<li>Aktive Mitwirkung beim Aufbau von <strong>Prozessen zur Softwareentwicklung</strong></li>
+<li>Unterstützung des Teams als <strong>Python-Senior</strong> und <strong>Software-Experte</strong></li>
+<li>Planung und Umsetzung zahlreicher Kernkomponenten</li>
+</ul>
+<h1>Gründungsteam</h1>
+<ul>
+<li>Aron Molnar (Gründer)</li>
+<li>Philipp Mirtl (Gründer)</li>
+<li>Daniel Endresz (Gründer)</li>
+<li>Patrick Pirker</li>
+</ul>
+      </div>
+    </article>
+    
+    <article class="project">
+      <h3 class="project-title">Prototyp medizinisches Gerät</h3>
+      <dl class="project-meta">
+        
+        <dt>Kunde</dt>
+        <dd>für Pixolus</dd>
+        
+        <dt>Zeitraum</dt>
+        <dd>April 2017 – September 2017</dd>
+        <dt>Technik</dt>
+        <dd>Django, Startup</dd>
+      </dl>
+      <div class="prose">
+        <h1>Projektbeschreibung</h1>
+<p>Pixolus aus Köln entwickelte für ein <a target="_blank" href="https://odimedical.com/">norwegisches Startup</a>
+den Prototyp eines medizinischen Geräts. Ich habe das Webportal gebaut, in dem medizinisches
+Personal die Messdaten weiterverarbeitet, komplett remote mit dem Team in Köln. Mit dem Prototyp
+konnte das Startup mehr Patientendaten sammeln und die Wirksamkeit seiner Diagnosemethode belegen.</p>
+<h1>Meine Highlights</h1>
+<ul>
+<li><strong>Webportal</strong> für einen Medizingeräte-Prototyp</li>
+<li><strong>Remote-Zusammenarbeit</strong> mit dem Team in Köln</li>
+</ul>
+      </div>
+    </article>
+    
+    <article class="project">
+      <h3 class="project-title"><a href="http://tigaeleven.com/">WLAN-Produkt „tigaeleven”</a></h3>
+      <dl class="project-meta">
+        
+        <dt>Kunde</dt>
+        <dd>für wifitiger GmbH</dd>
+        
+        <dt>Zeitraum</dt>
+        <dd>November 2015 – Dezember 2016</dd>
+        <dt>Technik</dt>
+        <dd>Startup, Django, Coova-Chilli, OpenWRT</dd>
+      </dl>
+      <div class="prose">
+        <h1>Projektbeschreibung</h1>
+<p>Gäste in Cafés und Restaurants bekommen kostenloses WLAN, nachdem sie sich am Webportal
+registriert haben, und werden später um eine Bewertung (z. B. auf Tripadvisor) gebeten.
+Mit den Gründern habe ich die Idee vom Prototyp zum marktreifen Produkt gebracht: WLAN-Router
+und Web-Applikation.</p>
+<h1>Meine Highlights</h1>
+<ul>
+<li>Vom Prototyp <strong>zum Produkt</strong></li>
+<li><strong>Technische Projektleitung</strong>, Team von 3 Entwicklern</li>
+<li>Django- und Frontend-Entwicklung</li>
+</ul>
+      </div>
+    </article>
+    
+    <article class="project">
+      <h3 class="project-title"><a href="http://www.careesma.at/">Jobplatform „Careesma”</a></h3>
+      <dl class="project-meta">
+        
+        <dt>Kunde</dt>
+        <dd>für Careesma GmbH</dd>
+        
+        <dt>Zeitraum</dt>
+        <dd>Juli 2014 – Jänner 2016</dd>
+        <dt>Technik</dt>
+        <dd>Django, Solr, MySQL, jQuery, AWS, Scrum</dd>
+      </dl>
+      <div class="prose">
+        <h1>Projektbeschreibung</h1>
+<p>careesma.at, mit über 200.000 Besuchern im Monat, wurde von einem Team in Barcelona entwickelt,
+für das Österreich der kleinste Markt war. Österreichische Wünsche kamen deshalb selten dran.
+Ich habe die mehrjährige Codebasis übernommen und in Wien ein eigenes Team aufgebaut, das die
+Plattform lokal weiterentwickelt hat.</p>
+<h1>Meine Highlights</h1>
+<ul>
+<li>Bestehende Codebasis eines anderen Teams <strong>übernommen und weiterentwickelt</strong></li>
+<li><strong>Entwicklungsteam in Wien aufgebaut</strong> (Frontend, System-Administration)</li>
+<li>Abstimmung mit dem Team in Barcelona</li>
+</ul>
+      </div>
+    </article>
+    
+  </section>
+  
+
+  <section class="section teams">
+    <h2 class="label">Was erfolgreiche Teams ausmacht</h2>
+    <div class="prose">
+      <p>
+        Für mich als Softwareentwickler gibt es zwei Konzepte, die mir besonders wichtig sind und die
+        ich in allen gut funktionierenden Teams und Projekten wiedergefunden habe:
+      </p>
+      <ul>
+        <li>
+          <strong>Strong Ownership</strong><br>
+          Das Team (und damit jeder Entwickler) muss Gesamtverantwortung für ein Produkt oder Service haben und
+          sich gegenüber dem Endkunden verantwortlich fühlen.
+        </li>
+        <li>
+          <strong>Fast Prototyping</strong><br>
+          Ideen und Konzepte müssen schnell abgetestet werden.
+          Je weniger technischer Aufwand, um eine Idee zu testen, desto besser.
+        </li>
+      </ul>
+      <p>
+        Hier meine Lieblingsbücher und -ressourcen, in denen beide Konzepte wiederzufinden sind:
+      </p>
+      <ul>
+        <li>
+          <a href="https://www.whatmatters.com/the-book/">Measure what matters</a><br>
+          „Get Started With OKRs. Your step-by-step guide for setting and achieving audacious goals.”
+        </li>
+        <li>
+          <a href="https://www.gv.com/sprint/">The Google design sprint</a><br>
+          „The sprint is a five-day process for answering critical business questions through design,
+          prototyping, and testing ideas with customers.”
+        </li>
+        <li>
+          <a href="https://www.strategyzer.com/canvas/business-model-canvas">The Value Proposition Canvas</a><br>
+          „How to better understand customers and create value propositions that sell.”
+        </li>
+        <li>
+          <a href="https://www.morawa.at/detail/ISBN-9781984801463/Iger-Robert/The-Ride-of-a-Lifetime">The Ride of a Lifetime</a><br>
+          „The former CEO of Disney shares the ideas and values he embraced during his fifteen years as CEO while reinventing one of the world's most beloved companies”
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section contact">
+    <img class="contact-portrait" src="../build/static/assets/images/me.jpg?v=4a36f767" alt="Stephan Pötschner" width="310" height="465" loading="lazy">
+    <div class="contact-body">
+      <h2 class="contact-title">Projekt <i>besprechen?</i></h2>
+      <p class="contact-text">Schreib mir oder ruf an – ich melde mich meist am selben Tag. Gern auch persönlich, auf einen Kaffee in Wien.</p>
+      <p class="contact-links">
+        <a href="mailto:stephan.poetschner@gmail.com">stephan.poetschner@gmail.com</a>
+        <a href="tel:+43 676 7441671">+43 676 7441671</a>
+        <a href="https://www.linkedin.com/in/stephan-poetschner/">LinkedIn</a>
+      </p>
+    </div>
+  </section>
+
+  </div><!-- .container -->
+
+  
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="vienna"><svg viewBox="0 0 100 116" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="50" cy="46" r="38"/><circle cx="50" cy="46" r="3"/><line x1="50" y1="46" x2="50.0" y2="8.0"/><rect x="46.8" y="8.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="65.5" y2="11.3"/><rect x="62.3" y="11.8" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="78.2" y2="20.6"/><rect x="75.0" y="21.1" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="86.1" y2="34.3"/><rect x="82.9" y="34.8" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="87.8" y2="50.0"/><rect x="84.6" y="50.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="82.9" y2="65.0"/><rect x="79.7" y="65.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="72.3" y2="76.7"/><rect x="69.1" y="77.2" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="57.9" y2="83.2"/><rect x="54.7" y="83.7" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="42.1" y2="83.2"/><rect x="38.9" y="83.7" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="27.7" y2="76.7"/><rect x="24.5" y="77.2" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="17.1" y2="65.0"/><rect x="13.9" y="65.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="12.2" y2="50.0"/><rect x="9.0" y="50.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="13.9" y2="34.3"/><rect x="10.7" y="34.8" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="21.8" y2="20.6"/><rect x="18.6" y="21.1" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="34.5" y2="11.3"/><rect x="31.3" y="11.8" width="6.4" height="5" rx="1"/><path d="M50 46 L22 112 M50 46 L78 112 M14 112 H86"/></svg><span>Aus Wien.</span></p>
+      <address class="footer-imprint" id="impressum">
+        <strong>Dipl.-Ing. (FH) Stephan Pötschner</strong><br>
+        Softwareentwicklung<br>
+        Hermannstraße 13/1/7, 3400 Klosterneuburg<br>
+        UID ATU64371502 · Gewerbebehörde BH Tulln<br>
+        Mitglied der WKO NÖ, FG UBIT<br>
+        Berufsrecht: Gewerbeordnung: <a href="https://www.ris.bka.gv.at">www.ris.bka.gv.at</a>
+      </address>
+
+      <details class="footer-privacy" id="datenschutz">
+        <summary>Datenschutz</summary>
+        <p>
+          Diese Website verwendet keine Cookies, keine Analyse-Werkzeuge und keine Dienste Dritter.
+        </p>
+        <p>
+          Verantwortlich ist Stephan Pötschner, Hermannstraße 13/1/7, 3400 Klosterneuburg,
+          <a href="mailto:stephan.poetschner@gmail.com">stephan.poetschner@gmail.com</a>.
+        </p>
+        <p>
+          Beim Aufruf speichert der Webserver technisch notwendige Daten (IP-Adresse, Datum und Uhrzeit,
+          aufgerufene Seite, Browserkennung), um den sicheren Betrieb zu gewährleisten
+          (Art. 6 Abs. 1 lit. f DSGVO). Diese Daten werden nach 52 Tagen gelöscht.
+        </p>
+        <p>
+          Gehostet wird die Website bei Opalstack, Server in Frankfurt (Deutschland).
+        </p>
+        <p>
+          Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch.
+          Beschwerden können Sie bei der <a href="https://www.dsb.gv.at">österreichischen Datenschutzbehörde</a> einbringen.
+        </p>
+      </details>
+    </div>
+  </footer>
+
+
+</body>
+</html>

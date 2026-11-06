@@ -14,27 +14,36 @@
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
+/* Instrument Serif Italic: only for single emphasised words (<i>), never for running text. */
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("../fonts/instrument-serif/instrument-serif-latin-400-italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+
 :root {
-  /* Colour: cream ground, ink text, deep green as the only accent.
-     Leaf is used only on green; sand only as a band. Contrast on --paper unless noted. */
+  /* Colour: cream ground, ink text, deep green as the accent, strong green as the signal.
+     Signal is never text on cream (too light); sand only as a band. Contrast on --paper unless noted. */
   --paper: #faf7f0;
   --ink: #1b1d1a;            /* 16:1 */
   --muted: #5f5e57;          /* 6.2:1; 5.2:1 on sand */
   --hair: #ddd5c4;
   --green: #1d3b31;          /* 11:1; accent: labels, links, pill, green bands */
-  --leaf: #c8e06a;           /* 8.6:1 on green; never on cream */
+  --signal: #2fd36b;         /* lines and fills on cream: key phrase, link underlines, label dots, marks */
+  --signal-on-green: #4be38a; /* figures, labels, links on green (7:1) */
   --on-green: #eef0e6;       /* text on green, 10:1 */
   --on-green-muted: #a9bdb2; /* 6:1 on green */
   --sand: #e9e2d3;
 
   --font: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-accent: "Instrument Serif", Georgia, serif;
 
   /* Type: few sizes, far apart. Body and the giant sizes do the work. */
   --fs-sm: .9375rem;                                  /* meta: years, captions */
   --fs-base: 1.125rem;                                /* running text */
   --fs-md: 1.25rem;                                   /* small headings, secondary quotes */
   --fs-lg: clamp(1.6rem, 1rem + 1.8vw, 2.75rem);      /* client names, offers, main quote */
-  --fs-xl: clamp(2.3rem, .8rem + 5.6vw, 6.5rem);      /* statement, contact */
+  --fs-xl: clamp(2.3rem, min(.8rem + 5vw, 8.5vh), 6rem); /* statement, contact; capped by height so the pill stays above the fold */
 
   /* Space: three clearly different levels. */
   --space-in: 1rem;                                   /* inside a group */
@@ -60,15 +69,19 @@ img { display: block; max-width: 100%; height: auto; }
 h1, h2, h3, p, ol, ul, dl, dd, figure, blockquote { margin: 0; }
 ol { list-style: none; padding: 0; }
 strong, b { font-weight: 600; }
+/* Emphasis: one or two words in serif italic, slightly larger to match the sans x-height */
+i { font-family: var(--font-accent); font-style: italic; font-weight: 400; font-size: 1.12em; letter-spacing: -.01em; }
+/* Highlight inside a quote: a signal stripe behind the lower half of the word */
+mark { background: linear-gradient(transparent 62%, var(--signal) 62%, var(--signal) 92%, transparent 92%); color: inherit; padding: 0 .05em; }
 
 a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--green);
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--signal);
   text-underline-offset: .2em;
 }
-a:hover { color: var(--green); text-decoration-thickness: 2px; }
+a:hover { text-decoration-thickness: 4px; }
 :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 3px; }
 
 /* Page frame: base.html wraps the main content in .container */
@@ -78,10 +91,12 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 /* Section = small green label + content. From 1000px the label gets its own left column. */
 .section { padding-top: var(--space-section); }
 .label {
-  font-size: 1rem; font-weight: 600; line-height: 1.4;
+  font-size: 1rem; font-weight: 700; line-height: 1.4;
   color: var(--green);
   margin-bottom: var(--space-group);
+  display: flex; gap: .6rem; align-items: center;
 }
+.label::before { content: ""; width: .7rem; height: .7rem; border-radius: 50%; background: var(--signal); flex: none; }
 @media (min-width: 1000px) {
   .section { display: grid; grid-template-columns: 1fr 3fr; column-gap: 4rem; align-items: start; }
   .section > :not(.label) { grid-column: 2; }
@@ -102,16 +117,18 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
   }
 }
 .band-green { background: var(--green); color: var(--on-green); }
-.band-green .label { color: var(--leaf); }
-.band-green a { text-decoration-color: var(--leaf); }
-.band-green a:hover { color: var(--leaf); }
+.band-green .label { color: var(--signal-on-green); }
+.band-green .label::before { background: var(--signal-on-green); }
+.band-green a { text-decoration-color: var(--signal-on-green); }
+.band-green a:hover { color: var(--signal-on-green); }
+.band-green :focus-visible, .site-footer :focus-visible { outline-color: var(--signal-on-green); }
 .band-sand { background: var(--sand); }
 
 /* Top: name line, statement, pill */
 .top {
-  min-height: min(92vh, 54rem);
+  min-height: min(100svh, 54rem);
   display: grid; grid-template-rows: auto 1fr auto;
-  padding: 2rem 0 3rem;
+  padding: 2rem 0;
 }
 .id { display: flex; align-items: center; gap: .9rem; }
 .portrait { width: 48px; height: 48px; object-fit: cover; object-position: 50% 20%; border-radius: 50%; }
@@ -125,37 +142,44 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 }
 .statement {
   align-self: center;
-  font-size: var(--fs-xl); line-height: 1.02; font-weight: 400; letter-spacing: -.035em;
-  max-width: 16ch;
-  padding: 4rem 0;
+  font-size: var(--fs-xl); line-height: 1.1; font-weight: 300; letter-spacing: -.035em;
+  max-width: 18ch; text-wrap: balance;
+  padding: clamp(2rem, 6vh, 4rem) 0;
 }
-.statement em { font-style: normal; font-weight: 600; }
+.statement em {
+  font-style: normal; font-weight: 700;
+  text-decoration: underline; text-decoration-color: var(--signal); text-decoration-thickness: .09em;
+  text-underline-offset: .1em; text-decoration-skip-ink: none;
+}
+.statement i, .contact-title i, .meetup-lead i { font-size: 1.15em; }
 .cta { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; }
 .cta-note { color: var(--muted); }
 
-/* Pill: the one call to action. Green on cream, leaf on hover. */
+/* Pill: the one call to action. Ink on cream, signal on hover. */
 .pill {
   display: inline-flex; align-items: center; min-height: 52px; padding: 0 1.6rem;
   border-radius: 999px;
-  background: var(--green); color: var(--on-green);
+  background: var(--ink); color: var(--paper);
   font-weight: 600; text-decoration: none; white-space: nowrap;
   transition: background-color .15s, color .15s;
 }
 .pill::after { content: "→"; margin-left: .6rem; }
-.pill:hover { background: var(--leaf); color: var(--green); }
+.pill:hover { background: var(--signal); color: var(--ink); }
 @media (max-width: 420px) { .pill { font-size: 1rem; padding: 0 1.25rem; } }
 
 /* Clients: big names, one line of context, years */
-.client-list li { display: grid; gap: .2rem 2rem; padding: 1.25rem 0; border-bottom: 1px solid var(--hair); }
+.client-list li { display: grid; gap: .2rem 2rem; padding: 1.25rem 0; border-bottom: 2px solid var(--ink); }
+.client-list li:hover .client { box-shadow: inset 0 -.18em var(--signal); }
 .client-list li:first-child { padding-top: 0; }
 @media (min-width: 700px) {
-  .client-list li { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr) auto; align-items: baseline; }
+  .client-list li { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr) 5.5em; align-items: baseline; }
 }
-.client { font-size: var(--fs-lg); font-weight: 500; letter-spacing: -.03em; line-height: 1.05; }
+.client { font-size: var(--fs-lg); font-weight: 600; letter-spacing: -.04em; line-height: 1.05; }
+.client-list .year { text-align: right; }
 .year { color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
 
 /* Django-Vienna band: lead sentence, short text, three figures */
-.meetup-lead { font-size: var(--fs-lg); font-weight: 400; letter-spacing: -.03em; line-height: 1.1; max-width: 22ch; }
+.meetup-lead { font-size: var(--fs-lg); font-weight: 500; letter-spacing: -.03em; line-height: 1.1; max-width: 22ch; }
 .meetup-text { margin-top: var(--space-group); max-width: var(--measure); }
 .meetup-text + .meetup-text { margin-top: var(--space-in); }
 .meetup .fact-list { margin-top: var(--space-section-sm, 4rem); }
@@ -166,8 +190,8 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 .fact-list { display: grid; gap: var(--space-group) 3rem; }
 @media (min-width: 700px) { .fact-list { grid-template-columns: repeat(3, 1fr); } }
 .fact-list dt {
-  font-size: clamp(3rem, 1.6rem + 4vw, 6rem); font-weight: 400; letter-spacing: -.05em; line-height: .95;
-  color: var(--leaf);
+  font-size: clamp(3rem, 1.6rem + 4vw, 6rem); font-weight: 600; letter-spacing: -.05em; line-height: .95;
+  color: var(--signal-on-green);
 }
 .fact-list dt small { display: block; font-size: var(--fs-md); letter-spacing: 0; line-height: 1.4; color: var(--on-green-muted); }
 .fact-list dd { margin-top: .5rem; max-width: 16em; }
@@ -175,7 +199,7 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 /* Offers large; how I work quieter, in three columns */
 .offer-list li { padding: 2rem 0; border-bottom: 1px solid var(--hair); }
 .offer-list li:first-child { padding-top: 0; }
-.offer-list h3 { font-size: var(--fs-lg); font-weight: 500; letter-spacing: -.03em; line-height: 1.1; margin-bottom: .6rem; }
+.offer-list h3 { font-size: var(--fs-lg); font-weight: 600; letter-spacing: -.035em; line-height: 1.1; margin-bottom: .6rem; }
 .offer-list p { max-width: var(--measure); color: var(--muted); }
 .how-list { display: grid; gap: var(--space-group) 2.5rem; }
 @media (min-width: 800px) { .how-list { grid-template-columns: repeat(3, 1fr); } }
@@ -208,7 +232,7 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
   .projects > .label + .project .project-meta { margin-top: 3.5rem; }
   .project-meta dt:not(:first-child) { margin-top: .6rem; }
 }
-.project-title { font-size: var(--fs-lg); font-weight: 500; letter-spacing: -.03em; line-height: 1.1; margin-bottom: var(--space-in); }
+.project-title { font-size: var(--fs-lg); font-weight: 600; letter-spacing: -.035em; line-height: 1.1; margin-bottom: var(--space-in); }
 @media (min-width: 1000px) { .project-title { margin-bottom: var(--space-group); } }
 .project-title a { text-decoration-color: var(--hair); }
 
@@ -221,7 +245,7 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 .prose ul { padding-left: 1.2em; }
 .prose li + li { margin-top: .4em; }
 .prose li::marker { color: var(--muted); }
-.prose blockquote { padding-left: 1em; border-left: 2px solid var(--green); }
+.prose blockquote { padding-left: 1em; border-left: 2px solid var(--signal); }
 
 /* Contact: portrait in the label column, a real person next to the invitation */
 .contact { padding-bottom: clamp(4rem, 3rem + 4vw, 8rem); }
@@ -229,7 +253,7 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 @media (min-width: 1000px) {
   .section > .contact-portrait { grid-column: 1; width: 100%; max-width: 15rem; margin: .6rem 0 0; }
 }
-.contact-title { font-size: var(--fs-xl); font-weight: 400; letter-spacing: -.04em; line-height: 1; }
+.contact-title { font-size: var(--fs-xl); font-weight: 600; letter-spacing: -.05em; line-height: 1; }
 .contact-text { color: var(--muted); margin-top: 1.25rem; font-size: var(--fs-md); max-width: var(--measure); }
 .contact-links {
   display: flex; flex-wrap: wrap; gap: 1rem 3rem; margin-top: var(--space-group);
@@ -237,8 +261,8 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 }
 .contact-links a { text-decoration-thickness: 2px; overflow-wrap: anywhere; }
 
-/* Vienna mark: one line drawing of the Riesenrad, leaf on green, in the footer only */
-.vienna { display: flex; align-items: flex-end; gap: 1rem; color: var(--leaf); }
+/* Vienna mark: one line drawing of the Riesenrad, signal on green, in the footer only */
+.vienna { display: flex; align-items: flex-end; gap: 1rem; color: var(--signal-on-green); }
 .vienna svg { width: 4.5rem; height: auto; flex: none; }
 .vienna span { color: var(--on-green); font-size: var(--fs-md); line-height: 1.2; }
 
@@ -247,7 +271,7 @@ a:hover { color: var(--green); text-decoration-thickness: 2px; }
 .footer-inner { padding: clamp(3rem, 2rem + 3vw, 5rem) var(--gap); max-width: calc(var(--wide) + 2 * var(--gap)); display: grid; gap: 2rem; }
 @media (min-width: 1000px) { .footer-inner { grid-template-columns: 1fr 1.5fr 1.5fr; align-items: end; } }
 .site-footer a { color: var(--on-green); text-decoration-color: var(--on-green-muted); }
-.site-footer a:hover { color: var(--leaf); text-decoration-color: var(--leaf); }
+.site-footer a:hover { color: var(--signal-on-green); text-decoration-color: var(--signal-on-green); }
 .footer-imprint { font-style: normal; }
 .footer-imprint strong { color: var(--on-green); }
 .footer-privacy summary { cursor: pointer; color: var(--on-green); }
