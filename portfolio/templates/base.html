@@ -7,7 +7,13 @@
 
   {% if META %}
   <meta name="description" content="{{ META }}">
+  <meta property="og:description" content="{{ META }}">
   {% endif %}
+  <meta property="og:title" content="{{ self.title() }}">
+  <meta property="og:image" content="https://stephan-poetschner.at/static/assets/images/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta name="twitter:card" content="summary_large_image">
 
   <meta name="google-site-verification" content="{{ GOOGLE_WEBMASTERS }}" />
 
