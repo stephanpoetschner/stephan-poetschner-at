@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:{{ AUTHOR_FAMILYNAME }};{{ AUTHOR_FIRSTNAME }};;{{ AUTHOR_TITLE }};
+FN:{{ AUTHOR }}
+TITLE:Django-Entwickler
+TEL;TYPE=CELL:{{ AUTHOR_TEL }}
+EMAIL;TYPE=INTERNET:{{ AUTHOR_EMAIL }}
+URL:https://stephan-poetschner.at/
+ADR;TYPE=WORK:;;{{ AUTHOR_STREET }};{{ AUTHOR_CITY.split(' ', 1)[1] }};;{{ AUTHOR_CITY.split(' ', 1)[0] }};Österreich
+END:VCARD

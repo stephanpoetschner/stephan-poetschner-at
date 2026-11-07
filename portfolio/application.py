@@ -41,3 +41,12 @@ def index():
     context['projects'] = app.reader.projects.sort(key=lambda x: x['date'], reverse=True)
 
     return render_template('index.html', **context)
+
+
+@app.route('/stephan-poetschner.vcf')
+def vcard():
+    """Contact card for the footer link; built from the same settings as the imprint."""
+    body = render_template('contact.vcf', **annotate_items(app.config['SITE']))
+    response = make_response(body.replace('\n', '\r\n'))
+    response.mimetype = 'text/vcard'
+    return response
