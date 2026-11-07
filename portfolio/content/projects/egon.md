@@ -25,4 +25,5 @@ Nachrichten pro Tag. Die Verarbeitung hält Schritt.
 * Anmeldung von Energiegemeinschaften und Aufbereitung der Energiedaten **automatisiert**
 * Die Nachrichtenverarbeitung für das **Zehnfache** an Daten umgebaut: Auch ungewöhnliche
   Nachrichten kleiner Netzbetreiber halten nichts mehr auf
-* Releases mit **über 550 automatisierten Tests** und Code Reviews abgesichert
+* Mit **automatisierten Tests** und Code Reviews dafür gesorgt, dass Änderungen schneller und
+  sicherer live gehen
