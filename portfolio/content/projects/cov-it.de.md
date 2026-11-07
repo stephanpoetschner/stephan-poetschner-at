@@ -29,4 +29,4 @@ zum Versand von Bescheinigungen. Das Produkt ist heute als CISS bei Krauth Digit
 # Gründungsteam
 
 * Mäx Blauth (Gründer und CTO, remote)
-* Ralph Kremer
+* Ralph Kremer (Gründer, Geschäftsführung)
