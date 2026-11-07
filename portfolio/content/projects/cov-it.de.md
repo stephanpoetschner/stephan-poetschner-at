@@ -3,7 +3,7 @@ slug: cov-it
 externalurl: https://www.cov-it.de/
 subline: für Covid IT Solutions GmbH
 duration: Juli 2022 – Dezember 2022
-tags: [ Django, Docker, Celery, SurvNet, Sormas, DEMIS ]
+tags: [ Django, Docker, Celery, SurvNet, SORMAS, DEMIS ]
 author: Stephan Pötschner
 date: 2023-03-24 12:00
 displayimage: False

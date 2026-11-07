@@ -3,7 +3,7 @@ slug: egon
 externalurl: https://www.e-gon.at/
 subline: für EZN / E.GON
 duration: April 2024 – heute
-tags: [ Django, Python, EDA ]
+tags: [ Django, Python, EDA, Ponton X/P ]
 author: Stephan Pötschner
 date: 2024-04-01 12:00
 displayimage: False
@@ -11,15 +11,18 @@ displayimage: False
 
 # Projektbeschreibung
 
-E.GON ist eine Online-Plattform für Energiegemeinschaften in Österreich.
-Damit gemeinsam erzeugter Strom, etwa aus Photovoltaik, fair verteilt und abgerechnet werden
-kann, muss die Plattform die Energiedaten der Netzbetreiber über EDA (Energiewirtschaftlicher
-Datenaustausch) empfangen und verarbeiten.
+E.GON verteilt und verrechnet gemeinsam erzeugten Strom in Energiegemeinschaften in ganz
+Österreich. Dafür verarbeitet die Plattform die Energiedaten der Netzbetreiber.
+
+In einem halben Jahr ist die Datenmenge auf das Zehnfache gestiegen, auf über 120.000
+Nachrichten pro Tag. Die Verarbeitung hält Schritt.
 
 
 # Meine Highlights
 
-* Im Backend-Team (EDA-Daten und Backend-Systeme) mitverantwortlich für **Architektur und Design**
-* Treibe Verbesserungen im **Entwicklungsprozess** voran
-* **Backend**-Entwicklung als Senior Individual Contributor
-* Anbindung an den **EDA-Datenaustausch** der Netzbetreiber
+* Aus einzelnen Skripten eine **belastbare Webarchitektur** aufgebaut, die mitwächst
+  (im Backend-Team mitverantwortlich für Architektur und Design)
+* Anmeldung von Energiegemeinschaften und Aufbereitung der Energiedaten **automatisiert**
+* Die Nachrichtenverarbeitung für das **Zehnfache** an Daten umgebaut: Auch ungewöhnliche
+  Nachrichten kleiner Netzbetreiber halten nichts mehr auf
+* Releases mit **über 550 automatisierten Tests** und Code Reviews abgesichert
