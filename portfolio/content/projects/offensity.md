@@ -11,22 +11,20 @@ displayimage: False
 
 # Projektbeschreibung
 
-Ein Gründerteam ohne Erfahrung als Softwareentwickler: Security Experten und Hacker. Budget für mehrere Entwickler. Ein Jahr Zeit.
-Die Idee: Schwachstellenscanner radikal zu vereinfachen und für jeden nutzbar zu machen.
+Ein Gründerteam ohne Erfahrung als Softwareentwickler: Security-Experten und Hacker. Budget für mehrere Entwickler. Ein Jahr Zeit.
+Die Idee: Schwachstellenscanner radikal vereinfachen und für jeden nutzbar machen.
 
-Was über ein Innovationsprogramm der A1 Telekom startete, ist zu einem beliebten Security Produkt geworden. Der Fokus bleibt ein einfach zu bedienendes Produkt, das Sicherheitslücken verlässlich erkennt und mit wenig Aufwand IT Infrastruktur absichern lässt.
+Was als Experiment im Innovationsprogramm der A1 Telekom begann, hat A1 Digital nach einem Jahr als strategisches Security-Produkt übernommen.
 
 
-* Mehr als 25.000 Subdomains von Offensity gescannt
+* Mehr als 25.000 Subdomains gescannt
 
 
 # Meine Highlights
 
-* Neuentwicklung vom Prototypen **zum erfolgreichen Produkt**
-* Aktive Mitwirkung beim Aufbau der **Softwarearchitektur**
-* Aktive Mitwirkung beim Aufbau von **Prozessen zur Softwareentwicklung**
-* Unterstützung des Teams als **Python-Senior** und **Software-Experte**
-* Planung und Umsetzung zahlreicher Kernkomponenten
+* Die **Architektur** entworfen, auf der alle Sicherheitsprüfungen laufen. Neue kommen dazu, ohne das Fundament umzubauen
+* Den kompletten **Webcrawler** geschrieben: Er durchsucht die Websites der Kunden und findet vergessene Admin-Seiten oder offen liegende Dateien
+* Die **Website** gebaut, über die sich Kunden selbst anmelden und das Produkt testen konnten. Gemeinsam mit dem Marketing von A1 Digital verantwortlich für Landingpages und Online-Kampagnen
 
 
 # Gründungsteam
