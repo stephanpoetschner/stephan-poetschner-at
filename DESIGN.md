@@ -21,8 +21,8 @@ It must **not** look like:
 - **Something technical / a terminal:** no monospace, no "01/02" indices, no code aesthetics,
   no dark-mode-hacker look.
 
-No mood photography. The portrait appears twice: small and round (48px) at the top, larger in
-the contact section, where it puts a real person next to the invitation.
+No mood photography. The portrait appears twice: small and round (56px, a tight head crop `me-face-{56,112,168}.jpg` via `srcset`, one file per pixel density so the browser never rescales) at the top, larger in
+the contact section (`me-{144…720}.jpg` via `srcset`/`sizes`, generated from `raw/fotos/_MG_2972 (1).jpg`), where it puts a real person next to the invitation.
 
 ## Principles (and why)
 

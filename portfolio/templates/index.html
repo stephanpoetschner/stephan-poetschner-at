@@ -7,13 +7,13 @@
 {% block main %}
   <header class="top">
     <div class="id">
-      <img class="portrait" src="{{ static_url('assets/images/me.jpg') }}" alt="{{ AUTHOR }}" width="48" height="48">
+      <img class="portrait" src="{{ static_url('assets/images/me-face-56.jpg') }}" srcset="{{ static_url('assets/images/me-face-56.jpg') }} 1x, {{ static_url('assets/images/me-face-112.jpg') }} 2x, {{ static_url('assets/images/me-face-168.jpg') }} 3x" alt="{{ AUTHOR }}" width="56" height="56">
       <p class="name">{{ AUTHOR }}</p>
       <p class="role">Django-Entwickler in Wien, selbständig seit 2008</p>
     </div>
     <h1 class="statement">Ich entwickle Django-Systeme für <i>kleine Teams</i> in Österreich: <em>bestehende weiter, neue von Grund auf.</em></h1>
     <div class="cta">
-      <a class="pill pill-mail" href="mailto:{{ AUTHOR_EMAIL }}">Einfach melden</a>
+      <a class="pill pill-mail" href="mailto:{{ AUTHOR_EMAIL }}?subject=Anfrage%20%C3%BCber%20stephan-poetschner.at&amp;body=Hallo%20Stephan%2C%0A%0Awir%20machen%20heute%20%E2%80%A6%20und%20br%C3%A4uchten%20eigentlich%20%E2%80%A6%0A%0A">Einfach melden</a>
       <a class="pill pill-tel" href="tel:{{ AUTHOR_TEL|replace(' ', '') }}">Einfach melden</a>
       <p class="cta-note">Kostenlos, mit einer ehrlichen ersten Einschätzung.</p>
     </div>
@@ -132,12 +132,12 @@
   </section>
 
   <section class="section contact">
-    <img class="contact-portrait" src="{{ static_url('assets/images/me.jpg') }}" alt="{{ AUTHOR }}" width="310" height="465" loading="lazy">
+    <img class="contact-portrait" src="{{ static_url('assets/images/me-240.jpg') }}" srcset="{{ static_url('assets/images/me-144.jpg') }} 144w, {{ static_url('assets/images/me-240.jpg') }} 240w, {{ static_url('assets/images/me-288.jpg') }} 288w, {{ static_url('assets/images/me-432.jpg') }} 432w, {{ static_url('assets/images/me-480.jpg') }} 480w, {{ static_url('assets/images/me-720.jpg') }} 720w" sizes="(min-width: 1000px) 15rem, 9rem" alt="{{ AUTHOR }}" width="240" height="360" loading="lazy">
     <div class="contact-body">
       <h2 class="contact-title">Projekt <i>besprechen?</i></h2>
       <p class="contact-text">Schreib mir oder ruf an – ich melde mich meist am selben Tag. Gern auch persönlich, auf einen Kaffee in Wien.</p>
       <p class="contact-links">
-        <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>
+        <a href="mailto:{{ AUTHOR_EMAIL }}?subject=Anfrage%20%C3%BCber%20stephan-poetschner.at&amp;body=Hallo%20Stephan%2C%0A%0Awir%20machen%20heute%20%E2%80%A6%20und%20br%C3%A4uchten%20eigentlich%20%E2%80%A6%0A%0A">{{ AUTHOR_EMAIL }}</a>
         <a href="tel:{{ AUTHOR_TEL }}">{{ AUTHOR_TEL }}</a>
         <a href="{{ AUTHOR_LINKEDIN }}">LinkedIn</a>
       </p>

@@ -131,7 +131,7 @@ a:hover { text-decoration-thickness: 4px; }
   padding: 2rem 0;
 }
 .id { display: flex; align-items: center; gap: .9rem; }
-.portrait { width: 48px; height: 48px; object-fit: cover; object-position: 50% 20%; border-radius: 50%; }
+.portrait { width: 56px; height: 56px; border-radius: 50%; }
 .name { font-weight: 600; }
 .role { color: var(--muted); }
 .role::before { content: "·"; margin-right: .6rem; }
