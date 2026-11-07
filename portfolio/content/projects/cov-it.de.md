@@ -1,8 +1,8 @@
 title: Digitalisierung für Covid-Fälle und Gesundheitsämter
 slug: cov-it
-externalurl: https://www.cov-it.de/
-subline: für Covid IT Solutions GmbH
-duration: Juli 2022 – Dezember 2022
+externalurl: https://www.krauth-digital.de/
+subline: für Covid IT Solutions (heute Krauth Digital)
+duration: August 2022 – Juni 2023
 tags: [ Django, Docker, Celery, SurvNet, SORMAS, DEMIS ]
 author: Stephan Pötschner
 date: 2023-03-24 12:00
@@ -11,22 +11,19 @@ displayimage: False
 
 # Projektbeschreibung
 
-Der Covid Virus hat unsere Gesellschaft ab 2020 vor enorme Herausforderungen gestellt. Auch Verwaltungen weltweit waren plötzlich unter dem Druck, Tausende von Krankheitsfällen kurzfristig zu bearbeiten und nachzuverfolgen.
+In der Pandemie mussten deutsche Gesundheitsämter plötzlich Tausende Fälle kurzfristig bearbeiten
+und nachverfolgen. Covid IT Solutions hat diese Arbeit digitalisiert: von der Fallermittlung bis
+zum Versand von Bescheinigungen. Das Produkt ist heute als CISS bei Krauth Digital im Einsatz.
 
-Covid IT Solutions GmbH hilft Prozesse im deutschen Gesundheitssystem zu digitalisieren und zu beschleunigen: von der Falluntersuchung über die Kontaktnachverfolgung und den Versand von Bescheinigungen bis zu vielen weiteren Anwendungsfälle.
-
-
-* 30 Gesundheitsämter nutzen Produkt
-* 30.000 deutschlandweit bearbeitete Fälle/Tag
-* 4.500.000 insgesamt bearbeitete Aufgaben
-* 95% der Bearbeitungszeit pro Fall eingespart
+* Über 4,5 Millionen Fälle digital bearbeitet
 
 
 # Meine Highlights
 
-* **Weiterentwicklung** am bestehenden Produkt 
-* Erweiterung des Portfolios mit neuen **Prototypen**
-* Unterstützung bei **Weiterentwicklung des Entwicklungsteams** (Automatische Deployments, Scrum Retros und Reviews, automatisierte Tests)
+* Im Team das Kernprodukt weiterentwickelt: **Labormeldungen** werden automatisch in die
+  Fallakten übernommen, doppelt erfasste Personen erkannt
+* Ein zweites Produkt, die **Online-Formulare** für Bürger, in vier Monaten praktisch allein
+  gebaut, mit Rückmeldung per E-Mail, SMS oder Brief
 
 
 # Technisches Team
