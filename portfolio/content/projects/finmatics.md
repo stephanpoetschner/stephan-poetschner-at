@@ -11,14 +11,14 @@ displayimage: False
 
 # Projektbeschreibung
 
-Finmatics automatisiert die Buchhaltung: Belege und Rechnungen werden erkannt und
-automatisch verbucht. Die Codebasis war acht Jahre gewachsen.
+Finmatics automatisiert die Buchhaltung: Belege und Rechnungen kommen herein, werden erkannt und
+automatisch verbucht. Alles beginnt damit, dass jeder Beleg verlässlich ankommt, egal in welcher
+Form.
 
 
 # Meine Highlights
 
-* Die gewachsene Codebasis auf **Django 4.2** gehoben
-* Den **E-Mail-Eingang** robust gemacht: Belege, die Kunden per E-Mail schicken, kommen
-  verlässlich an, auch aus Outlook oder als ZIP-Datei
+* Den **Belegeingang** per E-Mail robust gemacht, mit dem die ganze Verarbeitung beginnt: Belege
+  kommen verlässlich an, auch aus Outlook oder als ZIP-Datei
 * Einen **Support-Chatbot** allein gebaut, der Kundenfragen mit den Artikeln aus dem
   Hilfecenter beantwortet, statt Antworten zu erfinden
