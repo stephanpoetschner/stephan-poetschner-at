@@ -29,4 +29,3 @@ zum Versand von Bescheinigungen. Das Produkt ist heute als CISS bei Krauth Digit
 # Technisches Team
 
 * Mäx Blauth (Gründer und CTO, remote)
-* Yassine Dhane (remote)
