@@ -166,6 +166,9 @@ a:hover { text-decoration-thickness: 4px; }
 .pill::after { content: "→"; margin-left: .6rem; }
 .pill:hover { background: var(--signal); color: var(--ink); }
 @media (max-width: 420px) { .pill { font-size: 1rem; padding: 0 1.25rem; } }
+/* one pill per device: phone call on touch devices, mail elsewhere */
+.pill-tel { display: none; }
+@media (hover: none) and (pointer: coarse) { .pill-mail { display: none; } .pill-tel { display: inline-flex; } }
 
 /* Clients: big names, one line of context, years */
 .client-list li { display: grid; gap: .2rem 2rem; padding: 1.25rem 0; border-bottom: 2px solid var(--ink); }
@@ -197,6 +200,7 @@ a:hover { text-decoration-thickness: 4px; }
 .fact-list dd { margin-top: .5rem; max-width: 16em; }
 
 /* Offers large; how I work quieter, in three columns */
+.offers-lead { font-size: var(--fs-md); line-height: 1.45; max-width: var(--measure); margin-bottom: var(--space-group); }
 .offer-list li { padding: 2rem 0; border-bottom: 1px solid var(--hair); }
 .offer-list li:first-child { padding-top: 0; }
 .offer-list h3 { font-size: var(--fs-lg); font-weight: 600; letter-spacing: -.035em; line-height: 1.1; margin-bottom: .6rem; }
