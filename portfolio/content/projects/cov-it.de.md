@@ -26,6 +26,7 @@ zum Versand von Bescheinigungen. Das Produkt ist heute als CISS bei Krauth Digit
   gebaut, mit Rückmeldung per E-Mail, SMS oder Brief
 
 
-# Technisches Team
+# Gründungsteam
 
 * Mäx Blauth (Gründer und CTO, remote)
+* Ralph Kremer
