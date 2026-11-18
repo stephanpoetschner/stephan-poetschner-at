@@ -45,12 +45,12 @@
   <section class="section clients">
     <h2 class="label">Für wen ich gearbeitet habe</h2>
     <ol class="client-list">
-      <li><span class="client">E.GON</span><span class="what">Plattform für Energiegemeinschaften. Backend und Datenaustausch mit den Netzbetreibern.</span><span class="year">seit 2024</span></li>
-      <li><span class="client">Finmatics</span><span class="what">Belege und Rechnungen automatisch verbuchen, inklusive LLM-Projekt.</span><span class="year">2023–2024</span></li>
-      <li><span class="client">Covid IT Solutions</span><span class="what">Digitalisierung deutscher Gesundheitsämter.</span><span class="year">2022</span></li>
-      <li><span class="client">Offensity / A1 Digital</span><span class="what">Vom Prototyp zum Produkt, nach einem Jahr von A1 übernommen.</span><span class="year">2017–2022</span></li>
-      <li><span class="client">tiga.eleven</span><span class="what">Lead Developer, kleines internationales Team, marktreifes Produkt.</span><span class="year">2015–2016</span></li>
-      <li><span class="client">Careesma</span><span class="what">Codebasis eines spanischen Teams übernommen, Team in Wien aufgebaut.</span><span class="year">2014–2016</span></li>
+      <li><span class="client"><a href="#egon">E.GON</a></span><span class="what">Plattform für Energiegemeinschaften. Backend und Datenaustausch mit den Netzbetreibern.</span><span class="year">seit 2024</span></li>
+      <li><span class="client"><a href="#finmatics">Finmatics</a></span><span class="what">Belege und Rechnungen automatisch verbuchen, inklusive LLM-Projekt.</span><span class="year">2023–2024</span></li>
+      <li><span class="client"><a href="#cov-it">Covid IT Solutions</a></span><span class="what">Digitalisierung deutscher Gesundheitsämter.</span><span class="year">2022</span></li>
+      <li><span class="client"><a href="#offensity">Offensity / A1 Digital</a></span><span class="what">Vom Prototyp zum Produkt, nach einem Jahr von A1 übernommen.</span><span class="year">2017–2022</span></li>
+      <li><span class="client"><a href="#tigaeleven">tiga.eleven</a></span><span class="what">Lead Developer, kleines internationales Team, marktreifes Produkt.</span><span class="year">2015–2016</span></li>
+      <li><span class="client"><a href="#careesma">Careesma</a></span><span class="what">Codebasis eines spanischen Teams übernommen, Team in Wien aufgebaut.</span><span class="year">2014–2016</span></li>
     </ol>
   </section>
 
@@ -120,7 +120,7 @@
   <section class="section projects">
     <h2 class="label">Projekte im Detail</h2>
     {% for project in projects %}
-    <article class="project">
+    <article class="project" id="{{ project.slug }}">
       <h3 class="project-title">{% if project.externalurl %}<a href="{{ project.externalurl }}">{% endif %}{{ project.title }}{% if project.externalurl %}</a>{% endif %}</h3>
       <dl class="project-meta">
         {% if project.subline %}

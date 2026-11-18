@@ -171,13 +171,16 @@ a:hover { text-decoration-thickness: 4px; }
 @media (hover: none) and (pointer: coarse) { .pill-mail { display: none; } .pill-tel { display: inline-flex; } }
 
 /* Clients: big names, one line of context, years */
-.client-list li { display: grid; gap: .2rem 2rem; padding: 1.25rem 0; border-bottom: 2px solid var(--ink); }
+.client-list li { display: grid; gap: .2rem 2rem; padding: 1.25rem 0; border-bottom: 2px solid var(--ink); position: relative; }
 .client-list li:hover .client { box-shadow: inset 0 -.18em var(--signal); }
 .client-list li:first-child { padding-top: 0; }
 @media (min-width: 700px) {
   .client-list li { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr) 5.5em; align-items: baseline; }
 }
 .client { font-size: var(--fs-lg); font-weight: 600; letter-spacing: -.04em; line-height: 1.05; }
+.client a { color: inherit; text-decoration: none; }
+/* The whole row is the click target, matching the hover underline on the name */
+.client a::after { content: ""; position: absolute; inset: 0; }
 .client-list .year { text-align: right; }
 .year { color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
 
