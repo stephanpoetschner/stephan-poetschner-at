@@ -1,5 +1,6 @@
 title: Prototyp medizinisches Gerät
 slug: pixolus
+externalurl: https://odimedical.com/
 subline: für Pixolus
 duration: April 2017 – September 2017
 tags: [ Django, Startup ]
@@ -10,7 +11,7 @@ displayimage: False
 
 # Projektbeschreibung
 
-Pixolus aus Köln entwickelte für ein <a target="_blank" href="https://odimedical.com/">norwegisches Startup</a>
+Pixolus aus Köln entwickelte für ein norwegisches Startup
 den Prototyp eines medizinischen Geräts. Ich habe das Webportal gebaut, in dem medizinisches
 Personal die Messdaten weiterverarbeitet, komplett remote mit dem Team in Köln. Mit dem Prototyp
 konnte das Startup mehr Patientendaten sammeln und die Wirksamkeit seiner Diagnosemethode belegen.

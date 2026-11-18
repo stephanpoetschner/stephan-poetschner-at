@@ -241,7 +241,6 @@ a:hover { text-decoration-thickness: 4px; }
 }
 .project-title { font-size: var(--fs-lg); font-weight: 600; letter-spacing: -.035em; line-height: 1.1; margin-bottom: var(--space-in); }
 @media (min-width: 1000px) { .project-title { margin-bottom: var(--space-group); } }
-.project-title a { text-decoration-color: var(--hair); }
 
 /* Running text from Markdown: its "#" headings are labels, not page headings */
 .prose { max-width: var(--measure); }

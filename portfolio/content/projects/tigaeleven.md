@@ -1,6 +1,5 @@
 title: WLAN-Produkt „tigaeleven”
 slug: tigaeleven
-externalurl: http://tigaeleven.com/
 subline: für wifitiger GmbH
 duration: November 2015 – Dezember 2016
 tags: [ Startup, Django, Coova-Chilli, OpenWRT ]
