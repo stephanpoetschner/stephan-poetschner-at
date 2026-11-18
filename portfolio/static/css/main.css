@@ -283,8 +283,6 @@ a:hover { text-decoration-thickness: 4px; }
   margin-top: clamp(2rem, 1.5rem + 2vw, 3rem); padding-top: clamp(2rem, 1.5rem + 2vw, 3rem);
   border-top: 1px solid rgb(169 189 178 / .3);
 }
-
-@media (prefers-reduced-motion: reduce) { .pill { transition: none; } }
 @media (min-width: 760px) { .footer-legal { grid-template-columns: 1fr 1fr; } }
 .site-footer .label { font-size: inherit; color: var(--signal-on-green); margin-bottom: .75rem; }
 .site-footer .label::before { background: var(--signal-on-green); width: .55rem; height: .55rem; }
@@ -292,3 +290,5 @@ a:hover { text-decoration-thickness: 4px; }
 .site-footer strong { color: var(--on-green); }
 .footer-privacy p { max-width: 65ch; }
 .footer-privacy p + p { margin-top: .75em; }
+
+@media (prefers-reduced-motion: reduce) { .pill { transition: none; } }
