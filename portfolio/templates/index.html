@@ -173,7 +173,10 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="vienna"><svg viewBox="0 0 100 116" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="50" cy="46" r="38"/><circle cx="50" cy="46" r="3"/><line x1="50" y1="46" x2="50.0" y2="8.0"/><rect x="46.8" y="8.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="65.5" y2="11.3"/><rect x="62.3" y="11.8" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="78.2" y2="20.6"/><rect x="75.0" y="21.1" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="86.1" y2="34.3"/><rect x="82.9" y="34.8" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="87.8" y2="50.0"/><rect x="84.6" y="50.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="82.9" y2="65.0"/><rect x="79.7" y="65.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="72.3" y2="76.7"/><rect x="69.1" y="77.2" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="57.9" y2="83.2"/><rect x="54.7" y="83.7" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="42.1" y2="83.2"/><rect x="38.9" y="83.7" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="27.7" y2="76.7"/><rect x="24.5" y="77.2" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="17.1" y2="65.0"/><rect x="13.9" y="65.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="12.2" y2="50.0"/><rect x="9.0" y="50.5" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="13.9" y2="34.3"/><rect x="10.7" y="34.8" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="21.8" y2="20.6"/><rect x="18.6" y="21.1" width="6.4" height="5" rx="1"/><line x1="50" y1="46" x2="34.5" y2="11.3"/><rect x="31.3" y="11.8" width="6.4" height="5" rx="1"/><path d="M50 46 L22 112 M50 46 L78 112 M14 112 H86"/></svg><span>Aus Wien.</span></p>
-      <address class="footer-imprint" id="impressum">
+      <div class="footer-legal">
+      <section class="footer-imprint" id="impressum" aria-labelledby="impressum-title">
+        <h2 class="label" id="impressum-title">Impressum</h2>
+        <address>
         <strong>{{ AUTHOR_LEGALNAME }}</strong><br>
         {{ AUTHOR_TRADE }}<br>
         {{ AUTHOR_STREET }}, {{ AUTHOR_CITY }}<br>
@@ -181,30 +184,24 @@
         Mitglied der {{ AUTHOR_CHAMBER }}<br>
         Berufsrecht: Gewerbeordnung: <a href="https://www.ris.bka.gv.at">www.ris.bka.gv.at</a><br>
         <a href="{{ url_for('vcard') }}" download>Kontakt speichern (vCard)</a>
-      </address>
+        </address>
+      </section>
 
-      <details class="footer-privacy" id="datenschutz">
-        <summary>Datenschutz</summary>
+      <section class="footer-privacy" id="datenschutz" aria-labelledby="datenschutz-title">
+        <h2 class="label" id="datenschutz-title">Datenschutz</h2>
         <p>
-          Diese Website verwendet keine Cookies, keine Analyse-Werkzeuge und keine Dienste Dritter.
-        </p>
-        <p>
-          Verantwortlich ist {{ AUTHOR }}, {{ AUTHOR_STREET }}, {{ AUTHOR_CITY }},
+          <strong>Keine Cookies, kein Tracking, keine Dienste Dritter.</strong>
+          Der Webserver speichert technisch notwendige Zugriffsdaten (IP-Adresse, Zeitpunkt, Seite,
+          Browserkennung) für den sicheren Betrieb (Art. 6 Abs. 1 lit. f DSGVO) und löscht sie nach
+          {{ SERVER_LOG_DAYS }} Tagen. Hosting: {{ HOSTER }}. Verantwortlich: {{ AUTHOR }},
           <a href="mailto:{{ AUTHOR_EMAIL }}">{{ AUTHOR_EMAIL }}</a>.
         </p>
         <p>
-          Beim Aufruf speichert der Webserver technisch notwendige Daten (IP-Adresse, Datum und Uhrzeit,
-          aufgerufene Seite, Browserkennung), um den sicheren Betrieb zu gewährleisten
-          (Art. 6 Abs. 1 lit. f DSGVO). Diese Daten werden nach {{ SERVER_LOG_DAYS }} Tagen gelöscht.
+          Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch,
+          und kannst dich bei der <a href="https://www.dsb.gv.at">Datenschutzbehörde</a> beschweren.
         </p>
-        <p>
-          Gehostet wird die Website bei {{ HOSTER }}.
-        </p>
-        <p>
-          Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch.
-          Beschwerden können Sie bei der <a href="https://www.dsb.gv.at">österreichischen Datenschutzbehörde</a> einbringen.
-        </p>
-      </details>
+      </section>
+      </div>
     </div>
   </footer>
 {% endblock %}

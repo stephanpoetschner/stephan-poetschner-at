@@ -104,8 +104,9 @@ Weights: 300 for the statement, 600 for names and titles, 700 for the key phrase
 9. **Projekt besprechen?** – portrait in the label column (above on phones), large heading,
    email / phone / LinkedIn as large links, offer to meet in person.
 10. **Footer** (green) – Riesenrad mark + "Aus Wien.", imprint and privacy (legally required,
-   keep the content). Privacy is a `<details>`: on desktop its text opens as a full-width row
-   below the three bottom-aligned columns, so nothing above it moves when it opens.
+   keep the content). Two rows: the brand on top, then a hairline and a legal row of two
+   equal, top-aligned columns, Impressum | Datenschutz, each with a small label. Privacy is always
+   visible (no disclosure, no banner) and opens with a bold "Keine Cookies, kein Tracking".
 
 Favicon: italic "p" (Pötschner, Python), `--ink` on `--signal` (a dark tile vanished among other
 tabs). A scaled serif glyph blurs at 16px, so small sizes get hand-drawn pixel art:
